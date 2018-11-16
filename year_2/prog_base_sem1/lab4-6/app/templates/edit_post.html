@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_forms.html" as macro_form %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+
+{% block title %}Изменение записи{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Изменить запись id{{ post_id }} от @{{ author }}.</h1>
+    </div>
+    <div class="user-new-post">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">
+                    {% call macro_form.render_form(form, action_url=url_for('main.edit', id=post_id, _external=True)) %}
+                        {{ macro_form.render_field(form.title, placeholder='Заголовок', type='text') }}
+                        {{ macro_form.render_field(form.body, placeholder='Текст записи', type='text') }}
+                        <div class="login_buttons_wrap">
+                            {{ macro_form.render_button(form.submit, btn_class='custom_submit_button') }}
+                        </div>
+                    {% endcall %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

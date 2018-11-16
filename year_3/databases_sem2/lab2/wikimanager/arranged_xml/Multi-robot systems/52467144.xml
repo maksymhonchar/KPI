@@ -1,0 +1,8 @@
+<page><title>Swarm robotic platforms</title><pageid>52467144</pageid><category>Multi-robot systems</category><sections><section title="">Swarm robotic platforms apply swarm robotics in multi-robot collaboration. They take inspiration from nature (e.g. collective problem solving mechanisms seen in nature such as honey bee aggregation). The main goal is to control a large number of robots (with limited sensing/processing ability) to accomplish a common task/problem. Hardware limitation and cost of robot platforms limit current research in swarm robotics to mostly performed by simulation software (e.g. Stage, ARGoS). On the other hand, simulation of swarm scenarios that needs large numbers of agents is extremely complex and often inaccurate due to poor modelling of external conditions and limitation of computation.
+
+
+</section><section title="Comparison of platforms">
+Several mobile robot platforms have previously been developed to study swarm applications.
+
+
+</section></sections></page>

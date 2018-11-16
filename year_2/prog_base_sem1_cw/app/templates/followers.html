@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as paginmacro %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+
+{% block title %}{{ title }} @{{ user.username }}{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h1 class="text-center">{{ title }} @{{ user.username }}</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <table class="table table-hover followers">
+                <thead>
+                <tr>
+                    <th>Пользователь</th>
+                    <th>Дата подписки</th>
+                </tr>
+                </thead>
+                {% for follow in follows %}
+                    {% if follow.user != user %}
+                        <tr>
+                            <td>
+                                <a href="{{ url_for('main.user', username=follow.user.username, _external=True) }}">
+                                    @{{ follow.user.username }}
+                                </a>
+                            </td>
+                            <td>{{ moment(follow.timestamp).format('L hh:mm') }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <div class="pagination">
+        {{ paginmacro.pagination_widget(pagination, endpoint, username=user.username) }}
+    </div>
+{% endblock %}

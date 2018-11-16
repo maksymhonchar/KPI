@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directors>
+  <director name="Grigoriy" surname="Komar">
+    <id>1</id>
+    <investments>20000</investments>
+    <years>2.00</years>
+    <birthdate>1998-21-04</birthdate>
+  </director>
+  <director name="Bjarne" surname="Stroustrup">
+    <id>2</id>
+    <investments>99999</investments>
+    <years>15.50</years>
+    <birthdate>1950-30-01</birthdate>
+  </director>
+  <director name="Maxim" surname="Gonchar">
+    <id>3</id>
+    <investments>123</investments>
+    <years>123.00</years>
+    <birthdate>1980-08-08</birthdate>
+  </director>
+</directors>

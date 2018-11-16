@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_forms.html" as macro_form %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+
+{% block title %}WIDT-Добро пожаловать{% endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user, type='empty') }}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Войти</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                {% call macro_form.render_form(form, action_url=url_for('auth.login', _external=True)) %}
+                    {{ macro_form.render_field(form.email_or_username, placeholder='test@example.com') }}
+                    {{ macro_form.render_field(form.password, placeholder='', type='password') }}
+                    {{ macro_form.render_checkbox_field(form.remember_me) }}
+                    {{ macro_form.render_hidden_input(value=next, name='next') }}
+                    <div class="custom_buttons_wrap">
+                        {{ macro_form.render_button(form.submit, btn_class='login_button') }}
+                        {{ macro_form.render_link_button(btn_class='signup_button', text='Создайте аккаунт', href=url_for('auth.signup', _external=True)) }}
+                    </div>
+                {% endcall %}
+                <div class="form_helper">
+                    <a href="{{ url_for('auth.password_reset_request', _external=True) }}">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

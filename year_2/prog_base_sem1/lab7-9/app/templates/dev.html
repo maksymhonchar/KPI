@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+
+{% block title %}WIDT-Для Разработчиков{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <div class="container">
+        <div class="row">
+            <p><a href="{{ url_for('main.bugtracker', _external=True) }}">Багтрекер</a></p>
+            <p>Описание REST API:</p>
+            <ul>
+                <li>first</li>
+                <li>second</li>
+                <li>third</li>
+                <li>fourth</li>
+                <li>fifth</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

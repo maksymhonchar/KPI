@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Вхід у систему - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        {% if user.is_anonymous or userinst is None %}
+        <h3>Вхід співробітника до Реєстру</h3>
+        <p>Вхід призначений для Адміністраторів та Реєстраторів Реєстру Громадських Об'єднань.</p>
+        <p>При вході вкажіть кодове ім'я та пароль, видані Вашим керівником.</p>
+        <p>При виникненні технічних помилок чи питань зверніться до <a href="{% url 'support' %}">Відділу підтримки</a>.
+        </p>
+        <hr>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ loginform.non_field_errors }}
+            {% if formerrmsg is not None %}
+            <ul class="errorlist nonfield">
+                <li>{{ formerrmsg }}</li>
+            </ul>
+            {% endif %}
+            {% for hidden_field in loginform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            {% for field in loginform.visible_fields %}
+            <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            {% endfor %}
+            {{ form }}
+            <button type="submit">Увійти</button>
+        </form>
+        {% else %}
+        <h3>Ви вже увійшли у систему.</h3>
+        <p>Ваше кодове ім'я: {{ user.username }}</p>
+        <p>Скористайтесь посиланнями знизу для роботи із Реєстром.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+<html>
+<head>
+<style type ="text/css" >
+.footer {
+ position: fixed;
+ text-align: center;
+ bottom: 10px;
+ width: 100%;
+}
+h1 {
+ font-family: verdana;
+ font-size: 200%;
+}
+h4 {
+ margin-bottom: 5;
+}
+</style>
+<title> Welcome to the home page!</title>
+</head>
+<body link="#808080">
+
+<h1>Welcome to the homepage!</h1>
+
+<h4>API methods</h4>
+
+<li> [ <a href="http://127.0.0.1:5000/api">/api</a> ] or [ <a href="http://127.0.0.1:5000/api/help">/api/help</a> ] <br />
+&emsp;Here you can find help if you are stuck or simply need navigation help.
+<li> [ <a href="http://127.0.0.1:5000/api/directors">/api/directors</a> ] <br />
+&emsp;Here you can see all the information about all the directors in xml format.
+<li> [ <a href="http://127.0.0.1:5000/api/directors/about">/api/directors/about</a> ] <br />
+&emsp;Here you can seel information about directors.xml file.
+<li> [ /api/directors/{id} ] where {id} describes certain director id number. <br/>
+&emsp;Here you can see information about certain director, depending on his id number in xml format. <br />
+&emsp;For example, check out <a href="http://127.0.0.1:5000/api/directors/1">this</a> link - link to director with <b>id=1</b>.
+
+<br/>
+
+<h4>HTML</h4>
+
+<li> [ <a href="http://127.0.0.1:5000/home">/home</a> ] or simply [ <a href="http://127.0.0.1:5000/">/</a> ] <br/>
+&emsp;Home page with lot of information on it.
+<li> [ <a href="http://127.0.0.1:5000/help">/help</a> ] or [ <a href="http://127.0.0.1:5000/home/help">/home/help</a> ]<br />
+&emsp;Help page where you can find help if you are stuck or simply need navigation help.
+<li> [ <a href="http://127.0.0.1:5000/directors">/directors</a> ] <br/>
+&emsp;Page where you can find information about all directors.
+<li> [ /directors/{id} ] where {id} describes certain director id number. <br/>
+&emsp;Here you can find information about director with certain number. <br/>
+&emsp;If there are no directors with id you are looking for, you`ll receive an empty page. <br />
+&emsp;For example, check out <a href="http://127.0.0.1:5000/directors/1">this</a> link - link to director with <b>id=1</b>.
+<li> [ <a href="http://127.0.0.1:5000/new-director">/new-director</a> ] <br/>
+&emsp;Page where you can insert a new director.
+
+<br />
+
+<div class="footer">
+Maxim Gonchar Lab4 <br/> 
+<a href="http://127.0.0.1:5000/home">Home</a>
+</div>
+
+</body>
+</html>

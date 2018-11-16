@@ -1,0 +1,53 @@
+<page><title>Comparison of open-source configuration management software</title><pageid>9672896</pageid><category>Configuration management</category><sections><section title="">This is a comparison of notable free and open source configuration management software, suitable for tasks like server configuration, orchestration and infrastructure as code typically performed by a system administrator.
+
+
+</section><section title="Basic properties">"Verify mode" refers to having an ability to determine whether a node is conformant with a guarantee of not modifying it, and typically involves the exclusive use of an internal language supporting read-only mode for all potentially system-modifying operations. "Mutual auth" refers to the client verifying the server and vice versa. "Agent" describes whether additional software daemons are required. Depending on the management software these agents are usually deployed on the target system or on one or many central "controller" servers.
+
+
+</section><section title="Platform support">Note: This means platforms on which a recent version of the tool has actually been used successfully, not platforms where it should theoretically work since it is written in good portable C/C++ or an interpreted language. It should also be listed as a supported platform on the project's web site.
+
+
+</section><section title="Short descriptions">Not all tools have the same goal and the same feature set. To help distinguish between all of these software packages, here is a short description of each one.
+Ansible
+Combines multi-node deployment, ad-hoc task execution, and configuration management in one package. Manages nodes over SSH and requires python (2.6+ or 3.5+) to be installed on them. Modules work over JSON and standard output and can be written in any language. Uses YAML to express reusable descriptions of systems.
+Bcfg2
+Software to manage the configuration of a large number of computers using a central configuration model and the client&#8211;server paradigm. The system enables reconciliation between clients' state and the central configuration specification. Detailed reports provide a way to identify unmanaged configuration on hosts. Generators enable code or template based generation of configuration files from a central data repository.
+CFEngine
+Lightweight agent system. Manages configuration of a large number of computers using the client&#8211;server paradigm or stand-alone. Any client state which is different from the policy description is reverted to the desired state. Configuration state is specified via a declarative language. CFEngine's paradigm is convergent "computer immunology".
+cdist
+cdist is a zero dependency configuration management system: It requires only ssh on the target host, which is usually enabled on all Unix-like machines. Only the administration host needs to have Python 3.2 installed.
+Chef
+Chef is a configuration management tool written in Erlang, and uses a pure Ruby DSL for writing configuration "recipes". These recipes contain resources that should be put into the declared state. Chef can be used as a client&#8211;server tool, or used in "solo" mode.
+ISconf
+Tool to execute commands and replicate files on all nodes. The nodes do not need to be up; the commands will be executed when they boot. The system has no central server so commands can be launched from any node and they will replicate to all nodes.
+Juju
+Juju concentrates on the notion of service, abstracting the notion of machine or server, and defines relations between those services that are automatically updated when two linked services observe a notable modification.
+Local Configuration system (LCFG)
+LCFG manages the configuration with a central description language in XML, specifying resources, aspects and profiles. Configuration is deployed using the client&#8211;server paradigm. Appropriate scripts on clients (called components) transcribe the resources into configuration files and restart services as needed.
+Open PC server integration (Opsi)
+Opsi is desktop management software for Windows clients based on Linux servers. It provides automatic software deployment (distribution), unattended installation of OS, patch management, hard- and software inventory, license management and software asset management, and administrative tasks for the configuration management.
+PIKT
+PIKT is foremost a monitoring system that also does configuration management. "PIKT consists of a sophisticated, feature-rich file preprocessor; an innovative scripting language with unique labor-saving features; a flexible, centrally directed process scheduler; a customizing file installer; a collection of powerful command-line extensions; and other useful tools."
+Puppet
+Puppet consists of a custom declarative language to describe system configuration, distributed using the client&#8211;server paradigm (using XML-RPC protocol in older versions, with a recent switch to REST), and a library to realize the configuration. The resource abstraction layer enables administrators to describe the configuration in high-level terms, such as users, services and packages. Puppet will then ensure the server's state matches the description. There was brief support in Puppet for using a pure Ruby DSL as an alternative configuration language starting at version 2.6.0. However this feature was deprecated beginning with version 3.1.
+Quattor
+The quattor information model is based on the distinction between the desired state and the actual state. The desired state is registered in a fabric-wide configuration database, using a specially designed configuration language called Pan for expressing and validating configurations, composed out of reusable hierarchical building blocks called templates. Configurations are propagated to and cached on the managed nodes.
+Radmind
+Radmind manages hosts configuration at the file system level. In a similar way to Tripwire (and other configuration management tools), it can detect external changes to managed configuration, and can optionally reverse the changes. Radmind does not have higher-level configuration element (services, packages) abstraction. A graphical interface is available (only) for OS X.
+Rex
+Rex is a remote execution system with integrated configuration management and software deployment capabilities. The admin provides configuration instructions via so-called Rexfiles. They are written in a small DSL but can also contain arbitrary Perl. It integrates well with an automated build system used in CI environments.
+Rudder
+Rudder is an easy to use, web-driven, role-based solution for IT infrastructure Automation &amp; Compliance. A lightweight agent installed on all managed hosts applies configuration and verifies it regularly, centralising reporting data to a main server. Pre-defined modules enable quick and simple configuration for many scenarios, and a web-based interface allows you to build extra modules.
+Salt
+Salt started out as a tool for remote server management. As its usage has grown, it has gained a number of extended features, including a more comprehensive mechanism for host configuration. This is a relatively new feature facilitated through the Salt States component. With the traction that Salt has gotten in the last bit, the support for more features and platforms might continue to grow.
+SmartFrog
+Java-based tool to deploy and configure applications distributed across multiple machines. There is no central server; you can deploy a .SF configuration file to any node and have it distributed to peer nodes according to the distribution information contained inside the deployment descriptor itself.
+Spacewalk
+Spacewalk is an open source Linux and Solaris systems management solution and is the upstream project for the source of Red Hat Network Satellite. Spacewalk works with RHEL, Fedora, and other RHEL derivative distributions like CentOS, Scientific Linux, etc. There are ongoing efforts on getting it packaged for inclusion in Fedora. Spacewalk provides systems inventory (hardware and software information, installation and updates of software, collection and distribution of custom software packages into manageable groups, provision systems, management and deployment of configuration files, system monitoring, virtual guest provisioning, starting/stopping/configuring virtual guests and delegating all of these actions to local or LDAP users and system entitlements).
+STAF
+The Software Testing Automation Framework (STAF) enables users to create cross-platform, distributed software test environments. STAF removes the tedium of building an automation infrastructure, thus enabling users to focus on building their automation solution. The STAF framework provides the foundation upon which to build higher level solutions, and provides a pluggable approach supported across a large variety of platforms and languages.
+Synctool
+Synctool aims to be easy to understand, learn and use. It is written in Python and makes use of SSH (passwordless, with host based or key based authentication) and rsync. No specific language is needed to configure Synctool. Synctool has dry run capabilities that enable surgical precision.
+
+
+</section></sections></page>

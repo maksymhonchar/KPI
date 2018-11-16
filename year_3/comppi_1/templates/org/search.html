@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Пошук організації - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Пошук у Реєстрі Громадських Організацій</h3>
+        {% if searchresult is not None %}
+            <h4>Результати пошуку</h4>
+            {% if searchresult %}
+                {% for item in searchresult %}
+                    <ol>
+                        <li>ГО #{{ item.pk }} - {{ item.full_naming }}. <a href="{% url 'manageorg' orgid=item.pk %}">Посилання</a></li>
+                    </ol>
+                {% endfor %}
+            {% else %}
+                <p>Не знайдено результатів.</p>
+            {% endif %}
+        {% endif %}
+        <hr>
+        <h4>Форма пошуку</h4>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ searchform.non_field_errors }}
+            {% for hidden_field in searchform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            {% for field in searchform.visible_fields %}
+            <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            {% endfor %}
+            <button type="submit">Пошук!</button>
+            <br>
+            <hr>
+            <br>
+        </form>
+    </div>
+</div>
+{% endblock %}

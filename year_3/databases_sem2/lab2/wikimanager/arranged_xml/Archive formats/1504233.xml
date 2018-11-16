@@ -1,0 +1,88 @@
+<page><title>Comparison of file archivers</title><pageid>1504233</pageid><category>Archive formats</category><sections><section title="">The following tables compare general and technical information for a number of file archivers. Please see the individual products' articles for further information. They are neither all-inclusive nor are some entries necessarily up to date. Unless otherwise specified in the footnotes section, comparisons are based on the stable versions&#8212;without add-ons, extensions or external programs.
+
+
+</section><section title="Archivers">Note: Archivers names in purple are no longer in development.
+
+
+=== General information ===
+Basic general information about the archivers: creator/company, license/price etc.
+
+
+=== Operating system support ===
+The operating systems the archivers can run on without emulation or compatibility layer. Linux Ubuntu's own GUI Archive manager, for example, can open and create many archive formats (including Rar archives) even to the extent of splitting into parts and encryption and ability to be read by the native program. This is presumably a "compatibility layer."
+Notes:
+^ A separate 64-bit Windows x64 Edition version is also available.
+^ The Unix-like system port is known as p7zip. p7zip also is provided by FreeDOS.
+^ A Windows Mobile release (version 9.05-alpha onward) is available.
+^ Aminet contains several solution for 7zip under both classic and newage Amiga OS. [1]
+^ The programs for other platforms are called Unace, do not have the same GUI, and can only perform decompression.
+^ WinRAR is for Windows, RAR for other platforms.
+^ This program also has a POSIX version available.
+^ General Windows CE version.
+
+
+=== Archiver features ===
+Information about what common archiver features are implemented natively (without third-party add-ons).
+Notes:
+^ Application is only for decompression.
+^ GNU tar calls the external programs gzip and bzip2 to perform compression; these external programs usually come with systems that contain GNU tar.
+^ Allows adding a variable amount of redundancy for much better error recovery. See also RAR (file format).
+^ Extracting/adding file and/or directory names into archive in either UTF-7, UTF-8 or UTF-16/UCS-2 encoding to support single file/directory name which contains characters from different languages. More recent versions of the zip file format have support for Unicode filenames.
+^ In WinRAR 3.60, when opening 7-Zip archives which contains Unicode file/directory names, they will not be displayed correctly. There will be no problem extracting them, however.
+^ Does support Unicode names, but not under the default (initial) option settings: the user must tick "Use OEM conversion for filenames" under "General" on the "Miscellaneous" tab in the Configuration dialog to enable Unicode name support. Full support for Unicode files names by default is supported only for 7-Zip and RAR archive formats.
+^ Commandline batch compression is available only for ZIP and ALZ formats.
+^ UTF-8 file/path-names support was completed in release 3.0.1 on Unix systems, and in release 5.8.0 on Windows systems. GUI UTF-8 support for full internationalization of the application was completed in release 2.2.0. Optionally, extended characters can be set to be replaced by jolly "?" character for exporting scripts to legacy systems; scripts creation screen informs if commands are ANSI-safe, OEM-codepage-safe (on Windows), or requires UTF-8 compliant environment to run (system, command interpreter, etc).
+^ Commandline batch compression and expansion requires free add-on software downloaded from the WinZip website.[2]
+^ Peazip supports file encryption and file name encryption, although only in certain types of archives, including its own Pea format, 7-zip, zip and Arc.
+^ Many shells have built-in zip file support. Windows Explorer has "Send To"-&gt;"ZIP-compressed folder".
+^ Since version 3.0 (2008).
+
+
+=== Archive format support ===
+
+
+==== Reading ====
+Information about what archive formats the archivers can read. External links lead to information about support in future versions of the archiver or extensions that provide such functionality. Note that gzip, bzip2 and xz are rather compression formats than archive formats.
+Notes:
+^ Used to, but no longer does, due to technical and legal issues.
+^ Tar implementations call external programs (like compress, gzip or bzip2 or any other programs working with abstract streams and supporting the "-d" option) to perform (de)compression, and allowing you to implement your own filters[3]. These external programs may be shipped with your Operating System.
+^ GNU tar lets you implement your own filters [4], allowing you to use other compression programs (p7zip, ...) and filters (GPG, ...).
+^ Starting from version 11.
+^ Requires external program. More info
+^ Archive Utility itself is unable to open ISO files, but Disk Utility, which also comes with Mac OS X, is able to mount them as virtual disks.
+^ Requires external program.[5]
+^ Only partial support for reading proprietary SITX format. [6]
+^ FreeARC uses .arc as its filename extension, but this format is not the same as the traditional ARC file.
+^ Supports these formats as compression stream of other archive formats like tar.bz2 or iso.xz but does not support the format as an archive itself.
+^ B1 Free Archiver for Android and B1 Online Archiver support ARJ format.
+
+
+==== Writing ====
+Information about what archive formats the archivers can write and create. External links lead to information about support in future versions of the archiver or extensions that provide such functionality. Note that gzip, bzip2 and xz are rather compression formats than archive formats.
+Notes:
+^ Tar implementations call the external programs gzip and bzip2, 7z, xz, ... to perform compression; these external programs usually come with systems that contain tar.
+^ Requires rar.exe from WinRAR.
+^ Requires external program(if you are using WinZip 11.1 or earlier). More info
+^ Requires Ace32.exe from WinAce.
+^ The Extractor and XAD are not included in this list because they only expand archives.
+^ ALZip can also write to the following formats: BH, JAR, and LZH
+^ Updating archives is not supported.[7]
+^ Requires external program.[8]
+^ Stuffit supported file formats [9]
+^ Ark is a front-end only and requires appropriate command-line programs be installed. Programs like bzip2, gzip, tar, zip usually come with systems that contain Ark; writing in .rar format requires a commercial program. [10]
+^ Xarchiver is a front-end only and requires appropriate command-line programs be installed. Programs like bzip2, gzip, tar, zip usually come with systems that contain Xarchiver; writing in .rar format requires a commercial program. [11][12]
+^ Archive Manager is a front-end only and requires appropriate command-line programs be installed. Programs like bzip2, gzip, tar, zip usually come with systems that contain Archive Manager. writing in .rar format requires a commercial program.[13]
+^ If there are more than one, files must be grouped in a .tar before being compressed.
+^ supports the formats as stream compression of other archive format and can create compressed format like tar.bz2 or iso.xz but cannot create an archive in these formats
+^ it is possible to open war and jar files to extract e add/replace file; files war and jar are still valid after that
+
+
+==== Uncommon archive format support ====
+PeaZip has full support for various LPAQ and PAQ formats, QUAD and BALZ (highly efficient ROLZ based compressors), FreeArc format, and for its native PEA format.
+7-Zip includes read support for .msi, cpio and xar, plus Apple's dmg/HFS disk images and the deb/.rpm package distribution formats; beta versions (9.07 onwards) have full support for the LZMA2-compressed .xz format.
+Game Extractor includes read and write support for thousands of proprietary archive formats, primarily from games.
+
+
+</section><section title="Further reading">Maximum Compression site benchmarking compressors for several filetypes (text, executable, jpeg etc.).
+Kingsley G. Morse Jr., "Compression Tools Compared", Linux Journal, issue 137, September 2005
+Patrick Schmid, Achim Roos, (March 10, 2010) "Four Compression And Archiving Solutions Compared", Tom's Hardware</section></sections></page>

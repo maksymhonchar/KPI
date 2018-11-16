@@ -1,0 +1,33 @@
+<page><title>Comparison of research networking tools and research profiling systems</title><pageid>34475131</pageid><category>Bibliographic databases and indexes</category><sections><section title="">Research networking (RN) is about using web-based tools to identify, locate, and use research and scholarly information about people and resources. Research networking tools (RN tools) serve as knowledge management systems for the research enterprise. RN tools connect institution-level/enterprise systems, national research networks, publicly available research data (e.g., grants and publications), and restricted/proprietary data by harvesting information from disparate sources into compiled expertise profiles for faculty, investigators, scholars, clinicians, community partners, and facilities. RN tools facilitate the development of new collaborations and team science to address new or existing research challenges through the rapid discovery and recommendation of researchers, expertise, and resources.
+RN tools differ from search engines such as Google in that they access information in databases and other data not limited to web pages. They also differ from social networking systems such as LinkedIn or Facebook in that they represent a compendium of data ingested from authoritative and verifiable sources rather than predominantly individually posted information, making RN tools more reliable. Yet, RN tools have sufficient flexibility to allow for profile editing. RN tools also provide resources to bolster human connector systems: they can make non-intuitive matches, they do not depend on serendipity, and they do not have a propensity to return only to previously identified collaborations/collaborators. RN tools also generally have associated analytical capabilities that enable evaluation of collaboration and cross-disciplinary research/scholarly activity, especially over time.
+Researcher networking tools and research profiling systems can help researchers gain recognition for their work in the increasingly crowded publication environment. Active promotion of scholarship has become another aspect of the publication cycle. Recent years have seen a proliferation of both commercial and non-profit services that help researchers increase visibility and recognition of their work. A plethora of digital researcher services exist in an effort to enhance discoverability, shareability, and citability of researchers and their scholarship. According to Shanks and Arlitsch, digital researcher services fall into three categories:
+Author/Researcher Identification&#8212;these services provide some necessary infrastructure that may be used in the other two categories, such as unique identifiers and name disambiguation.
+Academic and Professional Networking&#8212;most succinctly described as &#8220;social networking for academics,&#8221; these services focus on connecting users based on research interest, affiliation, geography, or other variables.
+Reference and Citation Management&#8212;while these tools and services include some of the functionality and features of other categories, they are distinct given their primary focus on management of citations that a researcher compiles for use within a publication or for sharing with other researchers.
+Importantly, data harvested into robust RN tools is accessible for broad repurposing, especially if available as Linked Open Data (RDF triples). These RN tools enhance research support activities by providing data for customized, up-to-date web pages, CV/biosketch generation, and data tables for grant proposals.
+The following tables compare research networking (RN) software.
+
+
+</section><section title="General">This table provides general information for each tool: name, developing institution, external links to information, whether the code is Open Source and known adopters of the software.
+
+
+</section><section title="Data sources, ingest and export formats">This table provides information on the types of data used in each RN tool and how this data is ingested, along with data export formats (e.g. XML, RDF, RIS, PDF)
+
+
+</section><section title="Data interoperability and integration">This table provides information on whether the research networking tool is compatible with institutional enterprise systems (e.g. human resources databases), can be integrated with other external products or add-ons, and can be used for regional, national, international or federated connectivity.
+
+
+</section><section title="Users profiled, user interactivity and networking functionality">This table provides information on what user population is profiled for each tool, ability for users to edit their own profile data and type of networking. Active networking means that the user can enter connections to the network by entering colleagues' names. Passive networking means that the software infers network connections from a user's publication co-authors and builds a network from these names.
+
+
+</section><section title="Controlled vocabulary, ontologies and author disambiguation">This table provides information on the types of controlled vocabulary or thesauri used by the tools, as well as ontologies supported and whether author disambiguation is performed by the software.
+
+
+</section><section title="Bibliometrics">This table provides information on the types of bibliometrics provided in the tool.
+
+
+</section><section title="Notes and references">
+
+</section><section title="Bibliography">
+
+</section></sections></page>

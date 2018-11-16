@@ -1,0 +1,18 @@
+<page><title>Comparison of web hosting control panels</title><pageid>18977540</pageid><category>Software comparisons</category><sections><section title="">The following tables compare general and technical information for a variety of web hosting control panel software packages.
+
+
+</section><section title="License and operating system support">
+
+=== Free/Libre control panels ===
+
+
+=== Proprietary control panels ===
+
+
+</section><section title="Remote access">Some control panels allow shell (console) access to the underlying OS through a Java applet, requiring that the client-side computer use Java Virtual Machine software. Other control panels allow direct access using telnet or secure shell (SSH).
+
+
+</section><section title="Email management">While all control panel software below supports multiple email accounts, the features they provide vary.
+
+
+</section></sections></page>

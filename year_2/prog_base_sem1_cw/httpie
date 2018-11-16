@@ -1,0 +1,14 @@
+sudo apt install linuxbrew-wrapper
+brew install httpie
+brew doctor
+
+
+pip install httpie
+
+http --json --auth <big_token>: <method> <path> <if required: json>
+
+1. http --json --follow --auth maxgonchar9@gmail.com:123 GET http://127.0.0.1:5000/api/v1.0/token
+
+2. http --auth email:password --json GET/POST/PUT path
+
+3. http --auth email:password --json POST/PUT path arg1=val1 arg2="val 2"

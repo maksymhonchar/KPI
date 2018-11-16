@@ -1,0 +1,16 @@
+{
+  "post": {
+    "post_id": 0,
+    "message": "post message",
+    "owner": {
+      "owner_id": 0,
+      "name": "owner name",
+      "surname": "owner surname",
+      "sex": 0
+    },
+    "likes": 0,
+    "comments": 0,
+    "mark_as_ads": 0,
+    "publish_date": "dd-mm-yyyy"
+  }
+}

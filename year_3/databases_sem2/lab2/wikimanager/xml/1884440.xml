@@ -1,0 +1,74 @@
+<page><title>Comparison of file managers</title><pageid>1884440</pageid><category>File managers</category><sections><section title="">The following tables compare general and technical information for a number of notable file managers.
+
+
+</section><section title="General information">Basic general information about the managers: creator/company, etc.
+
+
+</section><section title="Operating system support">
+
+=== Cross-platform file managers ===
+This table shows the operating systems that the file managers can run on, without emulation.
+
+
+=== Mac-only file managers ===
+Finder
+ForkLift
+Path Finder
+Xfile
+Commander One
+CRAX Commander
+
+
+=== *nix-only file managers ===
+emelFM2
+Gentoo file manager
+GNOME Commander
+Krusader
+PCMan File Manager
+ROX-Filer
+Thunar
+SpaceFM
+
+
+=== Windows-only file managers ===
+Altap Salamander
+Directory Opus
+Explorer++
+FAR Manager
+File Manager
+Nomad.NET
+PowerDesk
+SE-Explorer
+STDU Explorer
+Total Commander
+Windows Explorer
+xplorer&#178;
+XYplorer
+ZTreeWin
+
+
+</section><section title="Manager views">
+Information about what common file manager views are implemented natively (without third-party add-ons).
+Note that the "Column View" does not refer to the Miller Columns browsing / visualization technique that can be applied to tree structures / folders.
+
+Twin-panel file managers have obligatory connected panels where action in one panel results in reaction in the second. Konqueror supports multiple panels divided horizontally, vertically or both, but these panels do not act as twin panels by default (the user has to mark the panels he wants to act as twin-panels).
+
+
+</section><section title="Network protocols">Information on what networking protocols the file managers support. Note that many of these protocols might be supported, in part or in whole, by software layers below the file manager, rather than by the file manager itself; for example, the Mac OS X Finder doesn't implement those protocols, and the Windows Explorer doesn't implement most of them, they just make ordinary file system calls to access remote files, and Konqueror either uses ordinary file system calls or KIO slave calls to access remote files. Some functions, such as browsing for servers or shares, might be implemented in the file manager even if most functions are implemented below the file manager.
+
+
+</section><section title="File features">Information on what basic file features the file managers support.
+
+
+</section><section title="Browsing features">
+
+</section><section title="Search features">Information on what file searching features the file managers support. RegExp include the possibilities of nested Boolean searches, thus implicitly all file managers supporting RegExp search support also Boolean searches.
+Column Definitions (D)
+
+Entry Notes (s)
+
+
+</section><section title="Extensibility">Information on which parts of the application can be extended by plugins.
+
+
+</section></sections></page>

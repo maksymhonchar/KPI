@@ -1,0 +1,20 @@
+<page><title>Comparison of office suites</title><pageid>2234471</pageid><category>Office suites</category><sections><section title="">The following tables compare general and technical information for a number of office suites:
+
+
+</section><section title="General information">
+
+=== Operating system support ===
+The operating systems the office suites were designed to run on without emulation; for the given office suite/OS combination, there are five possibilities:
+No indicates that it does not exist or was never released.
+Partial indicates that while the office suite works, it lacks important functionality compared to versions for other OSs; it is still being developed however.
+Beta indicates that while a version of the office suite is fully functional and has been released, it is still in development (e.g. for stability).
+Yes indicates that the office suite has been officially released in a fully functional, stable version.
+Dropped indicates that while the office suite works, new versions are no longer being released for the indicated OS; the number in parentheses is the last known stable version which was officially released for that OS.
+
+
+</section><section title="Main components">
+
+=== Online capabilities ===
+
+
+</section></sections></page>

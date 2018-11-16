@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}POSTS - about{% endblock %}
+{% block head %} {% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>
+                2016 year. Author: Maxim Gonchar. <br>
+                Total amount of posts: {{ posts_count }}.
+            </h3>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-content">
+        {% for item in posts %}
+            <div class="col-md-3 col-sm-12 col-sm-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">{{ item['title'] }}</h3>
+                </div>
+                <div class="panel-body">
+                  <img src="{{ "../static/img/post" ~ item['post_id'] ~ ".png" }}" alt="post image" class="img img-responsive img-circle post-image">
+                  {{ item['text'] }}
+                </div>
+                <div class="panel-footer">
+                  <a href="{{ "http://127.0.0.1:8000/posts/global_" ~ item['owner_id'] ~ "_" ~ item['post_id'] ~ "/"}}">See more:</a>
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

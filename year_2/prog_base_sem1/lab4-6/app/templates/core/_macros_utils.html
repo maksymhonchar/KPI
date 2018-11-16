@@ -1,0 +1,7 @@
+{% macro dataFieldIfExists(data='') -%}
+    {% if data %}
+        {{ data }}
+    {% else %}
+        Не указано
+    {% endif %}
+{%- endmacro %}

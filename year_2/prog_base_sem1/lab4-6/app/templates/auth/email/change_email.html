@@ -1,0 +1,7 @@
+<p>Привет, {{ user.username }}!</p>
+<p>Чтобы подтвердить Ваш новый адрес email, перейдите <a href="{{ url_for('auth.change_email', token=token, _external=True) }}">этой ссылке</a>.</p>
+<p>Если возникли проблемы, Вы можете скопировать следующую ссылку в адресную строку Вашего браузера:</p>
+<p>{{ url_for('auth.change_email', token=token, _external=True) }}</p>
+<p>С уважением,</p>
+<p>Команда WIDT</p>
+<p><small>Это служебный адрес email, его почта не проверяется.</small></p>

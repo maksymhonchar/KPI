@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}POSTS - {{ post['title'] }}{% endblock %}
+{% block head %} {% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="http://127.0.0.1:8000/posts">All posts</a></li>
+                <li class="active">Post {{ post['post_id'] }}</li>
+            </ul>
+        </div>
+        <div class="col-xs-12">
+            <h1>{{ post['owner']['name'] }} {{ post['owner']['surname'] }} : {{ post['title'] }}</h1>
+            <div class="custom-post-text">
+                <p>{{ post['text'] }}</p>
+            </div>
+            <div class="social-badges">
+                <p>
+                    <span class="label label-default"><i class="fa fa-heart" id="likes" aria-hidden="true"></i> {{ post['likes'] }}</span>
+                    <span class="label label-default"><i class="fa fa-retweet" id="reposts" aria-hidden="true"></i> {{ post['reposts'] }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

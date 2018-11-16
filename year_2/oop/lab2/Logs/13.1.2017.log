@@ -1,0 +1,115 @@
+[Game] - Game is creating instances for heroes and monsters.
+[System] - Model model-1 has been created.
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[System] - Item  changed his name to magic_sword_1
+[System] - Item  changed his name to magic_sword_2
+[System] - Item  changed his name to magic_sword_3
+[System] - Item  changed his name to mega_shield_1
+[System] - Item  changed his name to mega_shield_2
+[System] - Item  changed his name to mega_shield_3
+[Game] - Shield mega_shield_3 efficiency is 1590.
+[Game] - Shield mega_shield_3 efficiency is 1590.
+[Game] - Shield mega_shield_3 efficiency is 1590.
+[Game] - Shield mega_shield_2 efficiency is 1420.
+[Game] - Shield mega_shield_1 efficiency is 1250.
+[Game] - Sword magic_sword_3 efficiency is 210.
+[System] - Hero model-1 has been created.
+[System] - Hero Maxim has been created.
+[System] - Model model-2 has been created.
+[System] - Monster model-2 has been created.
+[System] - Monster MegaBoss has been created.
+[Game] - GAME ALERT: Hero Maxim wants to attack monster MegaBoss.
+[Player] - Swordsman is ready to fight!
+[Player] - Swordsman Maxim is attacking!
+[Player] - Arggh, BOSS got damaged...
+[Game] - GAME ALERT: Hero Maxim wants to attack monster MegaBoss.
+[Player] - Swordsman is ready to fight!
+[Player] - Swordsman Maxim is attacking!
+[Player] - Arggh, BOSS got damaged...
+[Game] - The Boss MegaBoss died from Maxim
+[Game] - GAME ALERT: Hero Maxim wants to attack monster MegaBoss.
+[Player] - Swordsman is ready to fight!
+[Player] - Swordsman Maxim is attacking!
+[Game] - This boss is already dead - a hero cannot hit him.
+[Game] - GAME ALERT: Hero Maxim wants to attack monster MegaBoss.
+[Player] - Swordsman is ready to fight!
+[Player] - Swordsman Maxim is attacking!
+[Game] - This boss is already dead - a hero cannot hit him.
+[Game] - GAME ALERT: Hero Maxim wants to attack monster MegaBoss.
+[Player] - Swordsman is ready to fight!
+[Player] - Swordsman Maxim is attacking!
+[Game] - This boss is already dead - a hero cannot hit him.
+[Logger] - Fatal error: a game model is not able to fight.
+[Game] - 
+End of the Lab 2.

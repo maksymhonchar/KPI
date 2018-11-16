@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as pagmacros %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+
+{% block title %}Топ на сайте{% endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user) }}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Десять лучших записей на сайте</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% if posts %}
+                {% for post in posts %}
+                    <p>
+                        <label class="label label-danger no-link-hover margin-horizontal-15px text-white">
+                            <a href="{{ url_for('main.likes', id=post.id, _external=True) }}">
+                                {{ post.faved_by.count() }} <i class="fa fa-heart" aria-hidden="true"></i>
+                            </a>
+                        </label>
+                        Запись "<a href="{{ url_for('main.post', id=post.id, _external=True) }}">{{ post.title }}</a>" от @{{ post.author.username }}
+                    </p>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <h3 class="text-center">Пока еще ничего не лайкнуто :c</h3>
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% if pagination %}
+                <div class="pagination">
+                    {{ pagmacros.pagination_widget(pagination, 'main.feed') }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

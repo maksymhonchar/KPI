@@ -1,0 +1,26 @@
+<page><title>Comparison of OLAP Servers</title><pageid>24523966</pageid><category>Data management</category><sections><section title="">The following tables compare general and technical information for a number of online analytical processing (OLAP) servers. Please see the individual products articles for further information.
+
+
+</section><section title="General information">
+
+</section><section title="Data storage modes">
+
+</section><section title="APIs and query languages">APIs and query languages OLAP servers support.
+
+
+</section><section title="OLAP distinctive features">A list of OLAP features that are not supported by all vendors. All vendors support features such as parent-child, multilevel hierarchy, drilldown.
+Data processing, management and performance related features:
+Data modeling features:
+
+
+</section><section title="System limits">
+
+</section><section title="Security">
+
+</section><section title="Operating systems">The OLAP servers can run on the following operating systems:
+Note (1):The server availability depends on Java Virtual Machine not on the operating system
+
+
+</section><section title="Support information">
+
+</section></sections></page>

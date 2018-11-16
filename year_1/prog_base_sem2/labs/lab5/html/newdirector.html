@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+.footer {
+ position: fixed;
+ text-align: center;
+ bottom: 10px;
+ width: 100%;
+}
+h3 {
+ font-family: verdana;
+ font-size: 150%;
+ marging-bottom: 15px;
+}
+</style>
+<title> New director page</title>
+</head>
+<body>
+
+<h3 align="center" s>Enter data about new director.</h3>
+
+<form action="http://127.0.0.1:5000/new-director" method="POST" align="center"">
+	Name:<br>
+	<input type="text" name="name" value='Your name' required><br>
+	Surname:<br>
+	<input type="text" name="surname" value='Your surname' required><br>
+	Investments:<br>
+	<input type="text" name="investments" value="0" required><br>
+	Experience in years:<br>
+	<input type="text" name="years" value="0.0" required><br>
+	Birth date:<br>
+	<input type="text" name="birthdate" value="yy-mm-dd" required><br>
+	<input type="submit" value='Add' />
+</form>
+
+<div class="footer">
+Maxim Gonchar Lab4 <br/> 
+<a href="http://127.0.0.1:5000/home">Home</a>
+</div>
+
+</body>
+</html>

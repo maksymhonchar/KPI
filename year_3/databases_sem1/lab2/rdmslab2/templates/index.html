@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Lab2 Index page</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Lab2 index page!</h1>
+    <p>
+        <small>Visit <a href="{% url 'apiindex' %}">/api</a> to check if sql connection was set properly.</small>
+    </p>
+    <p>
+        <small id="bd_state"></small>
+    </p>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12"><a href="{% url 'payrollsindex' %}">Manage Payrolls</a></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12"><a href="{% url 'employeesindex' %}">Manage Employees</a></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12"><a href="{% url 'paymentsindex' %}">Manage Payments</a></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12"><a href="{% url 'projectsindex' %}">Manage Projects</a></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: 'http://localhost:8000/api/',
+            dataType: 'json', // jsonp
+            success: function (json) {
+                var obj = document.getElementById("bd_state");
+                obj.innerHTML = "Current DB link state: " + json['mysqldb_conn'];
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<page><title>Comparison of Internet Relay Chat daemons</title><pageid>5417463</pageid><category>Internet Relay Chat daemons</category><sections><section title="">The following tables compare general and technical information including the differences in feature sets between popular IRC daemons. Grey entries in the list represent supposedly unmaintained daemons.
+This article is neither all-inclusive nor necessarily up-to-date, be warned.
+
+
+</section><section title="Servers">
+
+</section><section title="Operating system support">The operating systems the daemons can run on without emulation; also supported I/O facilities for network sockets (see IRCd for further information).
+
+
+</section><section title="Technology">Various networking and IRC technology implemented to date.
+
+
+</section><section title="Features">IRC server features, mostly extensions to RFC 1459. Probably also implementations of RFC 2810, RFC 2811, RFC 2812, RFC 2813, and possibly IRCX.
++channels (In early IRCds, these were simply named channels. At least one modern IRCd (IRCD) uses the + prefix for modeless channels, i.e. no modes are supported other than +t, which is forced. Since no user can become a chanop, no topic can be set. This is described in RFC 2811.)
+#channels ("+channels" were later replaced with "#channels" in version 2.7, numeric channels were removed entirely and channel bans (mode +b) were implemented.)
+&amp;channels (irc2.8, those that exist only on the current server, rather than the entire network)
+ !channels (irc2.10, those that are theoretically safe from suffering from the many ways that a user could exploit a channel by "riding a netsplit"; IRCds using timestamping provide (most of) this functionality on #channels)
+ %#channels (#channels whose name are in UTF-8 for IRCX)
+ %&amp;channels (&amp;channels whose name are in UTF-8 for IRCX)
+ %!channels (!channels whose name are in UTF-8 for IRCX)
+
+
+</section></sections></page>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directors>
+   <director name="Maxim" surname="Gonchar">
+      <nationality>Ukraine</nationality>
+      <birthdate>1998-07-08</birthdate>
+      <enthusiasm>5</enthusiasm>
+      <experience>5.8</experience>
+      <money>100000</money>
+      <startup>
+         <name>Apple</name>
+         <budget>50000</budget>
+      </startup>
+   </director>
+   <director name="Grigoriy" surname="Komar">
+      <nationality>Ukraine</nationality>
+      <birthdate>1998-21-04</birthdate>
+      <enthusiasm>8</enthusiasm>
+      <experience>8.2</experience>
+      <money>500000</money>
+      <startup>
+         <name>Synthesator</name>
+         <budget>10000</budget>
+      </startup>
+   </director>
+   <director name="Kostya" surname="Sharovarskiy">
+      <nationality>Ukraine</nationality>
+      <birthdate>1998-26-03</birthdate>
+      <enthusiasm>7</enthusiasm>
+      <experience>3.9</experience>
+      <money>200000</money>
+      <startup>
+         <name>CapInc</name>
+         <budget>80000</budget>
+      </startup>
+   </director>
+   <director name="Bjarne" surname="Stroustrup">
+      <nationality>Danish</nationality>
+      <birthdate>1950-30-01</birthdate>
+      <enthusiasm>10</enthusiasm>
+      <experience>10</experience>
+      <money>999999</money>
+      <startup>
+         <name>IBM</name>
+         <budget>99999</budget>
+      </startup>
+   </director>
+</directors>

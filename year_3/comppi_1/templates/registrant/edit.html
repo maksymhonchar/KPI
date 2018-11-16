@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Зміна Організації - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h4>Сторінка зміни Організації "{{ orgtochange.full_naming }}"</h4>
+        <hr>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ editprgform.non_field_errors }}
+            {% for hidden_field in editprgform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            {% for field in editprgform.visible_fields %}
+            <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            {% endfor %}
+            <button type="submit">Змінити</button>
+        </form>
+        <hr>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

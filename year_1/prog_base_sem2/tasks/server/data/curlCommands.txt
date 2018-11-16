@@ -1,0 +1,8 @@
+// Open browser to see beautiful pages.
+curl -XGET 127.0.0.1:5000/directors
+curl -XGET 127.0.0.1:5000/directors/2
+// Refresh /directors page to see changes
+curl -XDELETE 127.0.0.1:5000/directors/4
+// Refresh /directors page to see changes
+curl -XPOST 127.0.0.1:5000/directors/5 -d"name=NEWNAME&surname=NEWSURNAME&nationality=NEWNATIONALITY&birthdate=1970-01-01&enthusiasm=10&experience=5.2&money=10000&sname=MEWSTARTUP&sbudget=123123"
+

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}POSTS - 404 not found{% endblock %}
+{% block head %} {% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1>Page not found.</h1>
+        <p>What you were looking for is just not there.</p>
+        <p>Again, detailed reason: {{ error_msg }}</p>
+        <a href="{{ url_for('index') }}">Go to the homepage</a>
+    </div>
+</div>
+{% endblock %}

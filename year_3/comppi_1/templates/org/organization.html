@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Сторінка організації - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Організація "{{ orgtodisplay.full_naming }}"</h3>
+        <hr>
+        <h4>Основні поля</h4>
+        <ul>
+            <li>Вид ГО: {{ orgtodisplay.get_type_display }}</li>
+            <li>Спрямованість ГО: {{ orgtodisplay.get_orientation_display }}</li>
+            <li>Статус ГО: {{ orgtodisplay.get_status_display }}</li>
+            <li>Повне найменування громадського об'єднання: "{{ orgtodisplay.full_naming }}"</li>
+            <li>Коротке найменування: "{{ orgtodisplay.short_naming }}"</li>
+            <li>Іноземна назва: "{{ orgtodisplay.short_naming }}"</li>
+            <li>ЄДРПОУ: {{ orgtodisplay.edrpou }}</li>
+            <li>ЄДРПОУ Засновника: {{ orgtodisplay.owner_edrpou }}</li>
+            <li>Організаційно-правова форма" {{ orgtodisplay.organiz_pravov_form }}</li>
+            <li>Статус реєстрації: {{ orgtodisplay.registration_state|yesno:"Так,Ні" }}</li>
+            <li>Підприємницька активність: {{ orgtodisplay.entrepreneurial_activity|yesno:"Так,Ні" }}</li>
+            <li>Дата реєстрації (р-м-д): {{ orgtodisplay.registration_date }}</li>
+            <li>Зворотній зв'язок: <pre>{{ orgtodisplay.feedback }}</pre></li>
+        </ul>
+        <hr>
+        <h4>Місцезнаходження</h4>
+        <ul>
+            <li>Регіон: {{ orgtodisplay.location.get_region_display }}</li>
+            <li>Район: {{ orgtodisplay.location.district }}</li>
+            <li>Населений пункт: {{ orgtodisplay.location.locality }}</li>
+            <li>Вулиця: {{ orgtodisplay.location.street }}</li>
+            <li>Номер будинку/корпус: {{ orgtodisplay.location.building }}</li>
+        </ul>
+        <hr>
+        <h4>Сертифікат</h4>
+        <ul>
+            <li>Дата видання сертифікату (р-м-д): {{ orgtodisplay.certificate.issue_date }}</li>
+        </ul>
+        <hr>
+        <hr>
+        <br>
+        {% if userinst is not None and not userinst.is_admin %}
+        <h3>Зона Реєстратора</h3>
+        <p><a href="{% url 'registrantedit' orgid=orgtodisplay.pk %}">Зміна даної ГО</a></p>
+        {% if orgtodisplay.registration_state %}
+        <p><a href="{% url 'registrantchst' orgid=orgtodisplay.pk %}">Деактивація даної ГО</a></p>
+        {% else %}
+        <p><a href="{% url 'registrantchst' orgid=orgtodisplay.pk %}">Активація даної ГО</a></p>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        <br>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

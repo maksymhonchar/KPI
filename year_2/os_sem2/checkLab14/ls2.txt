@@ -1,0 +1,45 @@
+OS:
+total 24
+266055 drwxrwxrwx  3 bee bee 4096 тра 18 19:04 .
+320523 drwxrwxrwx 28 bee bee 4096 тра 18 19:06 ..
+266067 lrwxrwxrwx  1 bee bee   17 лис 29 14:53 labs -> ../source_OS/labs
+266068 lrwxrwxrwx  1 bee bee   18 лис 29 12:29 lects -> ../source_OS/lects
+266069 drwxrwxrwx  2 bee bee 4096 тра 18 15:52 links
+266065 -rwxrwxrwx  1 bee bee   20 тра 18 15:44 result2
+266059 -rw-rw-r--  1 bee bee   28 тра 18 19:04 result2.txt
+266066 -rwxrwxrwx  1 bee bee  273 тра 18 15:53 tree_OS
+
+OS/links:
+total 12
+266069 drwxrwxrwx 2 bee bee 4096 тра 18 15:52 .
+266055 drwxrwxrwx 3 bee bee 4096 тра 18 19:04 ..
+266070 -rwxrwxrwx 1 bee bee  240 тра 18 15:47 tree2_h
+
+source_OS:
+total 20
+265909 drwxrwxrwx  5 bee bee 4096 лис 29 12:08 .
+320523 drwxrwxrwx 28 bee bee 4096 тра 18 19:06 ..
+266050 drwxrwxrwx  2 bee bee 4096 тра 18 15:47 .hidden
+266076 drwxrwxrwx  2 bee bee 4096 тра 18 15:35 labs
+266073 drwxrwxrwx  2 bee bee 4096 тра 18 15:36 lects
+
+source_OS/.hidden:
+total 16
+266050 drwxrwxrwx 2 bee bee 4096 тра 18 15:47 .
+265909 drwxrwxrwx 5 bee bee 4096 лис 29 12:08 ..
+266072 -rwxrwxrwx 1 bee bee  240 тра 18 15:47 .tree2
+266071 -rwxrwxrwx 1 bee bee    4 лис 29 12:08 .user2
+
+source_OS/labs:
+total 16
+266076 drwxrwxrwx 2 bee bee 4096 тра 18 15:35 .
+265909 drwxrwxrwx 5 bee bee 4096 лис 29 12:08 ..
+266077 -rwxrwxrwx 1 bee bee    5 тра 18 15:36 lab2
+266078 -rwxrwxrwx 1 bee bee    5 тра 18 15:36 lab3
+
+source_OS/lects:
+total 8
+266073 drwxrwxrwx 2 bee bee 4096 тра 18 15:36 .
+265909 drwxrwxrwx 5 bee bee 4096 лис 29 12:08 ..
+266074 -rwxrwxrwx 1 bee bee    0 лис 29 12:08 lect1
+266075 -rwxrwxrwx 1 bee bee    0 лис 29 12:08 lect2

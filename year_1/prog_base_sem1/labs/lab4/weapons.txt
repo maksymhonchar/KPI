@@ -1,0 +1,8 @@
+No_weapon 0
+Knife 30
+Gun 40
+Laser 55
+Good_weapon! 100
+Super 228
+keklol 228
+23 23

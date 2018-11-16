@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>Формули трапецій</h1>
+<br>
+<hr>
+<br>
+<p>Вкажіть кількість проміжків n, default=68286:</p>
+ <form action="{% url 'trapezoid' %}" method="post">
+  n: <input type="text" name="n"><br>
+  <input type="submit" value="Submit">
+</form>
+<br>
+<p>Межі: [-13;-5]</p>
+<br>
+<hr>
+<hr>
+<p>Отриманий інтервал h = {{ h_interval }}</p>
+<br>
+<p>Кількість проміжків n = {{ n_amount }}</p>
+<br>
+<p>Результуючий інтеграл: I = {{ integral }}</p>
+<br>
+<p>Перші 10 координат Х</p>
+<ol>
+    {% for x in x_first_ten_coord %}
+    <li>{{ x }}</li>
+    {% endfor %}
+</ol>
+<br>
+<br>
+<p>Останні 10 координат Х</p>
+<ol>
+    {% for x in x_last_ten_coord %}
+    <li>{{ x }}</li>
+    {% endfor %}
+</ol>
+<br>
+<p>Перші 10 координат Y</p>
+<ol>
+    {% for y in y_first_ten_coord %}
+    <li>{{ y }}</li>
+    {% endfor %}
+</ol>
+<br>
+<br>
+<p>Останні 10 координат Y</p>
+<ol>
+    {% for y in y_last_ten_coord %}
+    <li>{{ y }}</li>
+    {% endfor %}
+</ol>
+<br>
+<br>
+
+{% endblock %}

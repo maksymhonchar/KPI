@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.Product" Collapsed="true">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAIAAAAAAAEAAAAAAAAAAAEAACAAAAIAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.WashingMachine" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.Fridge" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.DishWasher" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.TVSet" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.SamsungWashingMachine" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\SamsungProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.SamsungFridge" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\SamsungProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.SamsungDishWasher" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\SamsungProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.SamsungTVSet" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\SamsungProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.TochibaWashingMachine" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\TochibaProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.TochibaFridge" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\TochibaProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.TochibaDishWasher" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\TochibaProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.TochibaTVSet" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\TochibaProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.ProductManufacturer" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAEABAAAAAAAAAAACAAAAAEAgAAAAAIAAAgAAA=</HashCode>
+      <FileName>Products\ProductFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.SamsungProductManufacturer">
+    <Position X="4" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAIAAAgAAA=</HashCode>
+      <FileName>Products\ProductFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Course_Work_Honchar_Maxim_KP_51.TochibaProductManufacturer">
+    <Position X="7.25" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAIAAAgAAA=</HashCode>
+      <FileName>Products\ProductFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="OOP_Course_Work_Honchar_Maxim_KP_51.ProductColor" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

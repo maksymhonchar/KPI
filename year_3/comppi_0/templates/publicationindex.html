@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Publication index</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1>Publication index</h1>
+        <h4>back to TGAdmin index: <a href="{% url 'indexcore' %}">link</a></h4>
+    </div>
+    <hr>
+    <div class="row">
+        <h3>Publish a new post</h3>
+        <form action="{% url 'publishtext' %}" method="post">
+            {% csrf_token %}
+            Published text: <input type="text" name="publication_text"><br>
+            <input type="checkbox" name="parse_mode" value="markdown"> markdown enable
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <hr>
+    <div class="row">
+        <h3>Schedule a new post</h3>
+        <form action="{% url 'addevent' %}" method="post">
+            {% csrf_token %}
+            Published text: <input type="text" name="publication_text"><br>
+            Event time: <input id="date" type="datetime-local" name="event_time">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

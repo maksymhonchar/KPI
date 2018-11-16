@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ code }}-{{ short_msg }}{% endblock %}
+
+{% block styles -%}
+    <!-- Custom CSS styles -->
+    <link href="{{ url_for('static', filename="css/errorpage/styles.css") }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename="css/errorpage/media.css") }}" rel="stylesheet">
+{%- endblock %}
+
+{% block fonts -%}
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+{%- endblock %}
+
+{% block page_content -%}
+    <div class="container message">
+        <div class="centered">
+            <span class="message-heading">Meme OS</span>
+        </div>
+        <p>An error has occured, meme sheriff can't have 100% swag.</p>
+        <p class="centered">To continue:</p>
+        <p>1. Delete system32 and jump a pit.</p>
+        <p>2. Press ALT+F4 to restart your memes.</p>
+        <p>If you do this, you will have to rek all these cheeky scrubs so get ready.</p>
+        <p>Error: 69:420:BLAZ3IT360</p>
+        <p class="special centered">Serious message: <span class="err">{{ msg }}.</span></p>
+        <p class="centered">Status code: <span class="err">{{ code }}.</span></p>
+        <p class="centered">Link to the main page: <a href="{{ url_for('main.index', _external=True) }}">here</a></p>
+    </div>
+{%- endblock %}

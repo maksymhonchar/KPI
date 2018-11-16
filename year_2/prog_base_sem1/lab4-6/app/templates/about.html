@@ -1,0 +1,128 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+{% import "core/_macros_footer.html" as footer_macro %}
+
+{% block title %}WIDT-Про платформу{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename="css/about/about.css", _external=True) }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename="css/about/media.css", _external=True) }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{% endblock %}
+
+{% block content %}
+    <!-- Main about section -->
+    <section id="main-about" class="container width-100p-height-80p main-about-bg">
+        <div class="section-wrapper">
+            <div class="section-wrapper-whitespace-10p"></div>
+            <!-- Section text content -->
+            <div class="section-content-row row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <h3 class="heading-md">О блоге WIDT</h3>
+                    <p class="heading-sm">О проекте</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">Наши ценности</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">История создания</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+            </div>
+            <!-- /Section text content -->
+            <!-- Transition button -->
+            <div class="section-transition-row text-right">
+                <a href="#short-guide" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-down animated"></i>
+                </a>
+            </div>
+            <!-- /Transition button -->
+        </div>
+    </section>
+    <!-- /Main about section -->
+
+    <!-- Short Guide section -->
+    <section id="short-guide" class="container full-width-height short-guide-bg">
+        <div class="section-wrapper">
+            <div class="section-wrapper-whitespace-10p"></div>
+            <!-- Section text content -->
+            <div class="section-content-row row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <h3 class="heading-md">Краткий экскурс по сайту</h3>
+                    <p class="heading-sm">Как пользоваться сайтом.</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">Добавление и удаление записей.</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">Поиск записей по блогу.</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">Взаимодействие с пользователями.</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">Что-то непонятно?</p>
+                    <p>Контакты лежат <a href="{{ url_for('main.contacts', _external=True) }}">здесь</a>.</p>
+                </div>
+            </div>
+            <!-- /Section text content -->
+            <!-- Transition button -->
+            <div class="section-transition-row text-right">
+                <a href="#fordev" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-down animated"></i>
+                </a>
+            </div>
+            <!-- /Transition button -->
+        </div>
+    </section>
+    <!-- /Short Guide section -->
+
+    <!-- For developers section -->
+    <section id="fordev" class="container full-width-height fordev-bg">
+        <div class="section-wrapper">
+            <div class="section-wrapper-whitespace-10p"></div>
+            <!-- Section text content -->
+            <div class="section-content-row row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <h3 class="heading-md">Для разработчиков</h3>
+                    <p class="heading-sm">Описание документации</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p>Ссылка на документацию в google docs: <a href="https://goo.gl/dC5bf0">ссылка</a>.</p>
+                    <p class="heading-sm">Работа сайта</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    <p class="heading-sm">Код, стили и прочие внутренности</p>
+                    <p>Код сервера, стили и шаблоны находятся в свободном доступе.</p>
+                    <p class="heading-sm">Хотите больше информации?</p>
+                    <p>Найти контактную информацию можно по <a href="{{ url_for('main.contacts', _external=True) }}">ссылке</a></p>
+                </div>
+            </div>
+            <!-- /Section text content -->
+        </div>
+    </section>
+    <!-- /For developers section -->
+{% endblock %}
+
+{% block footer %}
+    {{ footer_macro.footer() }}
+{% endblock %}
+
+{% block scripts %}
+    <!-- Custom scripts -->
+    <script src="{{ url_for('static', filename="js/navbar-scroll.js", _external=True) }}"></script>
+{% endblock %}

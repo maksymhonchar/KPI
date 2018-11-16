@@ -1,0 +1,52 @@
+<RCC>
+    <qresource prefix="/data">
+        <file>data/army.csv</file>
+    </qresource>
+    <qresource prefix="/design">
+        <file>design/battlefield/background.png</file>
+        <file>design/battlefield/artifactstab_BG.png</file>
+        <file>design/battlefield/hiresoldierstab_BG.png</file>
+        <file>design/battlefield/heropowerstab_BG.png</file>
+        <file>design/tabwidget_tabBG.png</file>
+        <file>design/battlefield/battlefieldtab_BG.png</file>
+        <file>design/enemy.png</file>
+        <file>design/tabwidget_tabHoveredBG.png</file>
+        <file>design/enemy_pressed.png</file>
+        <file>design/controlButton_BG.png</file>
+        <file>design/heropowers/tapdamage.png</file>
+        <file>design/heropowers/anduin_heropower.png</file>
+        <file>design/heropowers/sylvanasHeroPower.png</file>
+        <file>design/heropowers/guldanrampage.png</file>
+        <file>design/heropowers/artasunity.png</file>
+        <file>design/artifacts/goldmultiplier.png</file>
+        <file>design/artifacts/diamonds.png</file>
+        <file>design/artifacts/criticalchance.png</file>
+        <file>design/artifacts/hpdecreaser.png</file>
+        <file>design/artifacts/perksdecreaser.png</file>
+        <file>design/army/dasha.png</file>
+        <file>design/army/kiev_batman.png</file>
+        <file>design/army/kim_5plus.png</file>
+        <file>design/army/matroskin.png</file>
+        <file>design/army/minion_child.png</file>
+        <file>design/army/penguin.png</file>
+        <file>design/army/peppa_pig.png</file>
+        <file>design/army/rabbit.png</file>
+        <file>design/army/rishuchiy_hromadyanin.png</file>
+        <file>design/army/sponge_bob.png</file>
+        <file>design/perksUI_BG.png</file>
+        <file>design/settings/settingsBG.png</file>
+        <file>design/settings/fblogo.png</file>
+        <file>design/settings/twitterlogo.png</file>
+        <file>design/settings/vklogo.png</file>
+        <file>design/settings/saveButton.png</file>
+        <file>design/windowicon.png</file>
+    </qresource>
+    <qresource prefix="/cursors">
+        <file>design/cursors/cursorArrovRed.png</file>
+        <file>design/cursors/cursorTarget.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>design/achievementDone_label.png</file>
+        <file>design/achievementNotDoneYet_label.png</file>
+    </qresource>
+</RCC>

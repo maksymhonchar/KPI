@@ -1,0 +1,13 @@
+<page><title>Comparison of terminal emulators</title><pageid>31202816</pageid><category>Software comparisons</category><sections><section title="">
+</section><section title="Operating systems">Note: Virtual machines and emulations are not included. Only directly supported platforms are listed.
+Notes
+^Dropdown This is a drop-down terminal.
+
+
+</section><section title="Capabilities">
+
+</section><section title="User interface">Notes
+^Output salad In a scrolled up position, command output overwrites the shown part of the scrollback buffer instead of appending to it.
+
+
+</section></sections></page>

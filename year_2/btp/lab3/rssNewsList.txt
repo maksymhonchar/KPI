@@ -1,0 +1,5 @@
+http://rss.nytimes.com/services/xml/rss/nyt/World.xml
+http://feeds.reuters.com/reuters/UKWorldNews?format=xml
+https://www.yahoo.com/news/rss/
+http://rss.cnn.com/rss/edition_world.rss
+http://feeds.bbci.co.uk/news/world/rss.xml

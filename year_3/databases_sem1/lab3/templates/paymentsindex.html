@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Payments page</title>
+</head>
+<body>
+
+<div class="col-sm-12">
+    <p>
+        <small>Back to <a href="{% url 'indexpage' %}">index</a></small>
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Payments page</h1>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>READ section</h3>
+            <div id="read_section"></div>
+            <button type="button" class="btn btn-primary" id="get_btn">Get existing content</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>CREATE section</h3>
+            <div id="create_section">
+                <label for="method_select">
+                    Method
+                    <select id="method_select">
+                        <option value="cash">cash</option>
+                        <option value="card">card</option>
+                    </select>
+                </label>
+                <br>
+                <label for="raw_salary_input">
+                    Raw salary <input type="text" name="raw_salary" id="raw_salary_input">
+                </label>
+                <br>
+                <label for="tax_rate_input">
+                    Tax rate <input type="text" name="tax_rate" id="tax_rate_input">
+                </label>
+            </div>
+            <button type="button" class="btn btn-success" id="create_btn">Create new</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>UPDATE section</h3>
+            <div id="update_section">
+                <label for="obj_id_select">
+                    Update row by ID:
+                    <select name="update_id" id="obj_id_select"></select>
+                </label>
+                <br>
+                <label for="method_upd_select">
+                    Method
+                    <select id="method_upd_select">
+                        <option value="cash">cash</option>
+                        <option value="card">card</option>
+                    </select>
+                </label>
+                <br>
+                <label for="raw_salary_upd_input">
+                    Raw salary <input type="text" name="raw_salary" id="raw_salary_upd_input">
+                </label>
+                <br>
+                <label for="tax_rate_upd_input">
+                    Tax rate <input type="text" name="tax_rate" id="tax_rate_upd_input">
+                </label>
+            </div>
+            <button type="button" class="btn btn-warning" id="update_btn">Update</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>DELETE section</h3>
+            <div id="delete_section">
+                <label for="delete_ids_select">
+                    Delete row by ID:
+                    <select name="delete_id" id="delete_ids_select"></select>
+                </label>
+            </div>
+            <button type="button" class="btn btn-danger" id="delete_btn">Delete</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>SEARCH section</h3>
+            <p>Search by max & min Raw Salary</p>
+            <label for="min_search">
+                Raw Salary MIN as float/int <input type="text" name="min_search" id="min_search">
+            </label>
+            <br>
+            <label for="max_search">
+                Raw Salary MAX as float/int <input type="text" name="max_search" id="max_search">
+            </label>
+            <br>
+            <button type="button" class="btn btn-primary" id="search_btn">Search!</button>
+            <br>
+            <br>
+            <div id="search_result"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Import/Export section</h3>
+            <p>
+                <a href="{% url 'exportmodel' %}?model_name=payments">Export payments to XML</a>
+            </p>
+            <p>Import payments from XML</p>
+            <form action="http://localhost:8000/api/payments/import/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="file">
+                <button type="submit">Import file</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        function updateGetUI(json) {
+            console.log('get:');
+            console.log(json);
+
+            var tblroot = document.createElement("div");
+            tblroot.setAttribute("class", "table-responsive");
+
+            var tbl = document.createElement("table");
+            tbl.setAttribute("class", "table table-bordered table-striped");
+
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+
+            var thead_tr = document.createElement("tr");
+
+            if (json) {
+                // Column names.
+                for (var colname in json[0]) {
+                    var th_elem = document.createElement("th");
+                    th_elem.innerHTML = colname;
+                    thead_tr.appendChild(th_elem);
+                }
+                // Column values for each column.
+                for (var i = 0; i < json.length; i++) {
+                    var tbody_tr_elem = document.createElement("tr");
+                    for (var item_colname in json[i]) {
+                        var tbody_td_elem = document.createElement("td");
+                        tbody_td_elem.innerHTML = json[i][item_colname];
+                        tbody_tr_elem.appendChild(tbody_td_elem);
+                    }
+                    tbody.appendChild(tbody_tr_elem);
+                }
+            } else {
+                var th_noitems_elem = document.createElement("th");
+                th_noitems_elem.innerHTML = "Pleaes create an item to get items";
+                thead_tr.appendChild(th_noitems_elem);
+            }
+
+            thead.appendChild(thead_tr);
+
+            tbl.appendChild(thead);
+            tbl.appendChild(tbody);
+
+            tblroot.appendChild(tbl);
+            document.getElementById("read_section").appendChild(tblroot);
+        }
+
+        function getPayments() {
+            $.ajax({
+                url: 'http://localhost:8000/api/payments/',
+                dataType: 'json', // jsonp
+                success: function (json) {
+                    updateGetUI(json);
+                }
+            });
+        }
+
+        function clearAndUpdateGetPayments() {
+            var read_section = document.getElementById("read_section");
+            read_section.innerHTML = "";
+            getPayments();
+        }
+
+        function updateUpdateDeleteIds() {
+            $.ajax({
+                url: 'http://localhost:8000/api/payments/',
+                dataType: 'json', // jsonp
+                success: function (json) {
+                    var updelem = document.getElementById("obj_id_select");
+                    updelem.innerHTML = "";
+                    var delelem = document.getElementById("delete_ids_select");
+                    delelem.innerHTML = "";
+
+                    for (var i = 0; i < json.length; i++) {
+                        var updoptionToPaste = document.createElement("option");
+                        var deloptionToPaste = document.createElement("option");
+
+                        var valueForOption = json[i]['id'];
+                        updoptionToPaste.setAttribute("value", valueForOption);
+                        updoptionToPaste.innerHTML = valueForOption;
+                        deloptionToPaste.setAttribute("value", valueForOption);
+                        deloptionToPaste.innerHTML = valueForOption;
+
+                        updelem.appendChild(updoptionToPaste);
+                        delelem.appendChild(deloptionToPaste);
+                    }
+                }
+            });
+        }
+
+        $(function () {
+            $("#get_btn").click(function () {
+                clearAndUpdateGetPayments();
+            })
+        });
+
+        $(function () {
+            $("#create_btn").click(function () {
+                var jsonToPost = {
+                    method: document.getElementById("method_select").value,
+                    raw_salary: parseFloat(document.getElementById("raw_salary_input").value),
+                    tax_rate: parseFloat(document.getElementById("tax_rate_input").value)
+                };
+                var posturl = "http://localhost:8000/api/payments/add/";
+                $.ajax({
+                    type: "POST",
+                    url: posturl,
+                    data: JSON.stringify(jsonToPost),
+                    dataType: "text",
+                    contentType: "text/plain",
+                    success: function (json) {
+                        console.log('post');
+                        console.log(json);
+                        clearAndUpdateGetPayments();
+                        updateUpdateDeleteIds();
+                    }
+                });
+            });
+        });
+
+        $(function () {
+            $("#update_btn").click(function () {
+                var jsonToUpdate = {
+                    method: document.getElementById("method_upd_select").value,
+                    raw_salary: parseFloat(document.getElementById("raw_salary_upd_input").value),
+                    tax_rate: parseFloat(document.getElementById("tax_rate_upd_input").value)
+                };
+                var updurl = "http://localhost:8000/api/payments/upd/" + parseInt(document.getElementById('obj_id_select').value) + '/';
+                $.ajax({
+                    type: "PUT",
+                    url: updurl,
+                    data: JSON.stringify(jsonToUpdate),
+                    dataType: "text",
+                    contentType: "text/plain",
+                    success: function (json) {
+                        console.log('put');
+                        console.log(json);
+                        clearAndUpdateGetPayments();
+                    }
+                });
+            });
+        });
+
+        $(function () {
+            $("#delete_btn").click(function () {
+                var rowToDeleteID = document.getElementById('delete_ids_select').value;
+                var delurl = "http://localhost:8000/api/payments/del/" + rowToDeleteID + '/';
+                $.ajax({
+                    type: "DELETE",
+                    url: delurl,
+                    success: function (json) {
+                        console.log('delete');
+                        console.log(json);
+                        clearAndUpdateGetPayments();
+                        updateUpdateDeleteIds();
+                    },
+                    error: function (data) {
+                        console.log('error while delete');
+                        console.log(data);
+                        alert('sorry, cannot delete element');
+                    }
+                });
+            });
+        });
+
+        $(function () {
+            $("#search_btn").click(function () {
+                var searchurl = 'http://localhost:8000/api/payments/search/';
+                var maxSearchValue = parseFloat(document.getElementById("max_search").value);
+                var minSearchValue = parseFloat(document.getElementById("min_search").value);
+
+                searchurl += '?min=' + minSearchValue + '&max=' + maxSearchValue;
+
+                $.ajax({
+                    type: "GET",
+                    url: searchurl,
+                    dataType: 'json', // jsonp
+                    success: function (json) {
+                        if (json.length) {
+                            var divToPasteSearchResults = document.createElement('div');
+
+                            var txtSearchResultLbl = document.createElement('p');
+                            txtSearchResultLbl.innerHTML = "Found rows:";
+                            divToPasteSearchResults.appendChild(txtSearchResultLbl);
+
+                            for (var i = 0; i < json.length; i++) {
+                                var resultParagraphElem = document.createElement('small');
+                                for (var key in json[i]) {
+                                    resultParagraphElem.innerHTML += key + ' - ' + json[i][key] + ';\t';
+                                }
+                                divToPasteSearchResults.appendChild(
+                                    document.createElement('br')
+                                );
+                                divToPasteSearchResults.appendChild(resultParagraphElem);
+                            }
+
+                            var sresult = document.getElementById('search_result');
+                            sresult.innerHTML = "";
+                            sresult.appendChild(divToPasteSearchResults);
+                        } else {
+                            document.getElementById('search_result').innerHTML = "Didnt find any";
+                        }
+                    }
+                });
+            });
+        });
+
+        // On document load update content.
+        getPayments();
+        updateUpdateDeleteIds();
+    });
+</script>
+
+</body>
+</html>

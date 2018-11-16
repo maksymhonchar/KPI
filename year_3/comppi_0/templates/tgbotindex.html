@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>TGBot index</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <h3>TGBot index</h3>
+            <h4>back to TGAdmin index: <a href="{% url 'indexcore' %}">link</a></h4>
+            <p>You are using bot with token: {{ token }}</p>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+            <h3>Dont forget to setup tgbot!</h3>
+            <p>Setup here: <a href="{% url 'tgbotsetup' %}">link_to_setup</a></p>
+            <p>Also initialize bot using Telegram and /start! <a href="https://t.me/tgrmadminbot">link</a></p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-10">
+            {% if bot is not None %}
+                <h3>Data about bot</h3>
+                <p><b>token:</b> {{ bot.token }}</p>
+                <p>
+                    <b>bot admin:</b>
+                    {{ bot.admin.last_name }}
+                    {{ bot.admin.first_name }}
+                    id{{ bot.admin.id }}
+                </p>
+                <p><b>language:</b> {{ bot.admin.language_code }}</p>
+                <h3>Data about tracked chat</h3>
+                {% if bot.chat is not None %}
+                    <p><b>Chat info:</b> {{ bot.chat.chatinst.type }} {{ bot.chat.chatinst.title }} id{{ bot.chat.chatinst.id }}</p>
+                    <p><b>Chat Tracked Users:</b></p>
+                    {% for userid, user in bot.chat.chat_users.items %}
+                        <p>@{{ user.username }} - {{ user.last_name }} {{ user.first_name }} id{{ userid }}</p>
+                    {% endfor %}
+                    <p><b>Chat Tracked Posts:</b></p>
+                    {% for pid, p in bot.chat.tracked_posts.items %}
+                        <p>
+                            pid{{ pid }} - text:"{{ p.tgpost.text }}" |
+                            {{ p.views }} views |
+                            <a href="rdr/?redirect_to=http://{{ p.redirect_to }}/&post_id={{ pid }}&utm_campaign_source=telegram-campaign-source&utm_campaign_medium=telegram-campaign-medium">link_to_track</a>
+                        </p>
+                    {% endfor %}
+                    <p><b>Chat History Posts:</b></p>
+                    {% for pid, p in bot.chat.chat_posts.items %}
+                        <p>pid{{ pid }} by @{{ p.from_user.username }} - text: "{{ p.text }}"</p>
+                    {% endfor %}
+                {% else %}
+                    <p><b>chat</b> is not initalized yet.</p>
+                {% endif %}
+            {% else %}
+                <h3>Please, initalize the bot using telegram chat.</h3>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

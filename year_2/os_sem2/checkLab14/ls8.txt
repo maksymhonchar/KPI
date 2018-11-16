@@ -1,0 +1,45 @@
+OS:
+total 6
+22 drwxrwxr-x 3 zulus zulus 1024 гру  3 15:35 .
+ 2 drwxrwxrwx 5 root  root  1024 гру  3 15:14 ..
+23 lrwxrwxrwx 1 zulus zulus   18 гру  3 15:24 labs -> ../source_OS/labs/
+24 lrwxrwxrwx 1 zulus zulus   19 гру  3 14:01 lects -> ../source_OS/lects/
+27 drwxrwxr-x 2 zulus zulus 1024 гру  3 15:34 links
+28 -rw-r--r-- 1 zulus zulus    0 гру  3 15:35 ls8
+25 -rw-rw-r-- 1 zulus zulus 1930 гру  3 15:34 result8
+26 -rw-rw-r-- 1 zulus zulus  284 гру  3 14:06 tree_OS
+
+OS/links:
+total 3
+27 drwxrwxr-x 2 zulus zulus 1024 гру  3 15:34 .
+22 drwxrwxr-x 3 zulus zulus 1024 гру  3 15:35 ..
+29 -rw-rw-r-- 1 zulus zulus  513 гру  3 15:34 tree8_h
+
+source_OS/:
+total 5
+12 drwxr-xr-x 5 zulus zulus 1024 гру  3 13:18 .
+ 2 drwxrwxrwx 5 root  root  1024 гру  3 15:14 ..
+13 drwxr-xr-x 2 zulus zulus 1024 гру  3 13:50 .hidden
+16 drwxr-xr-x 2 zulus zulus 1024 гру  3 13:46 labs
+19 drwxr-xr-x 2 zulus zulus 1024 гру  3 13:47 lects
+
+source_OS/.hidden:
+total 4
+13 drwxr-xr-x 2 zulus zulus 1024 гру  3 13:50 .
+12 drwxr-xr-x 5 zulus zulus 1024 гру  3 13:18 ..
+15 -rw-rw-r-- 1 zulus zulus  232 гру  3 13:50 .tree8
+14 -rw-rw-r-- 1 zulus zulus    6 гру  3 13:49 .user8
+
+source_OS/labs:
+total 4
+16 drwxr-xr-x 2 zulus zulus 1024 гру  3 13:46 .
+12 drwxr-xr-x 5 zulus zulus 1024 гру  3 13:18 ..
+17 -rw-rw-r-- 1 zulus zulus    5 гру  3 13:44 lab8
+18 -rw-rw-r-- 1 zulus zulus    5 гру  3 13:46 lab9
+
+source_OS/lects:
+total 2
+19 drwxr-xr-x 2 zulus zulus 1024 гру  3 13:47 .
+12 drwxr-xr-x 5 zulus zulus 1024 гру  3 13:18 ..
+21 -rw-rw-r-- 1 zulus zulus    0 гру  3 13:47 lect7
+20 -rw-rw-r-- 1 zulus zulus    0 гру  3 13:47 lect8

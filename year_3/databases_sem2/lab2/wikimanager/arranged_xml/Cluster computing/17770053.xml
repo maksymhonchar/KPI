@@ -1,0 +1,18 @@
+<page><title>Comparison of cluster software</title><pageid>17770053</pageid><category>Cluster computing</category><sections><section title="">The following tables compare general and technical information for notable computer cluster software. This software can be grossly separated in four categories: Job scheduler, nodes management, nodes installation and integrated stack (all the above).
+
+
+</section><section title="General information">Table explanation
+Software: The name of the application that is described
+
+
+</section><section title="Technical information">Table Explanation
+Software: The name of the application that is described
+SMP aware:
+basic: hard split into multiple virtual host
+basic+: hard split into multiple virtual host with some minimal/incomplete communication between virtual host on the same computer
+dynamic: split the resource of the computer(CPU/Ram) on demand
+
+
+</section><section title="History and adoption">
+
+</section></sections></page>

@@ -1,0 +1,74 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as pagmacros %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+{% import "core/_macros_forms.html" as macro_form %}
+
+{% block title %}Поиск пользователей{% endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user) }}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Поиск пользователей по сайту</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% call macro_form.render_form(form, action_url=url_for('main.search', _external=True)) %}
+                {{ macro_form.render_field(form.query, placeholder='Имя, фамилия или юзернейм', type='text') }}
+                <div class="login_buttons_wrap">
+                    {{ macro_form.render_button(form.submit, btn_class='custom_submit_button') }}
+                </div>
+            {% endcall %}
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            {% if text %}
+                {% if not users%}
+                    <h3>Ваш запрос по строке <b>"{{ form.query.data }}"</b> не дал ни одного результата.</h3>
+                {% else %}
+                    <h3>Результаты по запросу <b>"{{ form.query.data }}":</b></h3>
+                    {% for user in users %}
+                        <p>
+                            <a href="{{ url_for('main.user', username=user.username, _external=True) }}">@{{ user.username }}</a>
+                            | Постов: {{ user.posts.count() }}
+                            | Комментариев: {{ user.comments.count() }}
+                        </p>
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            <h3>Еще одна прикольная форма :0</h3>
+            <input onfocusout="validateForm()" class="form-control custom_input" id="custom_input" name="custom_input" placeholder="Не вводите пустые значения, или слишком короткие строки!" type="text" value="">
+            <p style="margin-top: 10px"><span class="label label-md label-danger" id="span-info"></span></p>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        function validateForm() {
+            var input_value = document.getElementById('custom_input').value;
+            var info_span = document.getElementById('span-info');
+            console.log(info_span);
+            if (input_value == "") {
+                info_span.innerHTML = "Поле не может быть пустым!";
+                return false;
+            }
+            if (input_value.length <= 5) {
+                info_span.innerHTML = "В поле было введено слишком маленькая строка!";
+                return false;
+            }
+            info_span.innerHTML = "Всё окич";
+            return true;
+        }
+    </script>
+
+{% endblock %}

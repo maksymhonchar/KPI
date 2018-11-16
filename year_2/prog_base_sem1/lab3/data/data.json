@@ -1,0 +1,156 @@
+{
+  "count": 8,
+  "items": [{
+    "post_id": 1,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my first message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 2,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my second message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 3,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my third message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 4,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my fourth message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 5,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my fifth message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 6,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my sixths message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 7,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my seventh message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  },
+  {
+    "post_id": 8,
+    "from_id": 127,
+    "owner_id": 127,
+    "post_type": "post",
+    "text": "Post message from user with id 127. This is my eights message.",
+    "title": "Title example",
+    "likes": 0,
+    "reposts": 0,
+    "publish_date": "01-01-2016",
+    "owner": {
+      "name": "Maxim",
+      "surname": "Gonchar",
+      "sex": 0
+    },
+    "attachments": [
+      {}
+    ]
+  }
+  ]
+}

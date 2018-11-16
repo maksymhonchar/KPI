@@ -1,0 +1,54 @@
+<html>
+<head>
+<style type ="text/css" >
+.footer {
+ position: fixed;
+ text-align: center;
+ bottom: 10px;
+ width: 100%;
+}
+h3 {
+ font-family: verdana;
+ font-size: 150%;
+ margin-bottom: 5px;
+ margin-top: 1px;
+}
+h4 {
+ font-family: verdana;
+ margin-bottom: 15px;
+ margin-top: 1px;
+}
+</style>
+<title> API help page</title>
+</head>
+<body link="#808080">
+
+<h3>Here you can see list of links you can go to.</h3>
+
+<br />
+
+<h4>You are in API section right now</h4>
+
+<li> [ <a href="http://127.0.0.1:5000/api">/api</a> ] or [ <a href="http://127.0.0.1:5000/api/help">/api/help</a> ] <br />
+<li> [ <a href="http://127.0.0.1:5000/api/directors">/api/directors</a> ] <br />
+<li> [ <a href="http://127.0.0.1:5000/api/directors/about">/api/directors/about</a> ] <br />
+<li> [ /api/directors/{id} ] <br/>
+&emsp; Note: {id} describes certain director id number. <br/>
+
+<br />
+<br />
+
+<h4>Try these requests:</h4>
+<li> [ /api/directors/inv=K&years=P ] </li>
+<li> [ /api/directors/inv&le;K&years&le;P ] </li>
+<li> [ /api/directors/inv>K&years>P ] </li>
+&emsp; Note: {inv} and {years} should be valid numbers. <br/>
+<br />
+
+<div class="footer">
+Maxim Gonchar Lab4 <br/> 
+<a href="http://127.0.0.1:5000/home">Home</a>
+</div>
+
+</body>
+</html>

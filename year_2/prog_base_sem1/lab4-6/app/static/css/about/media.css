@@ -1,0 +1,33 @@
+/* Large Devices, Wide Screens */
+/* For screens less than 1200px */
+@media only screen and (max-width: 1200px) {}
+/* Medium Devices, Desktops */
+/* For screens less than 992px */
+@media only screen and (max-width : 992px) {
+}
+/* Small Devices, Tablets */
+/* For screens less than 768px */
+@media only screen and (max-width : 768px) {
+    .heading-sm {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+/* Extra Small Devices, Phones */
+/* For screens less than 480px */
+@media only screen and (max-width : 480px) {
+    .heading-md {
+        font-size: 42px;
+    }
+
+    .heading-sm {
+        font-size: 27px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,64 @@
+.img-avatar {
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.img-avatar-sm {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.section-content-col-avatar {
+    display: table-cell;
+    width: 20%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.section-content-col-descr {
+    display: table-cell;
+    width: 80%;
+    height: 100%;
+    padding: 0 20px;
+    vertical-align: middle;
+}
+
+.section-content-col-avatar-bg {
+    display: table-cell;
+    width: 40%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.section-content-col-userinfo {
+    display: table-cell;
+    width: 60%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.user-new-post-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.user-post-wrapper {
+    display: table-cell;
+    width: 33%;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 15px;
+    text-align: center;
+}
+
+.user-post-line-wrapper {
+    display: table-row;
+    width: 100%;
+    height: 1%;
+    vertical-align: middle;
+}

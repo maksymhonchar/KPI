@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>Алгоритм Ромберга</h1>
+<br>
+<hr>
+<br>
+<p>Кількість кроків для досягнення необхідної точності: {{ final_step }}</p>
+<br>
+<p>Фінальний масив:</p>
+<ol>
+    {% for row in final_array %}
+    {% if row.0 != 0 %}
+    <li>
+        {% for item in row %}
+        {% if item != 0.0 %}
+        {{ item }} |
+        {% endif %}
+        {% endfor %}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ol>
+<br>
+<p>Розмір кроків h:</p>
+<ol>
+    {% for row in h_step_holder %}
+    <li>{{row}}</li>
+    {% endfor %}
+</ol>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<br>
+<p>Критерій Річардсона - порівнюємо із 10^(-9):</p>
+<p>rich_kriteria = (main_array[i, j - 1] - main_array[i - 1, j - 1]) / (power_of_4 - 1)</p>
+{% for i in r_kminus1_hi_values %}
+<ul>
+    <li>{{ i }}</li>
+</ul>
+{% endfor %}
+<br>
+<br>
+<br>
+
+{% endblock %}

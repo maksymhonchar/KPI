@@ -1,0 +1,9 @@
+<page><title>Comparison of HTML parsers</title><pageid>36625178</pageid><category>HTML parsers</category><sections><section title="">HTML parsers are software for automated Hypertext Markup Language (HTML) parsing. They have two main purposes:
+HTML traversal: offer an interface for programmers to easily access and modify of the "HTML string code". Canonical example: DOM parsers.
+HTML clean: to fix invalid HTML and to improve the layout and indent style of the resulting markup. Canonical example: HTML Tidy.
+* Latest release (of significant changes) date.
+** sanitize (generating standard-compatible web-page, reduce spam, etc.) and clean (strip out surplus presentational tags, remove XSS code, etc.) HTML code.
+*** Updates HTML4.X to XHTML or to HTML5, converting deprecated tags (ex. CENTER) to valid ones (ex. DIV with style="text-align:center;").
+
+
+</section></sections></page>

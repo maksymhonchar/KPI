@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Адміністратор Головна - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Вітаємо на сторінці Адміністратора Реєстру, {{ user.username }}!</h3>
+        <hr>
+        <p>Ви є адміністратором Ресурсу з <b>{{ user.date_joined }}</b>.</p>
+        <p>Номер вашої особової справи: <b>{{ userinst.doc_code }}</b></p>
+        <p>Зв'язок із Вами:</p>
+        <pre>{{ userinst.credentials }}</pre>
+        <hr>
+        <p>Як Адміністратор, Ви маєте право на такі дії:</p>
+        <ul>
+            <li>Створювати, Змінювати, Видаляти Реєстраторів</li>
+            <li>Створювати звіти діяльності Реєстраторів</li>
+        </ul>
+        <hr>
+        <p>Для управління Реєстраторами, перейдіть за <a href="{% url 'adminmng' %}">цим посиланням</a>.</p>
+        <p>Для створення звітів, перейдіть за <a href="{% url 'searchreportindex' %}">цим посиланням</a>.</p>
+        <hr>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

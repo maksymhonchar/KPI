@@ -1,0 +1,45 @@
+/* SECTIONS BACKGROUNS */
+.main-about-bg {
+    background: #a5dcff no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.short-guide-bg {
+    background: #ffe2b5 no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fordev-bg {
+    height: 97%;
+    background: #a5dcff no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* STYLINGS FOR TEXT CONTENT */
+.heading-md {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.heading-sm {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.heading-xs {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.par-sm {
+    font-size: 14px;
+}

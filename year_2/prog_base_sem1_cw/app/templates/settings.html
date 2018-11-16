@@ -1,0 +1,66 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_forms.html" as macro_form %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+
+{% block title %}Настройки @{{ current_user.username }}{% endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user) }}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h1 class="text-center">Настройки пользователя {{ current_user.username }}.</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="margin-vertical-10px text-center">
+                {{ macro_form.render_link_button(btn_class='custom_submit_button2', text='Изменить адрес email', href=url_for('auth.change_email_request', _external=True)) }}
+                {{ macro_form.render_link_button(btn_class='custom_submit_button2', text='Изменить пароль', href=url_for('auth.change_password', _external=True)) }}
+                {{ macro_form.render_link_button(btn_class='custom_submit_button2', text='Изменить фотографию', href=url_for('main.upload_avatar', _external=True)) }}
+            </div>
+            <div class="col-xs-12">
+                {% call macro_form.render_form(form, action_url=url_for('main.settings', _external=True), class_='settings-form') %}
+                    {{ macro_form.render_field(form.name, placeholder='Имя', type='text') }}
+                    {{ macro_form.render_field(form.surname, placeholder='Фамилия', type='text') }}
+                    <div id="datetimepicker">{{ macro_form.render_field(form.birthday, placeholder='дд мм гггг', type='text') }}</div>
+                    {{ macro_form.render_field(form.location, placeholder='Текущий город', type='text') }}
+                    {{ macro_form.render_field(form.about_me, placeholder='Люблю вареники з салом', type='text') }}
+                    <div class="login_buttons_wrap">
+                        {{ macro_form.render_button(form.submit, btn_class='custom_submit_button') }}
+                    </div>
+                {% endcall %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <!-- Custom scripts -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript">
+        ;(function($){
+            $.fn.datepicker.dates['ru'] = {
+                days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+                daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+                daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+                months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+                today: "Сегодня",
+                clear: "Очистить",
+                format: "dd.mm.yyyy",
+                weekStart: 1
+            };
+        }(jQuery));
+        $('#datetimepicker input').datepicker({
+            format: "dd-mm-yyyy",
+            clearBtn: true,
+            language: "ru",
+            autoclose: true,
+            todayHighlight: true
+        });
+    </script>
+{% endblock %}

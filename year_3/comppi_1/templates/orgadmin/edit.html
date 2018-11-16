@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Зміна Реєстратора - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h4>Сторінка зміни Реєстратора із username "{{ regtochange.user.username }}"</h4>
+        <hr>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ regchangeform.non_field_errors }}
+            {% if formerrmsg is not None %}
+            <ul class="errorlist nonfield">
+                <li>{{ formerrmsg }}</li>
+            </ul>
+            {% endif %}
+            {% for hidden_field in regchangeform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            {% for field in regchangeform.visible_fields %}
+            <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            {% endfor %}
+            <button type="submit">Змінити</button>
+        </form>
+        <hr>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

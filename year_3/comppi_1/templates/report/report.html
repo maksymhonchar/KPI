@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Сторінка звіту - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Звіт №{{ reportinst.pk }}.</h3>
+        <hr>
+        <h4>Виконавець</h4>
+        <ul>
+            <li>Реєстратор із username: {{ reportinst.registrant.user.username }}</li>
+            <li>Код особової справи: {{ reportinst.registrant.doc_code }}</li>
+            <li>Засоби зв'язку:</li>
+            <pre>{{ reportinst.registrant.credentials }}</pre>
+        </ul>
+        <hr>
+        <h4>Що було зроблено:</h4>
+        <ul>
+            <li>Дія: {{ reportinst.get_action_display }}</li>
+            <li>Час події: {{ reportinst.action_datetime }}</li>
+        </ul>
+        <h4>Організація</h4>
+        <ul>
+            <li>Організація "{{ reportinst.organization.full_naming  }}"</li>
+            <li><a href="{% url 'manageorg' orgid=reportinst.organization.pk %}">Посилання на організацію</a></li>
+        </ul>
+        <hr>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

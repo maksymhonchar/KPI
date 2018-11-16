@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+{% import "core/_macros_forms.html" as macro_form %}
+
+{% block title %}Комментарий от @{{ comment.author.username }}{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% if comment.disabled %}
+                <h1>Комментарий был удален.</h1>
+            {% else %}
+                <p>Автор: <a href="{{ url_for('main.user', username=comment.author.username, _external=True) }}">@{{ comment.author.username }}</a>
+                    , написано: {{ moment(comment.timestamp).format('L') }}</p>
+                <h3>"{{ comment.body }}"</h3>
+                <br>
+                <hr>
+                <p>Назад к посту: <a href="{{ url_for('main.post', id=comment.post.id, _external=True) }}">ссылка</a></p>
+                {% if current_user == comment.author -%}
+                    <p><a href="{{ url_for('main.edit_comment', id=comment.id, _external=True) }}">Изменить комментарий</a></p>
+                {% endif %}
+            {% endif %}
+            {% if current_user.is_administrator() %}
+                <br>
+                {% if comment.disabled %}
+                    <span class="label label-primary label-md">
+                        <a href="{{ url_for('administer.moderate_enable', id=comment.id, _external=True) }}">Возобновить</a>
+                    </span>
+                {% else %}
+                    <span class="label label-danger label-md">
+                        <a href="{{ url_for('administer.moderate_disable', id=comment.id, _external=True) }}">Удалить</a>
+                    </span>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

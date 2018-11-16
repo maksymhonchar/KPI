@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directors>
+  <director name="Sasha" surname="Bratus">
+    <id>2</id>
+    <birthdate>1997-05-06</birthdate>
+    <investments>2000</investments>
+    <years>3.00</years>
+  </director>
+  <director name="Igor" surname="Klapatniyk">
+    <id>3</id>
+    <birthdate>1998-02-15</birthdate>
+    <investments>3000</investments>
+    <years>0.00</years>
+  </director>
+</directors>

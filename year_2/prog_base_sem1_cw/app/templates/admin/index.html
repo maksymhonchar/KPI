@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as paginmacro %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+
+{% block title %}WIDT-Модерация{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Здесь можно изменять пользователей, комментарии, записи.</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Изменение пользователей: <a href="{{ url_for('administer.admin_users', _external=True) }}">ссылка</a></p>
+            <p>Изменение комментариев: <a href="{{ url_for('administer.admin_comments', _external=True) }}">ссылка</a></p>
+            <p>Изменение записей: <a href="{{ url_for('administer.admin_posts', _external=True) }}">ссылка</a></p>
+        </div>
+    </div>
+{% endblock %}

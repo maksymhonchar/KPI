@@ -1,0 +1,77 @@
+<page><title>Software categories</title><pageid>30888839</pageid><category>Software by type</category><sections><section title="">Software categories are groups of software. They allow software to be understood in terms of those categories instead of the particularities of each package. Different classification schemes consider different aspects of software.
+
+
+</section><section title="Categorization approaches">
+
+=== Function ===
+Computer software can be put into categories based on common function, type, or field of use. There are three broad classifications:
+Application software is the general designation of computer programs for performing tasks. Application software may be general purpose (word processing, web browsers, etc.) or have a specific purpose (accounting, truck scheduling, etc.). Application software contrasts with system software.
+System software is a generic term referring to the computer programs used to start and run computer systems including diverse application software and networks.
+Computer programming tools, such as compilers and linker, are used to translate and combine computer program source code and libraries into executable RAMs (programs that will belong to one of the three said)
+
+
+=== Copyright status ===
+The GNU Project categorizes software by copyright status: free software, open source software, public domain software, copylefted software, noncopylefted free software, lax permissive licensed software, GPL-covered software, the GNU operating system, GNU programs, GNU software, FSF-copyrighted GNU software, nonfree software, proprietary software, freeware, shareware, private software and commercial software.
+
+
+==== Free software ====
+Free software is software that comes with permission for anyone to use, copy and distribute, either verbatim or with modifications, either gratis or for a fee. In particular, this means that source code must be available. "If it's not source, it's not software." If a program is free, then it can potentially be included in a free operating system such as GNU, or free versions of the Linux system.
+Free software in the sense of copyright license (and the GNU project) is a matter of freedom, not price. But proprietary software companies typically use the term "free software" to refer to price. Sometimes this means a binary copy can be obtained at no charge; sometimes this means a copy is bundled with a computer for sale at no additional charge.
+
+
+==== Open source software ====
+Open source software is software with its source code made available under a certain license to its licensees. It can be used and disseminated at any point, the source code is open and can be modified as required. The one condition with this type of software is that when changes are made users should make these changes known to others. One of the key characteristics of open source software is that it is the shared intellectual property of all developers and users. The Linux operating system is one of the best known examples of a collection of open source software.
+
+
+==== Copylefted software ====
+Copylefted software is free software whose distribution terms ensure that all copies of all versions carry more or less the same distribution terms. This means, for instance, that copyleft licenses generally disallow others to add additional requirements to the software (though a limited set of safe added requirements can be allowed) and require making source code available. This shields the program, and its modified versions, from some of the common ways of making a program proprietary. Some copyleft licenses block other means of turning software proprietary.
+Copyleft is a general concept. Copylefting an actual program requires a specific set of distribution terms. Different copyleft licenses are usually &#8220;incompatible&#8221; due to varying terms, which makes it illegal to merge the code using one license with the code using the other license. If two pieces of software use the same license, they are generally mergeable.
+
+
+==== Non-copylefted free software ====
+Noncopylefted free software comes from the author with permission to redistribute and modify and to add license restrictions.
+If a program is free but not copylefted, then some copies or modified versions may not be free. A software company can compile the program, with or without modifications, and distribute the executable file as a proprietary software product. The X Window System illustrates this approach. The X Consortium releases X11 with distribution terms that make it noncopylefted free software. If you wish, you can get a copy which has those distribution terms and is free. However, nonfree versions are available and workstations and PC graphics boards for which nonfree versions are the only ones that work. The developers of X11 made X11 nonfree for a while; they were able to do this because others had contributed their code under the same noncopyleft license.
+
+
+==== Shareware ====
+Shareware is software that comes with permission to redistribute copies, but says that anyone who continues to use a copy is required to pay. Shareware is not free software, or even semi-free. For most shareware, source code is not available; thus, the program cannot be modified. Shareware does not come with permission to make a copy and install it without paying a license fee, including for nonprofit activity.
+
+
+==== Freeware ====
+Like shareware, freeware is software available for download and distribution without any initial payment. Freeware never has an associated fee. Things like minor program updates and small games are commonly distributed as freeware. Though freeware is cost free, it is copyrighted, so other people can't market the software as their own.
+
+
+</section><section title="Microsoft TechNet and AIS Software categories">This classification has seven major elements. They are: platform and management, education and reference, home and entertainment, content and communication, operations and professional, product manufacturing and service delivery, and line of business.
+Platform and management&#8212;Desktop and network infrastructure and management software that allows users to control the computer operating environment, hardware components and peripherals and infrastructure services and security.
+Education and reference&#8212;Educational software that does not contain resources, such as training or help files for a specific application.
+Home and entertainment&#8212;Applications designed primarily for use in or for the home, or for entertainment.
+Content and communications&#8212;Common applications for productivity, content creation, and communications. These typically include office productivity suites, multimedia players, file viewers, Web browsers, and collaboration tools.
+Operations and professional&#8212;Applications designed for business uses such as enterprise resource management, customer relations management, supply chain and manufacturing tasks, application development, information management and access, and tasks performed by both business and technical equipment.
+Product manufacturing and service delivery&#8212;Help users create products or deliver services in specific industries. Categories in this section are used by the North American Industry Classification System (NAICS).
+
+
+=== Vertical applications ===
+Agriculture, Forestry and Hunting
+Mining, Quarrying, and Oil and Gas Extraction
+Utilities
+Construction
+Manufacturing
+Wholesale Trade
+Retail Trade
+Transportation and Warehousing
+Information
+Finance and Insurance
+Real Estate and Rental and Leasing
+Professional, Scientific, and Technical Services
+Management of Companies and Enterprises
+Administrative and Support and Waste Management and Remediation Services
+Educational Services
+Health Care and Social Assistance
+Arts, Entertainment, and Recreation
+Accommodation and Food Services
+Public Administration
+Other Services (except Public Administration)
+Internal and proprietary line-of-business applications
+
+
+</section></sections></page>

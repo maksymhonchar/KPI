@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directors>
+  <director name="Maxim" surname="Gonchar">
+    <id>1</id>
+    <birthdate>1998-07-08</birthdate>
+    <investments>1000</investments>
+    <years>20.50</years>
+  </director>
+  <director name="Sasha" surname="Bratus">
+    <id>2</id>
+    <birthdate>1997-05-06</birthdate>
+    <investments>2000</investments>
+    <years>3.00</years>
+  </director>
+  <director name="Igor" surname="Klapatniyk">
+    <id>3</id>
+    <birthdate>1998-02-15</birthdate>
+    <investments>3000</investments>
+    <years>0.50</years>
+  </director>
+  <director name="Fedya" surname="Andrienko">
+    <id>4</id>
+    <birthdate>1992-09-25</birthdate>
+    <investments>19000</investments>
+    <years>5.50</years>
+  </director>
+  <director name="Sergei" surname="Romaniyk">
+    <id>5</id>
+    <birthdate>1988-11-11</birthdate>
+    <investments>123000</investments>
+    <years>15.50</years>
+  </director>
+</directors>

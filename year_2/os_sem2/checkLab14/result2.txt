@@ -1,0 +1,40 @@
+﻿bee
+2
+
+lab2
+lab3
+
+283485 -rw-rw-r-- 2 bee bee  237 бер 26 16:43 tree2_h
+283485 -rw-rw-r-- 2 bee bee  237 бер 26 16:43 .tree2
+
+NAME   FSTYPE LABEL UUID                                 MOUNTPOINT
+sda                                                      
+├─sda1 ext4         991fdca8-10fb-4f93-9c92-5d7f63d8fdcd /
+├─sda2                                                   
+└─sda5 swap         48549743-e0d6-434c-99ca-42e31bc93c67 [SWAP]
+sdb                                                      
+├─sdb1 ntfs   NTFS  3E2F75A5707475E6                     /home/bee/mount/EXT4
+└─sdb2 ext4         b82f744f-7f45-49a5-8782-45f28ecdbe95 /home/bee/mount/NTFS
+sdc                                                      
+├─sdc1 ntfs   NTFS  DADC2E6EDC2E44DB                     
+└─sdc2 vfat   FAT   F4E2-67ED                            
+sr0                                                      
+
+266070 -rwxrwxrwx 1 bee bee  240 тра 18 15:47 tree2_h
+266072 -rwxrwxrwx 1 bee bee  240 тра 18 15:47 .tree2
+
+12a13,26
+> bee
+> OS
+> ├── labs -> ../source_OS/labs
+> │   ├── lab2
+> │   └── lab3
+> ├── lects -> ../source_OS/lects
+> │   ├── lect1
+> │   └── lect2
+> ├── links
+> │   └── tree2_h
+> ├── result2
+> └── tree_OS
+> 
+> 3 directories, 7 files

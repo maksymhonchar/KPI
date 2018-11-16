@@ -1,0 +1,13 @@
+<page><title>Comparison of split testing tools</title><pageid>50507302</pageid><category>Software comparisons</category><sections><section title="">Performing split testing on a website requires a combination of features. There are many tools that make it easier to rotate variants and report results, yet they have many differences.
+
+
+</section><section title="Definitions">Integration of a tool with web development: using a JavaScript snippet means the developer must edit and install a snippet into the HTML code of the website. Use of a WordPress plug-in requires download and activation of the plug-in.
+Content testing: identifying what the tool allows the developer to test, and what requires optimization
+Test creation: whether tests can be created by the developer (user defined), or the tool automatically creates tests based on many permutations of all options that can be tested
+Minimum traffic required: by the website receive before it can use the tool
+Release: open to the public, or only granted to a select few users
+
+
+</section><section title="Overview">
+
+</section></sections></page>

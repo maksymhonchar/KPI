@@ -1,0 +1,6 @@
+CREATE TABLE Payments (
+	Id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	Method ENUM('cash', 'card') NOT NULL,
+	RawSalary DECIMAL(10,2) NOT NULL,
+	TaxRate DECIMAL(4,2) NOT NULL
+); 

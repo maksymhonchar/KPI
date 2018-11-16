@@ -1,0 +1,42 @@
+<page><title>Comparison of file synchronization software</title><pageid>27309498</pageid><category>Data synchronization</category><sections><section title="">This is a list of file synchronization software. File synchronization is a process of ensuring that files in two or more locations are updated via certain rules.
+
+
+</section><section title="Definitions">The following definitions clarify the purpose of columns used in the tables that follow.
+Name
+It may contain a product name, or product name plus edition name, depending on what is discussed.
+Operating system
+Platform
+Operating system (OS) is a computer program that makes a computer usable, hence all computers must have it. The operating system column lists the name of the operating systems on which the corresponding synchronization software runs. Platform is a broader term; it is used as the column name because some of the software in the table were OS-independent but required a certain software platform like Java SE or .NET Framework.
+Programming language
+Programming language was used to write the software, if known. For closed-source software this information may not be known.
+License
+Indicates the licensing model under which the software is published. For open source systems this may be the specific license (i.e. GPL, LGPL, MIT, etc.), for closed source/proprietary/commercial software this may be the model (subscription per user, perpetual per device, etc.)
+Portable
+If yes, the program is designed to run without needing to modify the configuration of the computer it is run on. The name 'portable' comes from the fact that these applications are intended to be able to be carried with the user on a portable drive and run on any computer it was designed to run on, even if the user does not have administrative privileges on the computer. See Portable Applications.
+Detect conflict
+Indicates whether the software will detect if the requested operation may result in data loss. See File Synchronization
+Renames/moves
+When a file/directory in given side of the synchronization is renamed/moved, the program repeats renaming/moving the file/directory to the other side of the synchronization. This feature saves bandwidth when operating on remote systems but increases the analysis duration. Programs that support this feature commonly do so by calculating and storing hash values of each file so they can detect if two files with different names, modification dates, etc., are identical in terms of their content. Programs which do not support this feature, will behave as if the originally-named file/directory has been deleted and the newly named file/directory is brand new and transmit the "new" file over to the other side again.
+Prior file versions, revision control
+Indicates whether the software allows one to revert to an earlier version of a particular file/directory.
+Scheduling or service
+Indicates whether the software will run automatically either via a scheduler, or by running as a system service. If no, a user must invoke the software manually each time a synchronization is needed.
+Online storage
+Is there an online file storage option? If so, what type?
+Other Information
+Notes that help clarify features already covered in other columns, or additional information that differentiates this software from the competition.
+NAS share mobilisation
+Indicates whether the software allows mobile devices pass-through access to NAS shares.
+
+
+</section><section title="Open-source">This is a comparison of the free and open-source file synchronization software.
+
+
+</section><section title="Freeware">This is a comparison of the freeware (proprietary software release free of charge) file synchronization software.
+
+
+</section><section title="Commercial">This is a comparison of commercial software in field of file synchronization. These programs only provide full functionality with a payment. As indicated, some are trialware and provide functionality during a trial period; some are freemium, meaning that they have freeware editions.
+
+
+</section><section title="Further reading">Kerner, Sean (2008-02-13). "Get In Sync with File Syncing Software". Tom's Guide. Retrieved 2009-07-01. 
+Kerner, Sean (2008-02-27). "Syncing Software Redux: More Options". Tom's Guide. Retrieved 2009-07-01.</section></sections></page>

@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_forms.html" as macro_form %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+
+{% block title %}WIDT-Изменение фотографии профиля{% endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user) }}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Изменение фотографии Вашего профиля</h1>
+        <p>Загрузите фотографию, меньше 2 Мб. Доступны форматы png, jpg, jpeg, gif.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                {% call macro_form.render_form(form, enctype="multipart/form-data", action_url=url_for('main.upload_avatar', _external=True)) %}
+                    {{ macro_form.render_file_input(form.avatar) }}
+                    {{ macro_form.render_button(form.submit, btn_class='custom_submit_button') }}
+                {% endcall %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

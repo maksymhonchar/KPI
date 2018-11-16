@@ -1,0 +1,47 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+{% import "core/_macros_forms.html" as macro_form %}
+
+{% block title %}WIDT-Багтрекер{% endblock%}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Сейчас в системе {{ bugs.__len__() }} багов</h1>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% if bugs %}
+                {% for bug in bugs %}
+                    <p>{{ bug.title }}</p>
+                    <p>{{ bug.body }}</p>
+                    <p>{{ moment(bug.timestamp).format('L h:mm:ss') }}</p>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <h2 class="text-center">Ура, багов нет!</h2>
+            {% endif %}
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <h3>Сообщите нам про ошибку на сайте</h3>
+            <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6">
+                {% call macro_form.render_form(form, action_url=url_for('main.bugtracker', _external=True)) %}
+                    {{ macro_form.render_field(form.title, placeholder='Заголовок', type='text') }}
+                    {{ macro_form.render_field(form.body, placeholder='Ничего не работает! Всё глючит!', type='text') }}
+                    <div class="login_buttons_wrap">
+                        {{ macro_form.render_button(form.submit, btn_class='custom_submit_button') }}
+                    </div>
+                {% endcall %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

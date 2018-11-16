@@ -1,0 +1,45 @@
+<page><title>Comparison of email clients</title><pageid>1496467</pageid><category>Email clients</category><sections><section title="">The following tables compare general and technical features of a number of notable email client programs.
+
+
+</section><section title="General">Basic general information about the clients: creator/company, O/S, licence, &amp; interface. Clients listed on a light purple background are no longer in active development.
+
+
+</section><section title="Release history">A brief digest of the release histories.
+
+
+</section><section title="Operating system support">The operating systems on which the clients can run natively (without emulation).
+
+
+</section><section title="Protocol support">
+
+=== Communication and access protocol support ===
+What email and related protocols and standards are supported by each client.
+
+
+=== Authentication support ===
+
+
+=== SSL and TLS support ===
+
+
+</section><section title="Features">Information on what features each of the clients support.
+
+
+=== General features ===
+For all of these clients, the concept of "HTML support" does not mean that they can process the full range of HTML that a web browser can handle. Almost all email readers limit HTML features, either for security reasons, or because of the nature of the interface. CSS and JavaScript can be especially problematic.
+
+
+=== Messages features ===
+
+
+=== Database, folders and customization ===
+
+
+=== Templates, scripts and programming languages ===
+
+
+</section><section title="Internationalization">The Bat! supports Email Address Internationalization (EAI).
+As of October 2016, email clients supporting SMTPUTF8 included Outlook 2016, mail for iOS, and mail for Android.
+
+
+</section></sections></page>

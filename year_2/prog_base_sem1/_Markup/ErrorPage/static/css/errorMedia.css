@@ -1,0 +1,31 @@
+/* Large Devices, Wide Screens */
+/* For screens less than 1200px */
+@media only screen and (max-width: 1200px) {
+  
+}
+
+/* Medium Devices, Desktops */
+/* For screens less than 992px */
+@media only screen and (max-width : 992px) {
+  p {
+    font-size: 30px;
+  }
+}
+
+/* Small Devices, Tablets */
+/* For screens less than 768px */
+@media only screen and (max-width : 768px) {
+  p {
+    font-size: 20px;
+  }
+
+  .message {
+    padding: 10% 10%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+/* For screens less than 480px */
+@media only screen and (max-width : 480px) {
+
+}

@@ -1,0 +1,4 @@
+Anon_robot No_weapon 50 50 50 0 100
+Maxim_robot Gun 20 20 20 40 100
+TheBestInDaWorld Knife 100 100 100 30 100
+newName keklol 12 12 13 228 -128

@@ -1,0 +1,56 @@
+<page><title>Comparison of VMware Fusion and Parallels Desktop</title><pageid>12967141</pageid><category>MacOS software</category><sections><section title="">Represented by their respective products, VMware and Parallels, Inc. are the two commercial competitors in the Mac consumer platform virtualization market. Both products are based on hypervisor technology and allow users to run an additional 32- or 64-bit x86 operating system in a virtual machine alongside Mac OS X on an Intel-powered Mac. The similarity in features and functionality between VMware Fusion and Parallels Desktop for Mac has given occasion for much comparison.
+
+
+</section><section title="Features">
+
+</section><section title="Minimum system requirements">
+
+</section><section title="2007 Benchmark tests">On August 16, 2007, CNET published the results of several benchmarks in which Fusion demonstrated better performance than Parallels Desktop for Mac in SMP-aware applications, which Fusion supports while Parallels does not. It should also be noted that Boot Camp is a tool for natively booting Windows XP on Intel Macintosh and is not a virtualization product. This comparison is of limited value today, as Parallels Desktop has had 4 major upgrades and VMware Fusion has had 3.
+ 
+This comparison was tested on an eight-core, 2.66 GHz MacPro running Mac OS X 10.4.10, Parallels Desktop 3.0 for Mac (build 4560) and VMware Fusion 1.0 (build 51348). Fusion and Parallels were both set to 1,024 MB of system memory and a 32 GB hard disk. Fusion was set to 128 MB of graphics memory, and Parallels Desktop for Mac was set to 64 MB of graphics memory (the maximum for each at that time).
+
+
+</section><section title="2008 Benchmark tests">In Volume 24, Issue 02 of MacTech, the editors published the results of one-step and task tests between VMware Fusion 1.0, Parallels Desktop 3.0 and Boot Camp and used a PC running Windows XP as a baseline comparison in a native PC environment.
+One-step Test: After clicking the mouse or pressing a key, this test requires no further human action.
+Task Test: This tests the interaction between Mac OS X and the virtual environment and requires multiple tests throughout the process.
+MacTech found that the faster the physical host computer, the more similarly Parallels Desktop and VMware Fusion performed. MacTech did not test multiple processor performance. The following graphs displays the results in seconds. Shorter bars indicate faster performance.
+ 
+Each test was run on a MacBook (2 GB RAM; 1.83 GHz Core Duo processor), a MacBook Pro (4 GB RAM; 2.16 GHz Core 2 Duo processor) and a Mac Pro (4 GB RAM; Quad Core configuration with two 2.66 GHz Dual-Core Intel Xeon processors). MacTech tested Parallels Desktop 3.0 for Mac Build 5160 and VMware Fusion 1.0 Build 51348. All tests were done on clean host systems with new installations of Mac OS X 10.4.10 and Office installations and included all of the most up-to-date patches. No third party software was installed other than Mac OS X, VMware Fusion, Parallels Desktop, Windows XP, Windows Vista, Adobe Reader and Microsoft Office.
+
+
+</section><section title="2009 Benchmark tests">In March, 2009, Volume 25, Issue 04, MacTech published the results of a new series of benchmark tests that compared the performance between VMware Fusion 2.0.1 and Parallels Desktop 4.0 for Mac (build 3540), both running Mac OS X 10.5.5.
+In most of MacTech&#8217;s tests, Parallels Desktop performed 14-20% faster than Fusion; however, Fusion ran 10% faster than Parallels Desktop when running Windows XP 32-bit on 2 virtual processors.
+The tests were performed on the White MacBook, MacBook Pro, iMac and MacPro. Both Fusion and Parallels Desktop were optimized for virtual machine performance. MacTech&#8217;s test included launch and CPU tests, File and Network IO, Footprint, Application Launch, Application Performance and 3D and HD Graphics. In many cases, tests were performed after both Adam and Successful launches and were timed using a stopwatch.
+1 3D Games tested were Civilization IV: Colonization and Portal. In Civilization, Parallels Desktop has faster FPS (Frames Per Second) and performed better on slower machines while Fusion has better, more detailed graphics. Fusion has difficulty showing the startup video, but Parallels Desktop's graphics are not as rich. When running Portal, Fusion is faster but its graphics are visibly lighter, while Parallels Desktop has better graphics and visual details.
+
+
+=== Cross-platform task tests ===
+MacTech&#8217;s cross platform tests timed how long it took users to perform multi-step tasks that moved data between Mac OS X and Windows. VMware Fusion, which is designed for increased isolation from the host, requires more manual steps to move data between the host and the virtual environment. Parallels Desktop, which is designed to run transparently with the Mac OS X host, requires fewer steps to perform the same tasks. Therefore, Parallels Desktop was faster.
+
+
+=== Networking and file I/O tests ===
+Parallels Desktop occasionally displayed lag anomalies while VMware Fusion's virtual drive performance was very close to that of a physical drive. VMware Fusion preferred a bridged connection for reliable performance, and Parallels Desktop was consistent regardless of the type of virtual network adaptor used.
+
+
+=== Simultaneous use of VM and host OS ===
+Parallel Desktop 5 always uses wired memory for hosted OS, while VMWare Fusion 3.0 uses active memory that can be swapped. Giving better performance to hosted VM, this leaves less memory to host OS programs and causes more swapping if you use VM and host OS programs at the same time.
+
+
+</section><section title="2010 Benchmark tests">In 2010 MacTech, Volume 26, Issue 01, published the results of a new series of benchmark tests showing a performance advantage for Parallels Desktop 5 across all subcategories, with an average of 30% faster.
+ITPro's November 2010 performance testing results were mixed, with Parallels being slightly faster, overall.
+
+
+</section><section title="2015 Benchmark tests">In 2015 TekRevue, published the results of an extensive series of benchmark tests showing a performance advantage for VMware Fusion 8, across most subcategories, and in particular the 3D ones.
+Quoting: "If you look at our Parallels vs. Fusion benchmark results simply by the numbers, then Fusion 8 is the clear winner, taking 11 out of 18 tests and pushing on three more. ... Some users are looking for a virtualization app to play Windows-only games, or crunch data in a Windows-only CPU-intensive app. Those folks should probably go with Fusion 8 this year."
+
+
+</section><section title="2016 Reviews">ARS Technica reviewed both Fusion and Parallels updates in August 2016.  
+
+
+</section><section title="2017 Info">VMware Fusion Pro says it supports DirectX 10 on its website while listing system requirements...
+"For DirectX 10 or OpenGL 3.3 support in a virtual machine:
+Host OS: macOS 10.10 or greater
+Hardware: Intel: HD4000 or newer Nvidia: 650M or newer AMD: HD 5770 or newer"
+
+
+</section></sections></page>

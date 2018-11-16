@@ -1,0 +1,35 @@
+<page><title>Comparison of reference management software</title><pageid>9922495</pageid><category>Reference management software</category><sections><section title="">The following tables compare reference management software. Readers using the table to choose reference management software should note the product's "latest stable release date". An older release date suggests that the product is not currently supported and users may encounter technical issues and receive little to no technical support.
+
+
+</section><section title="General">In the "notes" section, there is a difference between:
+web-based, referring to applications that may be installed on a web server (usually requiring MySQL or another database and PHP, Perl, Python, or some other language for web applications)
+a centrally-hosted website
+
+
+</section><section title="Operating system support">In the case of web applications, this describes the server OS. For centrally hosted websites that are proprietary, this is not applicable. Any client OS can connect to a web service unless stated otherwise in a footnote.
+
+
+</section><section title="Export file formats">This table lists the machine-readable file formats that can be exported from reference managers. These are typically used to share data with other reference managers or with other people who use a reference manager. To exchange data from one program to another, the first program must be able to export to a format that the second program may import. Import file formats are in a table below this one.
+
+
+</section><section title="Import file formats">This table lists the file formats which may be manually imported into the reference managers without needing to connect to one particular database. Many of these database companies use the same name for their file format as they do for their database (including Copac, CSA, ISI, Medline, Ovid, PubMed, and SciFinder). For the ability to retrieve citations from the particular databases (rather than the file format), please refer to the database connectivity table that is below this table.
+
+
+</section><section title="Citation styles">
+
+</section><section title="Reference list file formats">Zotero and Endnote are incompatible with LaTeX. Among other things, both programs do not provide for robust citation keys. Zotero also does not offer automatic generation and updating of bibliography files in select directories.
+
+
+</section><section title="Word processor integration">Some reference management software include support for automatic embedding and (re)formatting of references in word processing programs. This table lists this type of support for Microsoft Word, Pages, Apache OpenOffice / LibreOffice Writer, the LaTeX editors Kile and LyX, and Google Docs. Other programs are able to scan RTF or other textual formats for inserted placeholders which are subsequently formatted. Most reference management programs support copy/paste or drag-and-drop of references into any editor, but this is not meant here.
+
+
+</section><section title="Database connectivity">This table lists the academic databases and search engines which reference managers can import from. In some cases, a search and retrieval can be conducted directly in the reference manager. In others, a bookmarklet or Firefox extension will allow a site to be scraped.
+
+
+</section><section title="Password &quot;protection&quot; and network versions">Some reference managers provide network functionality. (N/A means the product has no networking, while "no" indicates it does (but lacks an implemented feature).)
+
+
+</section><section title="Bibliography">Gilmour, Ron; Cobus-Kuo, Laura (2011). "Reference Management Software: a Comparative Analysis of Four Products". Issues in Science and Technology Librarianship. Summer 2011. doi:10.5062/F4Z60KZF. Retrieved 2015-11-10. 
+Perkel, Jeffrey M. (2015-11-02). "Eight ways to clean a digital library". Nature. 527 (7576): 123&#8211;124. doi:10.1038/527123a. ISSN 0028-0836. PMID 26536960. Retrieved 2015-11-10. 
+Technische Universit&#228;t M&#252;nchen Library (2016-08-04). "Reference Management Software Comparison &#8212; 6th Update" (PDF). Retrieved 2016-08-09. 
+Tramullas, Jes&#250;s; S&#225;nchez-Casab&#243;n, Ana I.; Garrido-Picazo, Piedad (2015). "Studies and analysis of reference management software: a literature review". El Profesional de la Informaci&#243;n. 25 (4): 680&#8211;688. arXiv:1508.07480&#8239;. doi:10.3145/epi.2015.sep.17. ISSN 1699-2407. Retrieved 2016-02-02.</section></sections></page>

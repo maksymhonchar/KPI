@@ -1,0 +1,156 @@
+﻿<Window x:Class="WPF_HeroesMonsters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Heroes squad"
+        MinWidth="760"
+        Width="760"
+        MaxWidth="760"
+        Height="350"
+        MinHeight="120">
+    <Window.Resources>
+        <Style x:Key="LabelStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight" Value="Normal" />
+        </Style>
+        <Style x:Key="GridViewHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="20" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Command="{Binding ExitCommand}" Header="Сохранить и выйти"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Style="{StaticResource  LabelStyle}">Имя</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="NameField" 
+                         Width="100" 
+                         Margin="10, 0, 25, 0"
+                         Text="{Binding Path=NameToAdd, Mode=OneWayToSource}">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource  LabelStyle}">Урон</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="DamageField" 
+                         Width="50" 
+                         Margin="10, 0, 25, 0"
+                         Text="{Binding Path=SterngthToAdd, Mode=OneWayToSource}">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource  LabelStyle}">Сила</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="StrengthField"  
+                         Width="50" 
+                         Margin="10, 0, 25, 0"
+                         Text="{Binding Path=StrengthToAdd, Mode=OneWayToSource}">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource  LabelStyle}">Уворот</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="EvasionField"  
+                         Width="50" 
+                         Margin="10, 0, 25, 0"
+                         Text="{Binding Path=EvasionToAdd, Mode=OneWayToSource}">
+                </TextBox>
+
+                <Button x:Name="btnAddHero"
+                        Content="Добавить"
+                        Background="LightBlue"
+                        Command="{Binding AddHero}" 
+                        IsEnabled="False" 
+                        Width="60">
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <ListView Name="HeroesList"
+                  Grid.Row="2" 
+                  BorderBrush="White"
+                  ItemsSource="{Binding Path=HeroArr}"
+                  HorizontalAlignment="Center" 
+                  Width="752" 
+                  Margin="0,0,0,40">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Имя"
+                                    HeaderContainerStyle="{StaticResource GridViewHeaderStyle}"
+                                    DisplayMemberBinding="{Binding Path=Name}"
+                                    Width="280" />
+                    <GridViewColumn Header="Урон"
+                                    HeaderContainerStyle="{StaticResource GridViewHeaderStyle}"
+                                    DisplayMemberBinding="{Binding Path=Damage}"
+                                    Width="160" />
+                    <GridViewColumn Header="Сила"
+                                    HeaderContainerStyle="{StaticResource GridViewHeaderStyle}"
+                                    DisplayMemberBinding="{Binding Path=Strength}"
+                                    Width="160" />
+                    <GridViewColumn Header="Уклонение"
+                                    HeaderContainerStyle="{StaticResource GridViewHeaderStyle}"
+                                    DisplayMemberBinding="{Binding Path=Evasion}"
+                                    Width="150" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Grid Grid.Row="3" VerticalAlignment="Bottom" Margin="10, 0, 0, 5">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Style="{StaticResource LabelStyle}">Имя</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="NameEditField" 
+                         Width="100" 
+                         Margin="10, 0, 15, 0"
+                         Text="{Binding SelectedItem.Name, ElementName=HeroesList, Mode=OneWay}">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource LabelStyle}">Урон</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="DmgEditField" 
+                         Width="50" Margin="10, 0, 15, 0"
+                         Text="{Binding SelectedItem.Damage, ElementName=HeroesList, Mode=OneWay}">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource LabelStyle}">Сила</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="StrengthEditField"  
+                         Width="50" 
+                         Margin="10, 0, 15, 0"
+                         Text="{Binding SelectedItem.Strength, ElementName=HeroesList, Mode=OneWay}">
+                </TextBox>
+
+                <TextBlock Style="{StaticResource LabelStyle}">Уклонение</TextBlock>
+                <TextBox Validation.ErrorTemplate="{x:Null}" 
+                         Name="EvasionEditField"  
+                         Width="50" 
+                         Margin="10, 0, 10, 0"
+                         Text="{Binding SelectedItem.Evasion, ElementName=HeroesList, Mode=OneWay}">
+                </TextBox>
+
+                <Button x:Name="btnEditHero"
+                        IsEnabled="{Binding ElementName=HeroesList, Path=SelectedItems.Count}"
+                        Content="Изменить"
+                        Background="LightGreen"
+                        Click="MW_editHero" 
+                        Width="60"  
+                        Margin="10, 0, 10, 0">
+                </Button>
+                <Button x:Name="btnDeleteHero"
+                        IsEnabled="{Binding ElementName=HeroesList, Path=SelectedItems.Count}"
+                        Content="Удалить"
+                        Background="Red"
+                        Click="MW_deleteHero" 
+                        Width="60">
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

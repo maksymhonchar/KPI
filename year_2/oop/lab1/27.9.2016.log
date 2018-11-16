@@ -1,0 +1,57 @@
+[Game] - Game is creating instances for heroes and monsters.
+[System] - Model model-1 has been created.
+[System] - Access pass is set
+[System] - Hero model-1 has been created.
+[System] - Hero Maxim has been created.
+[System] - Model model-2 has been created.
+[System] - Hero model-2 has been created.
+[System] - Model model-3 has been created.
+[System] - Monster model-3 has been created.
+[System] - Monster MegaBoss has been created.
+[System] - Model model-4 has been created.
+[System] - Monster model-4 has been created.
+[Game] - Game is creating instances of Model for testing.
+[System] - Model model-5 has been created.
+[System] - Model model-6 has been created.
+[System] - Model model-6 has been created. It is on 4,5-4,5 now.
+[Game] - Game is placing monsters on the map.
+[Game] - Game is introducing heroes and monsters.
+[Game] - At the moment there are following models in the game:
+->Hero Maxim. Level 1. Has 5 items in backpack. Sword: magic_sword. Critical damage: 12. 
+->Weak Knight model-2 ready! 
+->Hello, I am a boss MegaBoss. Armor: 33. Critical hit chance: 12. 
+->Arrrgh, I will kill you! By the way, my name is model-4. 
+[Game] - Game is creating a fight.
+[Game] - Swordsman starts hitting boss.
+[Player] - Swordsman is ready to fight!
+[Player] - Ha-Ha, our Swordsman is attacking!
+[Player] - Arggh, BOSS got damaged...
+[Game] - Weak knight starts hitting a boss.
+[Player] - A WeakKnight is ready to fight! God bless him.
+[Player] - Master, I will fight for you! WeakKnight is attacking!
+[Player] - Arggh, BOSS got damaged...
+[Game] - Boss starts hitting a weakknight.
+[Player] - BOSS: I WILL CRUSH YOU!
+[Player] - Arggh, BOSS is attacking!
+[Player] - Oh no, Weak knight got damaged...
+[Game] - Casual monster starts hitting a weakknight.
+[Player] - Casual monster is ready to fight!
+[Player] - Arggh, Casual Monster is attacking!
+[Player] - Oh no, Weak knight got damaged...
+[Game] - Heroes and monsters start doing critical hits.
+[Game] - Swordsman does a critical hit to boss!
+[System] - Hero Maxim did a critical damage to MegaBoss!
+[Player] - Arggh, BOSS got damaged...
+[Game] - Weak knight does a critical hit to boss!
+[System] - This hero cannot use a critical hit ability.
+[Game] - Boss does a critical hit to weakknight!
+[System] - Monster MegaBoss did a critical damage to Maxim!
+[Player] - Oh no, our SwordsMan has been damaged!
+[Game] - Casual monster does a critical hit to weakknight!
+[System] - This monster cannot use a critical hit ability.
+[Game] - HP after the battle:
+->99 
+->55 
+->97 
+->100 
+[Game] - End of the program

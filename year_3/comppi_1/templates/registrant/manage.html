@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Реєстратор Управління - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Сторінка створення нових Організацій</h3>
+        <hr>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ neworgform.non_field_errors }}
+            {% if formerrmsg is not None %}
+            <ul class="errorlist nonfield">
+                <li>{{ formerrmsg }}</li>
+            </ul>
+            {% endif %}
+            {% for hidden_field in neworgform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            <h4>Сертифікат</h4>
+            <p>{{ neworgform.cert_issue_date.label_tag }}</p>
+            <p>{{ neworgform.cert_issue_date }}</p>
+            <hr>
+            <h4>Місцезнаходження</h4>
+            <p>{{ neworgform.loc_region.label_tag }}</p>
+            <p>{{ neworgform.loc_region }}</p>
+            <p>{{ neworgform.loc_district.label_tag }}</p>
+            <p>{{ neworgform.loc_district }}</p>
+            <p>{{ neworgform.loc_locality.label_tag }}</p>
+            <p>{{ neworgform.loc_locality }}</p>
+            <p>{{ neworgform.loc_street.label_tag }}</p>
+            <p>{{ neworgform.loc_street }}</p>
+            <p>{{ neworgform.loc_building.label_tag }}</p>
+            <p>{{ neworgform.loc_building }}</p>
+            <hr>
+            <h4>Організація</h4>
+            <p>{{ neworgform.org_type.label_tag }}</p>
+            <p>{{ neworgform.org_type }}</p>
+            <p>{{ neworgform.org_orientation.label_tag }}</p>
+            <p>{{ neworgform.org_orientation }}</p>
+            <p>{{ neworgform.org_status.label_tag }}</p>
+            <p>{{ neworgform.org_status }}</p>
+            <p>{{ neworgform.org_full_naming.label_tag }}</p>
+            <p>{{ neworgform.org_full_naming }}</p>
+            <p>{{ neworgform.org_short_naming.label_tag }}</p>
+            <p>{{ neworgform.org_short_naming }}</p>
+            <p>{{ neworgform.org_foreign_naming.label_tag }}</p>
+            <p>{{ neworgform.org_foreign_naming }}</p>
+            <p>{{ neworgform.org_edrpou.label_tag }}</p>
+            <p>{{ neworgform.org_edrpou }}</p>
+            <p>{{ neworgform.org_owner_edrpou.label_tag }}</p>
+            <p>{{ neworgform.org_owner_edrpou }}</p>
+            <p>{{ neworgform.org_organiz_pravov_form.label_tag }}</p>
+            <p>{{ neworgform.org_organiz_pravov_form }}</p>
+            <p>{{ neworgform.org_registration_state.label_tag }}</p>
+            <p>{{ neworgform.org_registration_state }}</p>
+            <p>{{ neworgform.org_entrepreneurial_activity.label_tag }}</p>
+            <p>{{ neworgform.org_entrepreneurial_activity }}</p>
+            <p>{{ neworgform.org_feedback.label_tag }}</p>
+            <p>{{ neworgform.org_feedback }}</p>
+            <hr>
+            <button type="submit">Створити</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

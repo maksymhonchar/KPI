@@ -1,0 +1,27 @@
+<page><title>Comparison of documentation generators</title><pageid>1531987</pageid><category>Documentation generators</category><sections><section title="">The following tables compare general and technical information for a number of documentation generators. Please see the individual products' articles for further information. Unless otherwise specified in footnotes, comparisons are based on the stable versions without any add-ons, extensions or external programs.
+
+
+</section><section title="General information">Basic general information about the generators, including: creator or company, license, and price.
+
+
+</section><section title="Operating system support">The operating systems the generators can run on.
+
+
+</section><section title="Language support">The programming languages the generators recognize.
+
+
+</section><section title="Input formats">The input formats the generators can read.
+
+
+</section><section title="Output formats">The output formats the generators can write.
+
+
+</section><section title="Other features">
+
+</section><section title="Possible omissions">AsciiDoc
+cldoc
+doxypress
+RoboHelp
+
+
+</section></sections></page>

@@ -1,0 +1,19 @@
+<page><title>Comparison of regular expression engines</title><pageid>10930422</pageid><category>Pattern matching</category><sections><section title="">This is a comparison of regular expression engines.
+
+
+</section><section title="Libraries">
+
+</section><section title="Languages">
+
+</section><section title="Language features">NOTE: An application using a library for regular expression support does not necessarily offer the full set of features of the library, e.g. GNU grep which uses PCRE does not offer lookahead support, though PCRE does.
+
+
+=== Part 1 ===
+
+
+=== Part 2 ===
+
+
+</section><section title="API features">
+
+</section></sections></page>

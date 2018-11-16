@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<director name="Maxim" surname="Gonchar">
+  <id>1</id>
+  <investments>1000</investments>
+  <years>20.50</years>
+  <birthdate>1998-07-08</birthdate>
+</director>

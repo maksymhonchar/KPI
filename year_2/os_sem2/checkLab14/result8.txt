@@ -1,0 +1,48 @@
+﻿zulus
+8
+
+
+lab8
+lab9
+
+
+924997 -rw-rw-r-- 2 zulus zulus  232 гру  3 13:50 tree8_h
+924997 -rw-rw-r-- 2 zulus zulus  232 гру  3 13:50 .tree8
+
+
+NAME   FSTYPE   LABEL                    UUID                                 MOUNTPOINT
+loop0  squashfs                                                               /snap/core/3247
+loop1  squashfs                                                               /snap/brackets/21
+loop2  squashfs                                                               /snap/core/3440
+sda                                                                           
+├─sda1 ntfs     Зарезервировано системой 2C34B92534B8F346                     
+├─sda2 ntfs                              CE12E7ED12E7D90B                     
+├─sda3 vfat                              33E6-1D4B                            
+├─sda4                                                                        
+├─sda5 ext4                              dbc99680-51af-49f3-a609-bc26bb288eaf /home
+├─sda6 swap                              ca601f06-ebe1-4017-8466-bbc0022e4f13 [SWAP]
+└─sda7 ext4                              e54e7690-15b6-469b-931d-d49e8ff222d9 /
+sdb                                                                           
+├─sdb1 ntfs                              48684EC60DA4B15E                     /home/zulus/mount/NTFS
+└─sdb2 ext4                              890c04fa-eeb8-469d-8e66-1f9c0146da7a /home/zulus/mount/EXT4
+
+
+28 -rw-rw-r-- 1 zulus zulus  232 гру  3 13:50 tree8_h
+15 -rw-rw-r-- 1 zulus zulus  232 гру  3 13:50 .tree8
+
+
+12a13,26
+> zulus
+> OS
+> ├── labs -> ../source_OS/labs
+> │   ├── lab8
+> │   └── lab9
+> ├── lects -> ../source_OS/lects
+> │   ├── lect7
+> │   └── lect8
+> ├── links
+> │   └── tree8_h
+> ├── result8
+> └── tree_OS
+> 
+> 3 directories, 7 files

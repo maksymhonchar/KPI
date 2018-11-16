@@ -1,0 +1,65 @@
+/* AVATAR IMAGE */
+.img-avatar {
+    width: 400px;
+    display: block;
+    margin: 50px auto;
+}
+
+/* TEXT STYLINGS */
+.img-avatar-description {
+    margin-top: -50px;
+}
+
+.paragraph-md {
+    font-size: 40px;
+}
+
+.paragraph-sm {
+    font-size: 27px;
+}
+
+/* SOCIAL PICTURES */
+.soc-btn-contacts {
+    background-color: transparent;
+    font-size: 110px;
+    color: #3a3e64;
+    margin: 0 15px;
+}
+
+.soc-big-fz {
+    font-size: 200px;
+    margin: -30px 0;
+}
+
+.soc-btns-wrapper {
+    margin-top: -40px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* WRAPPER FOR CONTACTS INFO */
+.contact-info-wrapper {
+    margin-top: 10px;
+    margin-bottom: 70px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-info-wrapper i {
+    margin: 5px;
+    font-size: 35px;
+}
+
+.contact-span {
+    margin: 0 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For screens less than 768px */
+
+}
+
+@media only screen and (max-width: 480px) {
+    /* For screens less than 480px */
+
+}

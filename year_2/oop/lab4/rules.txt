@@ -1,0 +1,41 @@
+﻿[ІМЕНА]
+1. Имена передают намерения программиста и представляют собой глаголы.
+2. Имена классов - с большой. Имена методов - с маленькой. Имена членов - с большой.
+Имена классов не глаголы.
+3. Префиксов членов классов - по минимуму.
+4. CamelCase - соблюдён.
+5. Каламбуров - нет.
+
+[ФУНКЦІЇ]
+1. Большинство функций - одна операция.
+2. Имена - содержательные.
+3. Аргументы в конструкторах - <=4, <=3. Все аргументы - по делу.
+Много объектов в аргументах - нет. Списков - почти нет.
+4. Аргументов-флагов в функциях - нет.
+5. Исключения, вместо возвращения кодов ошибок - есть.
+6. Тернарных операторов - нет.
+
+[ЗАГАЛЬНІ]
+1. Do not use several languages in one file;
+There are no other languages except for C# used in all of files.
+2. Do not ignore the compiler WARNINGs;
+Not a single warning appears when this program is being compiled;
+3. Base classes should not know anything about their Derivative classes;
+4. Dead/unreachable code should be deleted;
+Do not check impossible statements in if()/switch blocks;
+5. Классы не так и цепко связаны между собой.
+6. Комментарии - в общем по делу.
+
+[РЕФАКТОРИНГ]
+1. Duplicate code.
+2. Not using the negative statements.
+3. If big chaing of bitwise operations - divide them.
+4. Minimal amount of duplicated code.
+5. Comments: delete unused.
+6. Модификация малыми шагами - есть.
+7. Инкапсуляция полей (в Hero, Monster: функции, связанные с damage).
+8. Выделение класса - Node (?)
+9. Выделение интерфейса IMovable, IDestructable (хотя можно было этого не делать).
+
+НО
+тестов, чтобы рефакторить - не было.

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsUI</class>
+ <widget class="QDialog" name="SettingsUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>70</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Setings</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-image: url(:/design/design/battlefield/background.png);
+}
+
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="settingsTabs_tabWidget">
+     <property name="styleSheet">
+      <string notr="true">/*-----------------------------------------------------LABELS-----------------------------------------------------*/
+
+QLabel {
+	background-color: rgba(255, 255, 255, 170);
+	font: 75 bold 16pt &quot;PMingLiU-ExtB&quot;;
+	color: black;
+}
+
+QLabel#label_2 {
+	font: 75 bold 19pt &quot;PMingLiU-ExtB&quot;;
+}
+
+QLabel#helpLbl {
+	font: 75 bold 9pt &quot;PMingLiU-ExtB&quot;;
+}
+
+QPushButton:pressed {
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-style: inset;
+}
+
+/*-----------------------------------------------------QTABWIDGET-----------------------------------------------------*/
+
+QTabWidget::pane {
+    border-top: 2px solid rgb(191, 191, 191);
+}
+
+QTabWidget::tab-bar {
+    left: 0px;
+}
+
+QTabBar::tab {
+	background-image: url(:/design/design/tabwidget_tabBG.png);
+    border: 3px solid rgb(137, 90, 255);
+	width: 147px;
+    padding: 8px;
+	color: white;
+	font: 75 bold 12pt &quot;PMingLiU-ExtB&quot;;
+	border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background-image: url(:/design/design/tabwidget_tabHoveredBG.png);
+}
+
+QTabBar::tab:selected {
+    border: 3px solid rgb(137, 90, 255);
+}
+
+QTabBar::tab:!selected {
+    margin-top: 10px;
+}
+
+QTabBar::tab:first:selected {
+    margin-left: 0;
+}
+
+QTabBar::tab:last:selected {
+    margin-right: 0;
+}
+
+/*-----------------------------------------------------TAB_IMAGES-----------------------------------------------------*/
+
+QWidget#gnrlSettings_tab {
+	background-image: url(:/design/design/settings/settingsBG.png);
+}
+
+QWidget#glblStats_tab {
+	background-image: url(:/design/design/settings/settingsBG.png);
+}
+
+QWidget#tutorial_tab {
+	background-image: url(:/design/design/settings/settingsBG.png);
+}
+
+QWidget#about_tab {
+	background-image: url(:/design/design/settings/settingsBG.png);
+}
+
+/*-----------------------------------------------------BUTTON IMAGES-----------------------------------------------------*/
+QPushButton#vkshare_btn {
+	border-image: url(:/design/design/settings/vklogo.png);
+}
+
+QPushButton#fbshare_btn {
+	border-image: url(:/design/design/settings/fblogo.png);
+}
+
+QPushButton#twishare_btn {
+	border-image: url(:/design/design/settings/twitterlogo.png);
+}
+
+QPushButton#save_btn {
+	border-image: url(:/design/design/settings/saveButton.png);
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="gnrlSettings_tab">
+      <attribute name="title">
+       <string>General settings</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>180</y>
+         <width>344</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="shareDescr_lbl">
+          <property name="text">
+           <string>Tell your friends about this game!</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="vkshare_btn">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="fbshare_btn">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="twishare_btn">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>20</y>
+         <width>241</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Save your progress</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="save_btn">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="glblStats_tab">
+      <attribute name="title">
+       <string>Global stats</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="descr_lbl_1">
+             <property name="text">
+              <string>Current level</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_2">
+             <property name="text">
+              <string>Current gold</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_3">
+             <property name="text">
+              <string>Soldiers amount</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_4">
+             <property name="text">
+              <string>Artifacts upgraded</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_5">
+             <property name="text">
+              <string>Heropowers unlocked</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_6">
+             <property name="text">
+              <string>Awards collected</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_7">
+             <property name="text">
+              <string>Click damage</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_8">
+             <property name="text">
+              <string>Critical hit chance</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_9">
+             <property name="text">
+              <string>Army DPS</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="val_lbl_1">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_2">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_3">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_4">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_5">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_6">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_7">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_8">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_9">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="descr_lbl_10">
+             <property name="text">
+              <string>Monster HP decrease</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_11">
+             <property name="text">
+              <string>Critical hit multiplier</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_12">
+             <property name="text">
+              <string>Gold multiplier</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_13">
+             <property name="text">
+              <string>Gold collected</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_14">
+             <property name="text">
+              <string>Total clicks made</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_15">
+             <property name="text">
+              <string>Total critical hits made</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_16">
+             <property name="text">
+              <string>Monster kills</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_17">
+             <property name="text">
+              <string>Played time</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="descr_lbl_18">
+             <property name="text">
+              <string>Position in total rank</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="val_lbl_10">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_11">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_12">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_13">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_14">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_15">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_16">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_17">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="val_lbl_18">
+             <property name="text">
+              <string>-1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tutorial_tab">
+      <attribute name="title">
+       <string>Tutorial</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="helpLbl">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dungeon of dragons is a &amp;quot;clicker&amp;quot; game. That means, you should click as much as you can and the more gold and diamonds you earn, the better you fight with dragons.&lt;/p&gt;&lt;p&gt;Crush dragons and go further into the dungeon - that's a goal of the game.&lt;/p&gt;&lt;p&gt;When you are clicking on the monster, he gets damage. When the monster will have zero HP, that means, that you have passed the level. By passing levels you are getting money and probably diamonds.&lt;/p&gt;&lt;p&gt;Tap damage upgrades locate in &amp;quot;Hero powers&amp;quot; tab.&lt;/p&gt;&lt;p&gt;Only clicking is hard, so soldiers can help you overcome the enemy! What they do - they passively kill the monster without your help. You can hire soldiers in &amp;quot;Hire army&amp;quot; tab.&lt;br/&gt;&lt;br/&gt;Hero powers will also help you. You buy them once, and then can always use for free. They have cooldown, so be patient!&lt;br/&gt;&lt;br/&gt;Perks are also useful and very strong, but they are not cheap. They do certain buffs - so use them with mind!&lt;/p&gt;&lt;p&gt;Artifacts - this is key to win this game. They give spectacular multipliers to gold and diamonds gaining, they can reduce cost of the perks and reduce monster HP.&lt;/p&gt;&lt;p&gt;You can also see your achievements and ranking by clicking certain buttons on the main battle field.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="about_tab">
+      <attribute name="title">
+       <string>About</string>
+      </attribute>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>80</y>
+         <width>181</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Maxim Gonchar
+2016
+Course work</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>300</y>
+         <width>367</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>This program is built with Qt framework.</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

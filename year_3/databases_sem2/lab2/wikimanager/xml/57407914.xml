@@ -1,0 +1,18 @@
+<page><title>User:YET-ZIO/sandbox</title><pageid>57407914</pageid><category>Free software</category><sections><section title="">Grim is a free software text editor which is currently available for Windows and Unix-like platforms. It was initially released and created by Yet-Zio on April 16, 2018 which is then contributed to his organisation by himself known as "Master-Console Inc." for further development. Grim is written in Python and uses wxPython which is a python binding for the cross-platform GUI API wxWidgets for its GUI.
+It is licensed under the MIT License and is an open-source-software. Grim is also available in 14 languages and is under active development. Its supports highlighting features for Normal-text, Python and other programming languages too. Grim is normally seen having a violet coloured background interface with white text but there are certain other variants of the software with more features and modified theme.
+It has a Github repository with updates and releases continuing with its website. Grim is also known as the "yet another advanced text-editor" with a good-support from its developers and features of a normal text editor could have. It's first final-beta version was never released to the public but was noted down by its developer. It doesn't currently support encoding, machine code and uses a Soul document(.soul) as the default file for saving as the .soul file format doesn't support compiled or machine code.
+
+
+</section><section title="See Also">Free Software
+Text editor
+wxPython
+wxWidgets
+Syntax Highlighting
+GUI
+OSS
+
+
+</section><section title="External Links">Official Website
+Github Repository
+
+,</section></sections></page>

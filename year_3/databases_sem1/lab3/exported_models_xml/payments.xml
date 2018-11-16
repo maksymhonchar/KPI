@@ -1,0 +1,1 @@
+<?xml version="1.0" ?><payments><payment><id>1</id><method>b'cash'</method><raw_salary>10000.68</raw_salary><tax_rate>1.25</tax_rate></payment><payment><id>2</id><method>b'cash'</method><raw_salary>50000.0</raw_salary><tax_rate>12.66</tax_rate></payment></payments>

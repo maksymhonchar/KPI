@@ -1,0 +1,61 @@
+{
+  'update_id': 227065413,
+  'message': {
+    'photo': [],
+    'entities': [],
+    'supergroup_chat_created': False,
+    'new_chat_members': [],
+    'new_chat_member': None,
+    'message_id': 776,
+    'channel_chat_created': False,
+    'text': '1',
+    'chat': {
+      'title': 'tmpgroup',
+      'id': -256052527,
+      'type': 'group',
+      'all_members_are_administrators': True
+    },
+    'delete_chat_photo': False,
+    'caption_entities': [],
+    'new_chat_photo': [],
+    'date': 1513652627,
+    'from': {
+      'username': 'mhonchar',
+      'last_name': 'Honchar',
+      'language_code': 'en-US',
+      'first_name': 'Maxim',
+      'id': 312481375,
+      'is_bot': False
+    },
+    'group_chat_created': False
+  },
+  '_effective_message': {
+    'photo': [],
+    'entities': [],
+    'supergroup_chat_created': False,
+    'new_chat_members': [],
+    'new_chat_member': None,
+    'message_id': 776,
+    'channel_chat_created': False,
+    'text': '1',
+    'chat': {
+      'title': 'tmpgroup',
+      'id': -256052527,
+      'type': 'group',
+      'all_members_are_administrators': True
+    },
+    'delete_chat_photo': False,
+    'caption_entities': [],
+    'new_chat_photo': [],
+    'date': 1513652627,
+    'from': {
+      'username': 'mhonchar',
+      'last_name': 'Honchar',
+      'language_code': 'en-US',
+      'first_name': 'Maxim',
+      'id': 312481375,
+      'is_bot': False
+    },
+    'group_chat_created': False
+  }
+}

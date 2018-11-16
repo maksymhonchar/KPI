@@ -1,0 +1,47 @@
+<page><title>Comparison of IDE choices for Haxe programmers</title><pageid>46617333</pageid><category>Integrated development environments</category><sections><section title="">Haxe is an open source programming language. Multiple development environments have support for Haxe.
+
+
+</section><section title="Integrated Development Environments (IDEs)">
+
+=== Availability ===
+
+
+=== Syntax, parsing, code-assist ===
+
+
+=== Goto, Searching ===
+
+
+=== Code Generation ===
+
+
+=== Refactoring ===
+
+
+=== Hierarchy views ===
+
+
+=== Projects ===
+
+
+=== Build, debug, run ===
+
+
+=== Multi-lingual IDE ===
+
+
+=== Miscellaneous ===
+
+
+</section><section title="Text Editors">Multiple text editors, with the help of additional syntax files and some language semantics configuration, support Haxe syntax highlighting and semantics.
+GNU Emacs/XEmacs (in Haxe mode)
+Gedit
+vim with Haxe plugin (Vaxe)
+Atom with Haxe plugin
+EditPlus
+UltraEdit
+Notepad++ (with Haxe syntax file)
+Textmate
+
+
+</section></sections></page>

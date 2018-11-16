@@ -1,0 +1,98 @@
+/* SECTIONS BACKGROUNDS */
+.section-wrapper-intro {
+    padding: 120px 0 0;
+}
+
+.section-wrapper-signup {
+    padding: 95px 0 0;
+}
+
+.intro-bg {
+    /*url(/static/img/sections-bg/basic-bg-1.jpg)*/
+    background: #a5dcff no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.whatisit-bg {
+    /* url(/static/img/sections-bg/basic-bg-3.jpg) */
+    background: #ffe2b5 no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.community-bg {
+    /* url(/static/img/sections-bg/basic-bg-2.jpg)  */
+    background: #a5dcff no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.services-bg {
+    /* url(/static/img/sections-bg/basic-bg-2.jpg)  */
+    background: #ffe2b5 no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.signup-bg {
+    /* url(../img/sections-bg/basic-bg-4.jpg) */
+    width: 100%;
+    height: 97%;
+    background: #a5dcff no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* SECTION CONTENT STYLES */
+.section-content-heading {
+    font-size: 100px;
+}
+
+.section-content-heading-md {
+    font-size: 35px;
+}
+
+.section-content-heading-sm {
+    font-size: 25px;
+}
+
+.subscription {
+    font-size: 12px;
+    padding: 13px;
+}
+
+
+/* SIGNUP BUTTON */
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-signup {
+    border: 3px solid #3a3e64;
+    background-color: transparent;
+    color: #3a3e64;
+}
+
+.btn-signup:focus,
+.btn-signup:hover {
+    outline: none;
+    border: 3px solid #3a3e64;
+    background-color: #3a3e64;
+    color: #fff;
+}

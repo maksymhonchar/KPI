@@ -1,0 +1,149 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+{% import "core/_macros_footer.html" as footer_macro %}
+
+{% block title %}WIDT-Добро Пожаловать!{% endblock %}
+
+{% block styles -%}
+    <!-- Custom CSS styles -->
+    <link href="{{ url_for('static', filename="css/greetingspage/styles.css", _external=True) }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename="css/greetingspage/media.css", _external=True) }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename="css/core.css", _external=True) }}" rel="stylesheet">
+{%- endblock %}
+
+{% block body_attribs -%}id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"{%- endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user, type='intro', fixed_top=True) }}
+{%- endblock %}
+
+{% block content %}
+    <!-- Main content -->
+    <!-- Intro section -->
+    <section id="intro" class="container full-width-height intro-bg">
+        <div class="section-wrapper">
+            <!-- Section text content -->
+            <div class="section-content-row text-center">
+                <div class="row section-wrapper-intro">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <h1 class="section-content-heading">WIDT blog</h1>
+                        <p>Ваши посты должны быть под рукой <b>всегда</b>.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Section text content -->
+            <!-- Transition button -->
+            <div class="section-transition-row text-center">
+                <a href="#whatisit" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+            <!-- /Transition button -->
+        </div>
+    </section>
+    <!-- /Intro section -->
+
+    <!-- What is it section -->
+    <section id="whatisit" class="container full-width-height whatisit-bg">
+        <div class="section-wrapper">
+            <div class="section-wrapper-whitespace-10p"></div>
+            <!-- Section text content -->
+            <div class="section-content-row text-center">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <h3 class="section-content-heading-md">Что я сегодня сделал?</h3>
+                        <p>Если вы читали хорошую книгу, отмечали праздник на работе, или провели день с семьей - запишите!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Section text content -->
+            <!-- Transition button -->
+            <div class="section-transition-row text-center">
+                <a href="#community" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+            <!-- /Transition button -->
+        </div>
+    </section>
+
+    <!-- Community section -->
+    <section id="community" class="container full-width-height community-bg">
+        <div class="section-wrapper">
+            <div class="section-wrapper-whitespace-10p"></div>
+            <!-- Section text content -->
+            <div class="section-content-row text-center">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <h3 class="section-content-heading-md">Всё на растоянии вытянутой руки</h3>
+                        <p>Ваши записи, комментарии, друзья и подписки - рядом</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Section text content -->
+            <!-- Transition button -->
+            <div class="section-transition-row text-center">
+                <a href="#services" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+            <!-- /Transition button -->
+        </div>
+    </section>
+    <!-- /Community section -->
+
+    <!-- Services section -->
+    <section id="services" class="container full-width-height services-bg">
+        <div class="section-wrapper">
+            <div class="section-wrapper-whitespace-10p"></div>
+            <!-- Section text content -->
+            <div class="section-content-row text-center">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+                        <h3 class="section-content-heading-md">С этими возможностями вы будете невероятно невероятны!</h3>
+                        <p>Описание сервиса 1, сервиса 2, сервиса 3.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Section text content -->
+            <!-- Transition button -->
+            <div class="section-transition-row text-center">
+                <a href="#signupsection" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+            <!-- /Transition button -->
+        </div>
+    </section>
+
+    <!-- Signup section -->
+    <section id="signupsection" class="container signup-bg">
+        <div class="section-wrapper">
+            <!-- Section text content -->
+            <div class="section-content-row text-center">
+                <div class="row section-wrapper-signup">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12 ">
+                        <div class="section-content-heading">
+                            <h3 class="section-content-heading-sm">Чего же вы ждете?<br>Создайте свой профиль прямо
+                                сейчас!</h3>
+                        </div>
+                        <a class="btn btn-default btn-signup btn-lg"
+                           href="{{ url_for('auth.signup', _external=True) }}">Создать профиль</a>
+                        <p class="small subscription">(Внутри еще очень много всего интересного)</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Section text content -->
+        </div>
+    </section>
+    <!-- /Main content-->
+{%- endblock %}
+
+{% block footer -%}
+    {{ footer_macro.footer(True) }}
+{%- endblock %}
+
+{% block scripts %}
+    <!-- Custom scripts -->
+    <script src="{{ url_for('static', filename="js/navbar-scroll.js", _external=True) }}"></script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Пошук звіту - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Сторінка перегляду Звітів за їх дією: додавання ГО, видалення ГО, зміна ГО.</h3>
+        <hr>
+        <br>
+        <h4>Оновлення ГО</h4>
+        {% if not repsupd %}
+        <p>У системі поки немає ніяких звітів оновлення.</p>
+        {% else %}
+        {% for rep in repsupd %}
+        <p><b>Звіт №{{ rep.pk }}</b>.</p>
+        <p>Організація "{{ rep.organization.full_naming }}".</p>
+        <p>Реєстратор із username "{{ rep.registrant.user.username }}".</p>
+        <p><a href="{% url 'managereport' reportid=rep.pk %}">Посилання</a></p>
+        <br>
+        {% endfor %}
+        {% endif %}
+        <hr>
+        <h4>Додавання ГО</h4>
+        {% if not repsnew %}
+        <p>У системі поки немає ніяких звітів додавання.</p>
+        {% else %}
+        {% for rep in repsnew %}
+        <p><b>Звіт №{{ rep.pk }}</b>.</p>
+        <p>Організація "{{ rep.organization.full_naming }}".</p>
+        <p>Реєстратор із username "{{ rep.registrant.user.username }}".</p>
+        <p><a href="{% url 'managereport' reportid=rep.pk %}">Посилання</a></p>
+        <br>
+        {% endfor %}
+        {% endif %}
+        <hr>
+        <h4>Видалення ГО</h4>
+        {% if not repsdel %}
+        <p>У системі поки немає ніяких звітів активації/деактивації.</p>
+        {% else %}
+        {% for rep in repsdel %}
+        <p><b>Звіт №{{ rep.pk }}</b>.</p>
+        <p>Організація "{{ rep.organization.full_naming }}".</p>
+        <p>Реєстратор із username "{{ rep.registrant.user.username }}".</p>
+        <p><a href="{% url 'managereport' reportid=rep.pk %}">Посилання</a></p>
+        <br>
+        {% endfor %}
+        {% endif %}
+        <hr>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

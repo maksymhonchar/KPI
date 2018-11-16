@@ -1,0 +1,20 @@
+<page><title>Etcher (software)</title><pageid>57358393</pageid><category>Software</category><sections><section title="">Etcher is a free and open-source cross platform software for which is used for burning image (ZIP,ISO,IMG) with support for Windows , OSx and GNU/Linux which has been developed with help of electron framework and supports hardware like USB Key and SD card. 
+
+
+</section><section title="Features">Etcher is used to create a USB stick or a USB bootable external USB hard drive  .
+The user interface is used to select the disk image to be burned, to connect the USB media and to start burning .
+Automatic detection of USB storage media, SD card .
+Do not select a hard drive. You will not be able to accidentally destroy the data present on a hard disk;
+Allows you to prepare a bootable USB key with a Windows 10 image larger than the capacity of a DVD :
+Allows you to install Raspbian for Raspberry Pi on Micro SD card .
+When the burning is complete, Etcher proposes to burn a new medium with the same image or a new one. This is convenient for teachers who would like to burn the same image on the SD cards of all Raspberry Pi at their school .
+
+
+</section><section title="Supported Linux distributions">Ubuntu, Kubuntu and Xubuntu
+Debian Live Gnome / KDE / LXDE / Xfce
+Linux Mint
+PrimTux 
+Emmabunt&#252;s
+
+
+</section></sections></page>

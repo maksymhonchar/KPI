@@ -1,0 +1,55 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as pagmacros %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+
+{% block title %}Admin: изменение пользователей{% endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user) }}
+{% endblock %}
+
+{% block styles -%}
+    {{ super() }}
+    <link href="{{ url_for('static', filename="css/user.css", _external=True) }}" rel="stylesheet">
+{%- endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Список пользователей для изменений</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for user in users -%}
+                <div class="section-wrapper padding-topbot-20px">
+                    <div class="section-content-col-avatar">
+                        <img
+                                src="{% if user.avatar %}{{ url_for('main.userpic', id=user.id) }}{% else %}https://pp.vk.me/c637529/v637529738/23c19/14YPY_pdSzU.jpg{% endif %}"
+                                alt="@{{ user.username }} avatar"
+                                class="img-avatar-sm img-responsive">
+                    </div>
+                    <div class="section-content-col-descr">
+                        <p>
+                            <a href="{{ url_for('main.user', username=user.username, _external=True) }}">
+                                {{ user.name }} {{ user.surname }} - @{{ user.username }}
+                            </a>
+                            <span class="small">({% if user.is_online() %}Online{% else %}Offline{% endif %})</span>
+                        </p>
+                        <p class="text-md">
+                            Записей {{ user.posts.count() }},
+                            Комментариев {{ user.comments.count() }}
+                        </p>
+                    </div>
+                </div>
+            {%- endfor %}
+        </div>
+    </div>
+    {% if pagination %}
+        <div class="container">
+            <div class="row">
+                <div class="pagination">
+                        {{ pagmacros.pagination_widget(pagination, 'administer.admin_users') }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

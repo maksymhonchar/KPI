@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Головна - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col-md-12">
+        <h3>Вітаємо на головній сторінці Реєстру Громадських Об'єднань!</h3>
+        <hr>
+        <p>Сторінка <a href="{% url 'searchorg' %}">"Пошук організацій"</a></p>
+        <p>Сторінка <a href="{% url 'about' %}">"Про Реєстр"</a></p>
+        <p>Сторінка <a href="{% url 'support' %}">"Технічна підтримка Реєстру"</a></p>
+    </div>
+</div>
+
+<!--Footer-->
+<div class="footer">
+    {% if user.is_anonymous %}
+    <p><a href="{% url 'login' %}">Вхід для персоналу</a></p>
+    {% else %}
+    <p>
+        {% if userinst %}
+        <p>Поточний співробітник: "{{ userinst.user.username }}"</p>
+        {% if userinst.is_admin %}
+        <a href="{% url 'adminindex' %}">Адміністратор: головна </a> |
+        <a href="{% url 'adminmng' %}">Адміністратор: управління</a> |
+        <a href="{% url 'searchreportindex' %}">Адміністратор: звіти</a> |
+        {% else %}
+        <a href="{% url 'registrantindex' %}">Реєстратор: головна</a> |
+        <a href="{% url 'registrantmng' %}">Реєстратор: організації</a> |
+        {% endif %}
+        <a href="{% url 'logout' %}">Вихід із системи</a>
+        {% endif %}
+    </p>
+    {% endif %}
+    <p class="text-muted">Всі права захищені. "Держiнформ'юст" © 2013-2018</p>
+</div>
+<!--End Footer-->
+
+{% endblock %}
+

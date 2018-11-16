@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Employees page</title>
+</head>
+<body>
+
+<div class="col-sm-12">
+    <p>
+        <small>Back to <a href="{% url 'indexpage' %}">index</a></small>
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Employees page</h1>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>READ section</h3>
+            <div id="read_section"></div>
+            <button type="button" class="btn btn-primary" id="get_btn">Get existing content</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>CREATE section</h3>
+            <div id="create_section">
+                <label for="full_name_input">
+                    Full name <input type="text" name="full_name" id="full_name_input">
+                </label>
+                <br>
+                <label for="characteristics_input">
+                    Charateristics <input type="text" name="characteristics" id="characteristics_input">
+                </label>
+                <br>
+                <label for="is_intern_select">
+                    Is intern
+                    <select name="is_intern" id="is_intern_select">
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                </label>
+            </div>
+            <button type="button" class="btn btn-success" id="create_btn">Create new</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>UPDATE section</h3>
+            <div id="update_section">
+                <label for="obj_id_select">
+                    Update row by ID:
+                    <select name="update_id" id="obj_id_select"></select>
+                </label>
+                <br>
+                <label for="full_name_upd_input">
+                    Full name <input type="text" name="full_name" id="full_name_upd_input">
+                </label>
+                <br>
+                <label for="characteristics_upd_input">
+                    Charateristics <input type="text" name="characteristics" id="characteristics_upd_input">
+                </label>
+                <br>
+                <label for="is_intern_upd_select">
+                    Is intern
+                    <select name="is_intern" id="is_intern_upd_select">
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                </label>
+            </div>
+            <button type="button" class="btn btn-warning" id="update_btn">Update</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>DELETE section</h3>
+            <div id="delete_section">
+                <label for="delete_ids_select">
+                    Delete row by ID:
+                    <select name="delete_id" id="delete_ids_select"></select>
+                </label>
+            </div>
+            <button type="button" class="btn btn-danger" id="delete_btn">Delete</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>SEARCH section</h3>
+            <label for="fulltext_search">
+                Characteristics includes (sep=' '): <input type="text" name="descr_fulltext" id="fulltext_search">
+            </label>
+            <br>
+            <label for="like_search">
+                Full name is like: <input type="text" name="full_name_like" id="like_search">
+            </label>
+            <br>
+            <label for="isintern_search">
+                Is intern?
+                <select name="is_intern" id="isintern_search">
+                    <option value="1">1</option>
+                    <option value="0">0</option>
+                </select>
+            </label>
+            <br>
+            <button type="button" class="btn btn-primary" id="search_btn">Search!</button>
+            <br>
+            <br>
+            <div id="search_result"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Import/Export section</h3>
+            <p>
+                <a href="{% url 'exportmodel' %}?model_name=employees">Export employees to XML</a>
+            </p>
+            <p>Import employees from XML</p>
+            <form action="http://localhost:8000/api/employees/import/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="file">
+                <button type="submit">Import file</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        function updateGetUI(json) {
+            console.log('get:');
+            console.log(json);
+
+            var tblroot = document.createElement("div");
+            tblroot.setAttribute("class", "table-responsive");
+
+            var tbl = document.createElement("table");
+            tbl.setAttribute("class", "table table-bordered table-striped");
+
+            var thead = document.createElement("thead");
+            var tbody = document.createElement("tbody");
+
+            var thead_tr = document.createElement("tr");
+
+            if (json) {
+                // Column names.
+                for (var colname in json[0]) {
+                    var th_elem = document.createElement("th");
+                    th_elem.innerHTML = colname;
+                    thead_tr.appendChild(th_elem);
+                }
+                // Column values for each column.
+                for (var i = 0; i < json.length; i++) {
+                    var tbody_tr_elem = document.createElement("tr");
+                    for (var item_colname in json[i]) {
+                        var tbody_td_elem = document.createElement("td");
+                        tbody_td_elem.innerHTML = json[i][item_colname];
+                        tbody_tr_elem.appendChild(tbody_td_elem);
+                    }
+                    tbody.appendChild(tbody_tr_elem);
+                }
+            } else {
+                var th_noitems_elem = document.createElement("th");
+                th_noitems_elem.innerHTML = "Pleaes create an item to get items";
+                thead_tr.appendChild(th_noitems_elem);
+            }
+
+            thead.appendChild(thead_tr);
+
+            tbl.appendChild(thead);
+            tbl.appendChild(tbody);
+
+            tblroot.appendChild(tbl);
+            document.getElementById("read_section").appendChild(tblroot);
+        }
+
+        function getEmployees() {
+            $.ajax({
+                url: 'http://localhost:8000/api/employees/',
+                dataType: 'json', // jsonp
+                success: function (json) {
+                    updateGetUI(json);
+                }
+            });
+        }
+
+        function clearAndUpdateGetEmployees() {
+            var read_section = document.getElementById("read_section");
+            read_section.innerHTML = "";
+            getEmployees();
+        }
+
+        function updateUpdateDeleteIds() {
+            $.ajax({
+                url: 'http://localhost:8000/api/employees/',
+                dataType: 'json', // jsonp
+                success: function (json) {
+                    var updelem = document.getElementById("obj_id_select");
+                    updelem.innerHTML = "";
+                    var delelem = document.getElementById("delete_ids_select");
+                    delelem.innerHTML = "";
+
+                    for (var i = 0; i < json.length; i++) {
+                        var updoptionToPaste = document.createElement("option");
+                        var deloptionToPaste = document.createElement("option");
+
+                        var valueForOption = json[i]['employee_id'];
+                        updoptionToPaste.setAttribute("value", valueForOption);
+                        updoptionToPaste.innerHTML = valueForOption;
+                        deloptionToPaste.setAttribute("value", valueForOption);
+                        deloptionToPaste.innerHTML = valueForOption;
+
+                        updelem.appendChild(updoptionToPaste);
+                        delelem.appendChild(deloptionToPaste);
+                    }
+                }
+            });
+        }
+
+        $(function () {
+            $("#get_btn").click(function () {
+                clearAndUpdateGetEmployees();
+            })
+        });
+
+        $(function () {
+            $("#create_btn").click(function () {
+                var jsonToPost = {
+                    full_name: document.getElementById("full_name_input").value,
+                    characteristics: document.getElementById("characteristics_input").value,
+                    is_intern: parseInt(document.getElementById("is_intern_select").value)
+                };
+                var posturl = "http://localhost:8000/api/employees/add/";
+                $.ajax({
+                    type: "POST",
+                    url: posturl,
+                    data: JSON.stringify(jsonToPost),
+                    dataType: "text",
+                    contentType: "text/plain",
+                    success: function (json) {
+                        console.log('post');
+                        console.log(json);
+                        clearAndUpdateGetEmployees();
+                        updateUpdateDeleteIds();
+                    }
+                });
+            });
+        });
+
+        $(function () {
+            $("#update_btn").click(function () {
+                var jsonToUpdate = {
+                    full_name: document.getElementById("full_name_upd_input").value,
+                    characteristics: document.getElementById("characteristics_upd_input").value,
+                    is_intern: parseInt(document.getElementById("is_intern_upd_select").value)
+                };
+                var updurl = "http://localhost:8000/api/employees/upd/" + parseInt(document.getElementById('obj_id_select').value) + '/';
+                $.ajax({
+                    type: "PUT",
+                    url: updurl,
+                    data: JSON.stringify(jsonToUpdate),
+                    dataType: "text",
+                    contentType: "text/plain",
+                    success: function (json) {
+                        console.log('put');
+                        console.log(json);
+                        clearAndUpdateGetEmployees();
+                    }
+                });
+            });
+        });
+
+        $(function () {
+            $("#delete_btn").click(function () {
+                var rowToDeleteID = document.getElementById('delete_ids_select').value;
+                var delurl = "http://localhost:8000/api/employees/del/" + rowToDeleteID + '/';
+                console.log('debug ' + delurl);
+                $.ajax({
+                    type: "DELETE",
+                    url: delurl,
+                    success: function (json) {
+                        console.log('delete');
+                        console.log(json);
+                        clearAndUpdateGetEmployees();
+                        updateUpdateDeleteIds();
+                    },
+                    error: function (data) {
+                        console.log('error while delete');
+                        console.log(data);
+                        alert('sorry, cannot delete element');
+                    }
+                });
+            });
+        });
+
+        $(function () {
+            $("#search_btn").click(function () {
+                var searchurl = 'http://localhost:8000/api/employees/search/';
+                if (document.getElementById('fulltext_search').value) {
+                    searchurl += ('?characteristics=' + document.getElementById('fulltext_search').value);
+                } else if (document.getElementById('like_search').value) {
+                    searchurl += ('?full_name=' + document.getElementById('like_search').value);
+                } else {
+                    searchurl += ('?is_intern=' + document.getElementById('isintern_search').value);
+                }
+                $.ajax({
+                    type: "GET",
+                    url: searchurl,
+                    dataType: 'json', // jsonp
+                    success: function (json) {
+                        if (json.length) {
+                            var divToPasteSearchResults = document.createElement('div');
+
+                            var txtSearchResultLbl = document.createElement('p');
+                            txtSearchResultLbl.innerHTML = "Found rows:";
+                            divToPasteSearchResults.appendChild(txtSearchResultLbl);
+
+                            for (var i = 0; i < json.length; i++) {
+                                var resultParagraphElem = document.createElement('small');
+                                for (var key in json[i]) {
+                                    resultParagraphElem.innerHTML += key + ' - ' + json[i][key] + ';\t';
+                                }
+                                divToPasteSearchResults.appendChild(
+                                    document.createElement('br')
+                                );
+                                divToPasteSearchResults.appendChild(resultParagraphElem);
+                            }
+
+                            var sresult = document.getElementById('search_result');
+                            sresult.innerHTML = "";
+                            sresult.appendChild(divToPasteSearchResults);
+                        } else {
+                            document.getElementById('search_result').innerHTML = "Didnt find any";
+                        }
+                    }
+                });
+            });
+        });
+
+        // On document load update content.
+        getEmployees();
+        updateUpdateDeleteIds();
+    });
+</script>
+
+</body>
+</html>

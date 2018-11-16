@@ -1,0 +1,51 @@
+<page><title>Comparison of archive formats</title><pageid>4523373</pageid><category>Archive formats</category><sections><section title="">There are many popular computer data archive formats for creating and maintaining archive files. The tables below compare many popular archive formats.
+
+
+</section><section title="Features">The table compares various features column-by-column below:
+
+
+=== Purpose ===
+Archive formats are used for backups, mobility, and archiving. Many archive formats compress the data to consume less storage space and result in quicker transfer times as the same data is represented by fewer bytes. Another benefit is that files are combined into one archive file which has less overhead for managing or transferring.
+There are numerous compression algorithms available to losslessly compress archived data and some algorithms work better (smaller archive or faster compression) with particular data types.
+Archive formats are also used by most operating systems to package software for easier distribution and installation than binary executables.
+
+
+=== Filename extension ===
+The DOS and Windows operating systems required filenames to include an extension (of at least one, and typically 3 characters) to identify the file type and use. Filename extensions must be unique for each type of file. Many operating systems identify a file's type from its contents without the need for an extension in its name. However, the use of three-character extensions has been embraced as a useful and efficient shorthand for identifying file types&#8212;both for computer software, and for humans.
+
+
+=== Integrity check ===
+Archive files are often stored on magnetic media, which is subject to data storage errors. Early tape media had a higher rate of errors than is expected for magnetic media today. Many archive formats contain extra data embedded in the files in order to detect data storage or transmission errors, and the software used to read the archive files contain logic to detect errors.
+
+
+=== Recovery record ===
+Many archive formats contain redundant data embedded in the files in order to detect data storage or transmission errors, and the software used to read the archive files contain logic to detect and correct errors.
+
+
+=== Encryption ===
+In order to protect the data being stored or transferred from being read if intercepted, many archive formats include the capability to encrypt the data. There are multiple mathematical algorithms available to encrypt data.
+
+
+</section><section title="Comparison">
+
+=== Containers and compression ===
+
+
+==== Notes ====
+^1 While the original tar format uses the ASCII character encoding, current implementations use the UTF-8 (Unicode) encoding, which is backwards compatible with ASCII.^2 Supports the external Parchive program (par2).^3 From 3.20 release RAR can store modification, creation and last access time with the precision up to 0.0000001 second (= 0.1 &#181;s). [1] [2]^4 The PAQ family (with its lighter weight derivative LPAQ) went through many revisions, each revision suggested its own extension. For example: ".paq9a".^5 WIM can store the ciphertext of encrypted files on an NTFS volume, but such files can only by decrypted if an administrator extracts the file to an NTFS volume, and the decryption key is available (typically from the file's original owner on the same Windows installation). Microsoft has also distributed some download versions of the Windows operating system as encrypted WIM files, but via an external encryption process and not a feature of WIM.
+
+
+=== Software packaging and distribution ===
+
+
+==== Notes ====
+^1 Not to be confused with the archiver JAR written by Robert K. Jung, which produces ".j" files.
+
+
+</section><section title="Features">
+
+=== Notes ===
+^1 Compression is not a built-in feature of the formats, however, the resulting archive can be compressed with any algorithm of choice. Several implementations include functionality to do this automatically^2 That is, most implementations can optionally produce a self-extracting executable^3 Per-file compression with gzip, bzip2, lzo, xz, lzma (as opposed to compressing the whole archive). An individual can choose not to compress already compressed filenames based on their suffix as well.
+
+
+</section></sections></page>

@@ -1,0 +1,47 @@
+{% macro footer(onTopLink=False) %}
+    <!-- Footer content -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1 text-center footer-item">
+                    <h5>Интересные ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ url_for('main.about', _external=True) }}">О проекте</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('main.contacts', _external=True) }}">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('main.legal', _external=True) }}">Правила сайта</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('main.dev', _external=True) }}">Для разработчиков</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 hidden-sm hidden-xs text-center footer-item">
+                    <h5>Текущая версия: v.0.0.1</h5>
+                    {% if onTopLink -%}
+                        <a href="#page-top" class="page-scroll">На самый верх</a>
+                    {%- endif %}
+                </div>
+                <div class="col-md-4 col-sm-6 hidden-xs text-center footer-item">
+                    <h5>WIDT в социалках:</h5>
+                    <ul class="list-inline">
+                        <li class="padding-side-10px">
+                            <a href="https://www.facebook.com/widt.blog" class="btn soc"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="padding-side-10px">
+                            <a href="https://twitter.com/widt_blog" class="btn soc"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="padding-side-10px">
+                            <a href="https://vk.com/widt.blog" class="btn soc"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer content -->
+{% endmacro %}

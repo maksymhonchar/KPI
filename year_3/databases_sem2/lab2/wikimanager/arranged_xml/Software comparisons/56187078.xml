@@ -1,0 +1,17 @@
+<page><title>User:Bolo1910/Comparison of software prototyping tools</title><pageid>56187078</pageid><category>Software comparisons</category><sections><section title="">Software prototyping tools are used to quickly create software prototypes simulating key aspects of the final product, while ignoring others (like textual and media content, interactivity, real implementation). The article only includes dedicated applications, not paper tools, UI libraries or popular software repurposed for prototyping.
+
+
+</section><section title="General-purpose">These tools have the broadest feature set, namely some level of visual fidelity, interactivity and any sort of prototyping aid (built-in widgets, masters, library support, etc.)
+Some clarifications on the vocabulary:
+Widget behavior: moving or editing (e.g. changing the label in a field) at runtime
+Master: synchronising a master widget with its instances
+Layout: anything other than "absolute positioning on a canvas"
+Specification: generated documentation of content
+Annotations: In-screen documentation
+Positioning aids: align, distribute, guides, grouping, etc.
+
+
+</section><section title="Wireframing">These tools are mainly used to create "wireframes" or "zonings", i.e. simple prototypes with low interactivity (often only link between pages) and visual fidelity.
+
+
+</section></sections></page>

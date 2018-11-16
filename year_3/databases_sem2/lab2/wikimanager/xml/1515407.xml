@@ -1,0 +1,168 @@
+<page><title>Comparison of command shells</title><pageid>1515407</pageid><category>Command shells</category><sections><section title="">A command shell is a command line interface computer program to an operating system.
+
+
+</section><section title="General characteristics">
+
+</section><section title="Interactive features">
+
+=== Background execution ===
+Background execution allows a shell to run a command in background. POSIX shells and other Unix shells allow background execution by using the &amp; character and the end of command, and in PowerShell you can use Start-Process or Start-Job commands.
+
+
+=== Completions ===
+
+Completion features assist the user in typing commands at the command line, by looking for and suggesting matching words for incomplete ones. Completion is generally requested by pressing the completion key (often the Tab &#8633; key).
+Command name completion is the completion of the name of a command. In most shells, a command can be a program in the command path (usually $PATH), a builtin command, a function or alias.
+Path completion is the completion of the path to a file, relative or absolute.
+Wildcard completion is a generalization of path completion, where an expression matches any number of files, using any supported syntax for file matching.
+Variable completion is the completion of the name of a variable name (environment variable or shell variable). Bash, zsh, and fish have completion for all variable names. PowerShell has completions for environment variable names, shell variable names and &#8212; from within user-defined functions &#8212; parameter names.
+Command argument completion is the completion of a specific command's arguments. There are two types of arguments, named and positional: Named arguments, often called options, are identified by their name or letter preceding a value, whereas positional arguments consist only of the value. Some shells allow completion of argument names, but few support completing values.
+Bash, zsh and fish offer parameter name completion through a definition external to the command, distributed in a separate completion definition file. For command parameter name/value completions, these shells assume path/filename completion if no completion is defined for the command. Completion can be set up to suggest completions by calling a shell function. The fish shell additionally supports parsing of man pages to extract parameter information that can be used to improve completions/suggestions. In PowerShell, all types of commands (cmdlets, functions, script files) inherently expose data about the names, types and valid value ranges/lists for each argument. This metadata is used by PowerShell to automatically support argument name and value completion for built-in commands/functions, user-defined commands/functions as well as for script files. Individual cmdlets can also define dynamic completion of argument values where the completion values are computed dynamically on the running system.
+
+
+=== Command history ===
+
+A user of a shell may find that he/she is typing something similar to what the user typed before. If the shell supports command history the user can call the previous command into the line editor and edit it before issuing it again.
+Shells that support completion may also be able to directly complete the command from the command history given a partial/initial part of the previous command.
+Most modern shells support command history. Shells which support command history in general also supports completion from history rather than just recalling commands from the history. In addition to the plain command text, PowerShell also records execution start- and end time and execution status in the command history.
+
+
+=== Mandatory argument prompt ===
+
+Mandatory arguments/parameters are arguments/parameters which must be assigned a value upon invocation the command, function or script file. A shell that can determine ahead of invocation that there are missing mandatory values, can assist the interactive user by prompting for those values instead of letting the command fail. Having the shell prompt for missing values will allow the author of a script, command or function to mark a parameter as mandatory instead of creating script code to either prompt for the missing values (after determining that it is being run interactively) or fail with a message.
+PowerShell allows commands, functions and scripts to define arguments/parameters as mandatory. The shell determines prior to invocation if there is any mandatory arguments/parameters which have not been bound, and will then prompt the user for the value(s) before actual invocation. 
+
+
+=== Automatic suggestions ===
+
+With automatic suggestions the shell monitors while the interactive user is typing and displays context-relevant suggestions without interrupting the typing instead of the user explicitly requesting completion.
+The PowerShell Integrated Scripting Environment use the discoverable metadata to provide "intellisense" - i.e. suggestions that automatically pops up as the user types, in addition to when the user explicitly requests completion lists by pressing e.g. Tab &#8633;
+
+
+=== Directory history, stack or similar features ===
+A shell may record the locations the user has used as current locations and allow fast switching to any location/directory in the history.
+One of the uses of the zsh directory stack is to record a directory history. In particular, the AUTO_PUSHD option and advanced cd arguments and completion are used for this purpose.
+PowerShell allows multiple named stacks to be used. Locations (directories) can be pushed onto/popped from the current stack or a named stack. Any stack can become the current (default) stack. Unlike most other shells, PowerShell's location concept allow location stacks to hold file system locations as well as other location types like e.g. Active Directory organizational units/groups, SQL Server databases/tables/objects, Internet Information Server applications/sites/virtual directories.
+4DOS and Take Command Console record history of current directories and allows the user to switch to a directory in the history using a popup a window.
+
+
+=== Implicit directory change ===
+A directory name can be used directly as a command which implicitly changes the current location to the directory.
+
+
+=== Autocorrection ===
+When a command line does not match a command or arguments directly, spell checking can automatically correct common typing mistakes (such as case sensitivity, missing letters). There are two approaches to this; the shell can either suggest probable corrections upon command invocation, or this can happen earlier as part of a completion or autosuggestion.
+The tcsh and zsh shells feature optional spell checking/correction, upon command invocation.
+Fish does the autocorrection upon completion and autosuggestion. The feature is therefore not in the way when typing out the whole command and pressing enter, whereas extensive use of the tab and right-arrow keys makes the shell mostly case insensitive.
+The PSReadLine PowerShell module (which is shipped with version 5.0) provides the option to specify a CommandValidationHandler ScriptBlock which runs before submitting the command. This allows for custom correcting of commonly mistyped commands, and verification before actually running the command.
+
+
+=== Integrated environment ===
+
+An integrated environment is the integration of the command-line interface with editors (typically multiple documents), help system and possibly debugging and other tools.
+Take Command Console (TCC) comes with an integrated environment with command line pane, file explorer, editor, batch debugger and more.
+PowerShell ISE includes a command line pane with support for integrated command line, copy-paste, multiple document editors, source-level debugging, help pane, command explorer pane and scripting interface allowing scripts/modules to manipulate menus, add-ons etc. The ISE (menus, windows, shortcuts, addons) are customizable through scripts.
+
+
+=== Snippets ===
+
+Snippets are small regions of reusable script code. Snippets are often used to save keystrokes, or to assist the user with common scripting patterns. Many text editors support snippets for scripting either as built-in functionality or through plugins.
+PowerShell supports snippets in the Integrated Scripting Environment (ISE) using Ctrl+J.
+
+
+=== Value prompt ===
+A shell script can prompt the interactive user for a value.
+
+
+=== Menu/options selector ===
+A shell script can present the interactive user with a list of choices.
+
+
+=== Progress indicator ===
+A shell script (or job) can report progress of long running tasks to the interactive user.
+Unix/Linux systems may offer other tools support using progress indicators from scripts or as standalone-commands, such as the program "pv". These are not integrated features of the shells, however.
+PowerShell has a built-in command and API functions (to be used when authoring commands) for writing/updating a progress bar. Progress bar messages are sent separates from regular command output and the progress bar is always displayed at the ultimate interactive users console regardless of whether the progress messages originates from an interactive script, from a background job or from a remote session.
+
+
+=== Interactive table ===
+Output from a command execution can be displayed in a table/grid which can be interactively sorted and filtered and/or otherwise manipulated after command execution ends.
+PowerShell Out-GridView cmdlet displays data in an interactive window with interactive sorting and filtering.
+
+
+=== Syntax highlighting ===
+
+An independent project offers syntax highlighting as an add-on to the Z Shell (zsh). This is not part of the shell, however.
+PowerShell provides customizable syntax highlighting on the command line through the PSReadLine module. This module can be used with PowerShell v3.0+, and it's included with v5.0. Additionally, it is loaded by default in the command line host "powershell.exe" in v5.0. The PowerShell ISE also includes syntax highlighting on the command line as well as in the script pane. Take Command Console (TCC) offers syntax highlighting in the integrated environment.
+
+
+=== Context sensitive help ===
+
+4DOS, 4OS2, 4NT / Take Command Console and PowerShell (in PowerShell ISE) looks up context-sensitive help information when F1 is pressed.
+Zsh provides various forms of configurable context-sensitive help as part of its run-help widget, _complete_help command, or in the completion of options for some commands.
+
+
+=== Command builder ===
+A command builder is a guided dialog which assists the user in filling in a command. PowerShell has a command builder which is available in PowerShell ISE or which can be displayed separately through the Show-Command cmdlet.
+
+
+</section><section title="Programming features">Notes
+^fish math :The bundled math function requires bc.
+
+
+</section><section title="String processing and filename matching">
+
+</section><section title="Inter-process communication">
+
+=== Keystroke stacking ===
+In anticipation of what a given running application may accept as keyboard input, the user of the shell instructs the shell to generate a sequence of simulated keystrokes, which the application will interpret as an keyboard input from an interactive user. By sending keystroke sequences the user may be able to direct the application to perform actions that would be impossible to achieve through input redirection or would otherwise require an interactive user. For example, if an application acts on keystrokes, which cannot be redirected, distinguishes between normal and extended keys, flushes the queue before accepting new input on startup or under certain conditions, or because it does not read through standard input at all. Keystroke stacking typically also provides means to control the timing of simulated keys being sent or to delay new keys until the queue was flushed etc. It also allows to simulate keys which are not present on a keyboard (because the corresponding keys do not physically exist or because a different keyboard layout is being used) and therefore would be impossible to type by a user.
+
+
+</section><section title="Security features">
+
+=== Secure prompt ===
+Some shell scripts need to query the user for sensitive information such as passwords, private digital keys, PIN codes or other confidential information. Sensitive input should not be echoed back to the screen/input device where it could be gleaned by unauthorized persons. Plaintext memory representation of sensitive information should also be avoided as it could allow the information to be compromised, e.g., through swap files, core dumps etc.
+The shells bash, zsh and PowerShell offer this as a specific feature. Shells which do not offer this as a specific feature may still be able to turn off echoing through some other means. Shells executing on a Unix/Linux operating system can use the stty external command to switch off/on echoing of input characters. In addition to not echoing back the characters, PowerShell's -AsSecureString option also encrypts the input character-by-character during the input process, ensuring that the string is never represented unencrypted in memory where it could be compromised through memory dumps, scanning, transcription etc.
+
+
+=== Encrypted variables/parameters ===
+If a script reads a password into an environment variable it is in memory in plain text, and thus may be accessed via a core dump. It is also in the process environment, which may be accessible by other processes started by the script.
+PowerShell can work with encrypted string variables/parameters. Encrypted variables ensure that values are not inadvertently disclosed through e.g. transcripts, echo'ing, logfiles, memory or crash dumps or even malicious memory scanning. PowerShell also supports saving of such encrypted strings in text files, protected by a key owned by the current user.
+
+
+=== Execute permission ===
+Some operating systems define an execute permission which can be granted to users/groups for a file.
+On Unix systems, the execute permission controls access to invoking the file as a program, and applies both to executables and scripts. As the permission is enforced in the program loader, no obligation is needed from the invoking program, nor the invoked program, in enforcing the execute permission &#8212; this also goes for shells and other interpreter programs. The behaviour is mandated by the POSIX C library that is used for interfacing with the kernel: POSIX specifies that the exec family of functions shall fail with EACCESS (permission denied) if the file denies execution permission (see execve &#8211; System Interfaces Reference, The Single UNIX Specification, Issue 7 from The Open Group).
+The execute permission only applies when the script is run directly. If a script is invoked as an argument to the interpreting shell, it will be executed regardless of whether the user holds the execute permission for that script.
+Although Windows also specifies an execute permission, none of the Windows specific shells block script execution if the permission has not been granted.
+
+
+=== Untrusted script blocking ===
+Some shells will block scripts determined to be untrustworthy, or refuse to run scripts if mandated by a system administrator.
+
+
+==== Script origin execution restriction ====
+PowerShell can be set to block execution of scripts which has been marked as obtained from an unknown/untrusted origin (e.g. the Internet). Internet facing applications such as web browsers, IM clients, mail readers etc. mark files downloaded from the internet with the origin zone in an alternate data stream which is understood by PowerShell.
+
+
+==== Signed script restriction ====
+Script/code signing policies can be used to ensure that an operations department only run approved scripts/code which have been reviewed and signed by a trusted reviewer/approver. Signing regimes also protects against tampering. If a script is sent from vendor to a client, the client can use signing to ensure that the script has not been tampered with during transit and that the script indeed originates from the vendor and not an attacker trying to social engineer an operator into running an attack script.
+PowerShell can be set to allow execution of otherwise blocked scripts (e.g. originating from an untrusted zone) if the script has been digitally signed using a trusted digital certificate.
+
+
+==== Multilevel execution policies ====
+A company may want to enforce execution restriction globally within the company and/or certain parts of the company. It may want to set a policy for running signed scripts but allow certain parts of the company to set their own policies for zoned restrictions.
+PowerShell allows script blocking policies to be enforced at multiple levels: Local machine, current user etc. A higher level policy overrides a lower level policy, e.g. if a policy is defined for the local machine it is in place for all users of the local machine, only if it is left undefined at the higher level can it be defined for the lower levels.
+
+
+=== Restricted shell subset ===
+Several shells can be started or be configured to start in a mode where only a limited set of commands and actions is available to the user. While not a security boundary (the command accessing a resource is blocked rather than the resource) this is nevertheless typically used to restrict users' actions before logging in.
+A restricted mode is part of the POSIX specification for shells, and most of the Linux/Unix shells support such a mode where several of the built-in commands are disabled and only external commands from a certain directory can be invoked.
+PowerShell supports restricted modes through session configuration files or session configurations. A session configuration file can define visible (available) cmdlets, aliases, functions, path providers and more.
+
+
+=== Safe data subset ===
+Scripts that invoke other scripts can be a security risk as they can potentially execute foreign code in the context of the user who launched the initial script. Scripts will usually be designed to exclusively include scripts from known safe locations; but in some instances, e.g. when offering the user a way to configure the environment or loading localized messages, the script may need to include other scripts/files. One way to address this risk is for the shell to offer a safe subset of commands which can be executed by an included script.
+PowerShell data sections can contain constants and expressions using a restricted subset of operators and commands. PowerShell data sections are used when e.g. localized strings needs to be read from an external source while protecting against unwanted side effects.
+
+
+</section></sections></page>

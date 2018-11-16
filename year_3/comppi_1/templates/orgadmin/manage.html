@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Адміністратор Управління - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Сторінка управління Реєстраторами</h3>
+        <hr>
+        <h4>Створити нового Реєстратора</h4>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ newregform.non_field_errors }}
+            {% if formerrmsg is not None %}
+            <ul class="errorlist nonfield">
+                <li>{{ formerrmsg }}</li>
+            </ul>
+            {% endif %}
+            {% for hidden_field in newregform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            {% for field in newregform.visible_fields %}
+            <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            {% endfor %}
+            {{ form }}
+            <button type="submit">Створити</button>
+        </form>
+        <hr>
+        <h4>Список усіх Реєстраторів у системі</h4>
+        <ol>
+            {% for reg in allregs %}
+            <li>
+                <p>Username: {{ reg.user.username }}</p>
+                <p>Особова справа: {{ reg.doc_code }}</p>
+                <p>Створений адміністратором {{ reg.hired_by.user.username }}</p>
+                <p>
+                    <a class="btn btn-warning" href="{% url 'adminregedit' regid=reg.pk %}" role="button">Змінити</a>
+                    <a class="btn btn-danger" href="{% url 'adminregdelete' regid=reg.pk %}" role="button">Видалити</a>
+                </p>
+            </li>
+            {% endfor %}
+        </ol>
+        <br>
+        <hr>
+        <br>
+        <br>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+<page><title>Software safety classification</title><pageid>54309575</pageid><category>Occupational safety and health</category><sections><section title="">
+</section><section title="Safety Classes">Software classification is based on potential for hazard(s) that could cause injury to the user or patient.
+Per IEC 62304:2006, software can be divided into three separate classes:
+Class A: No injury or damage to health is possible
+Class B: Nonserious injury is possible
+Class C: Death or serious injury is possible
+
+
+=== Serious injury ===
+Injury or illness that directly or indirectly
+is life threatening
+results in permanent impairment of a body function or permanent damage to a body structure, or
+necessitates medical or surgical intervention to prevent permanent impairment of a body function or permanent damage to a body structure.
+
+^ "Developing Medical Device Software to IEC 62304 | MDDI Medical Device and Diagnostic Industry News Products and Suppliers". www.mddionline.com. Retrieved 2017-06-15.</section></sections></page>

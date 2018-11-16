@@ -1,0 +1,142 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as pagmacros %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+{% import "core/_macros_footer.html" as footer_macro %}
+{% import "core/_macros_utils.html" as utils_macro %}
+{% import "core/_macros_forms.html" as macro_form %}
+
+{% block title %}WIDT-@{{ user.username }}{% endblock %}
+
+{% block styles -%}
+    {{ super() }}
+    <link href="{{ url_for('static', filename="css/user.css", _external=True) }}" rel="stylesheet">
+{%- endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{%- endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h2 class="text-center">
+            {{ user.name }} {{ user.surname }} - @{{ user.username }}
+            {% if current_user.username == user.username -%}
+                <small>
+                    (Ваш профиль)
+                </small>
+            {%- endif %}
+        </h2>
+        <h4 class="text-center">
+            {% if user.is_online() %}Online{% else %}Offline{% endif %}
+        </h4>
+    </div>
+
+    <div class="container">
+        <div class="section-wrapper">
+            <div class="section-content-col-avatar-bg">
+                <img
+                        src="{% if user.avatar %}{{ url_for('main.userpic', id=user.id) }}{% else %}https://pp.vk.me/c637529/v637529738/23c19/14YPY_pdSzU.jpg{% endif %}"
+                        alt="@{{ user.username }} avatar"
+                        class="img-circle img-avatar img-responsive"
+                >
+            </div>
+            <div class="section-content-col-userinfo">
+                <h3 class="margin-vertical-10px">Информация о пользователе:</h3>
+                <ul>
+                    <li>В последний раз был на сайте: {{ moment(user.last_seen).fromNow() }}</li>
+                    <li>День рождения: {{ utils_macro.dataFieldIfExists(user.birthday) }}</li>
+                    <li>Местоположение: {% if user.location %}
+                        <a href="https://maps.google.com/?q={{ user.location }}">{{ user.location }}</a>{% else %}Не
+                        указано{% endif %}</li>
+                    <li>Про себя: {{ utils_macro.dataFieldIfExists(user.about) }}</li>
+                    <li>{% if user.gender == 1 %}Зарегестрирован{% else %}Зарегестрирована{% endif %}
+                        с: {{ moment(user.member_since).format('L') }}</li>
+                    <li>Написал <b>{{ user.posts.count() }}</b> записей и <b>{{ user.comments.count() }}</b>
+                        комментариев.
+                    </li>
+                </ul>
+                <p>
+                    {% if current_user.can(Permission.FOLLOW_PERSON) and user != current_user %}
+                        {% if not current_user.is_following(user) %}
+                            <a href="{{ url_for('main.follow', username=user.username, _external=True) }}"
+                               class="btn btn-primary">Подписаться</a>
+                        {% else %}
+                            <a href="{{ url_for('main.unfollow', username=user.username, _external=True) }}" class="btn btn-default">Отписаться</a>
+                        {% endif %}
+                    {% endif %}
+                    <a href="{{ url_for('main.followers', username=user.username, _external=True) }}">Подписаны: <span
+                            class="badge">{{ user.followers.count() - 1 }}</span></a>
+                    <a href="{{ url_for('main.followed_by', username=user.username, _external=True) }}">Подписан на: <span
+                            class="badge">{{ user.followed.count() - 1 }}</span></a>
+                    {% if current_user.is_authenticated and user != current_user and user.is_following(current_user) %}
+                        | <span class="label label-default">Подписан на Вас</span>
+                    {% endif %}
+                </p>
+                <p>
+                    {% if user == current_user %}
+                        <a class="btn btn-default" href="{{ url_for('main.settings', _external=True) }}">Изменить профиль</a>
+                    {% endif %}
+                    {% if current_user.is_administrator() %}
+                        <a class="btn btn-danger" href="{{ url_for('administer.edit_profile_admin', id=user.id, _external=True) }}">Изменить
+                            профиль [Admin]</a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    {% if current_user.can(Permission.WRITE_ARTICLES) and is_owner -%}
+        <div class="user-new-post-wrapper">
+            <div class="container">
+                <div class="row">
+                    <h3 class="text-center">Новая запись</h3>
+                    <div class="col-xs-10 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-2">
+                        {% call macro_form.render_form(form, action_url=url_for('main.user', username=current_user.username, _external=True)) %}
+                            {{ macro_form.render_field(form.title, placeholder='Заголовок', type='text') }}
+                            {{ macro_form.render_field(form.body, placeholder='Текст записи', type='text') }}
+                            <div class="login_buttons_wrap">
+                                {{ macro_form.render_button(form.submit, btn_class='custom_submit_button') }}
+                            </div>
+                        {% endcall %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <hr>
+    <br>
+    <div class="container padding-topbot-20px">
+        <h3 class="text-center">{% if is_owner %}Мои записи{% else %}Записи пользователя{% endif %}</h3>
+        <div class="row">
+            {% if posts %}
+                <div class="section-wrapper">
+                    {% for post in posts %}
+                        {% if loop.index%3==1 %}
+                            <div class="user-post-line-wrapper"></div>
+                        {% endif %}
+                        <div class="user-post-wrapper">
+                            <a href="{{ url_for('main.post', id=post.id, _external=True) }}">Запись id{{ post.id }}</a>
+                            <p>Написал{% if post.author.gender==0 %}а{% endif %} в {{ moment(post.timestamp).format('L h:mm:ss') }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Еще нет ни одной записи от этого пользователя.</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="pagination">
+                {{ pagmacros.pagination_widget(pagination, 'main.user', username=user.username) }}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+{% endblock %}
+
+{% block footer -%}
+    {{ footer_macro.footer() }}
+{%- endblock %}

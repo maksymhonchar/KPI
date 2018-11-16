@@ -1,0 +1,14 @@
+<page><title>Comparison of continuous integration software</title><pageid>22903426</pageid><category>Continuous integration</category><sections><section title="">This is a compendium of continuous integration software that supports a software engineering practice, continuous integration, in which developers' changes are immediately tested and reported when they are added to the mainline code base. The comparison of various continuous integration tools is done on the basis of platform, license, builders and Integration IDEs.
+These software aid in enabling continuous delivery and increase a developer's productivity by giving in-time feedback. This ultimately leads to an improved code quality thus improving the overall software quality.
+
+
+</section><section title="Comparison">The following table compares the features of some of the most popular continuous integration software; it is not comprehensive with regard to listing all of the popular CI Software. Comparison is done on the basis of Platform, Computing Platform, License, Builders and the Integration tools and IDEs supported
+
+
+</section><section title="SCM system support">The following table compares the features of some of the most popular Continuous Integration software on the basis of the Source Control Management or the Version Control Management which is an essential part of CI Software system. Some of the popular SCMs are given and if they are supported or not by the CI is what is mentioned in the table.
+
+
+</section><section title="Further reading">Paul M. Duvall, Steve Matyas, Andrew Glover. Continuous Integration: Improving Software Quality and Reducing Risk. ISBN 9780321630148. CS1 maint: Multiple names: authors list (link)
+Ching, Maria Odea; Porter, Brett. Apache Maven 2 Effective Implementation: Build and Manage Applications with Maven, Continuum, and Archiva. Packt Publishing Ltd. ISBN 9781847194558. 
+Melymuka, Volodymyr. TeamCity 7 Continuous Integration Essentials. Packt Publishing Ltd. ISBN 9781849693776. 
+List of Continuous Integration services</section></sections></page>

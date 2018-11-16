@@ -1,0 +1,109 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_pagination.html" as pagmacros %}
+{% import "core/_macros_navbar.html" as macro_navbar %}
+{% import "core/_macros_forms.html" as macro_form %}
+
+{% block title %}WIDT-Пользователи платформы{% endblock %}
+
+{% block styles -%}
+    {{ super() }}
+    <link href="{{ url_for('static', filename="css/user.css", _external=True) }}" rel="stylesheet">
+{%- endblock %}
+
+{% block navbar %}
+    {{ macro_navbar.navbar(current_user) }}
+{% endblock %}
+
+{% block page_content %}
+    <div class="page-header text-center">
+        <h1>Список всех пользователей платформы. Сейчас их <b>{{ pagination.total }}</b></h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <form class="form-signin" method="POST" role="form">
+                <h3>Поиск по юзернейму</h3>
+                <input type="text" name="un" placeholder="username" required>
+                <button class="btn btn-primary" id="searchbtn" type="button">Поиск</button>
+            </form>
+        </div>
+        <div class="row" id="search-results">
+        </div>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for user in users -%}
+                <div class="section-wrapper padding-topbot-20px">
+                    <div class="section-content-col-avatar">
+                        <img
+                                src="{% if user.avatar %}{{ url_for('main.userpic', _external=True, id=user.id) }}{% else %}https://pp.vk.me/c637529/v637529738/23c19/14YPY_pdSzU.jpg{% endif %}"
+                                alt="@{{ user.username }} avatar"
+                                class="img-avatar-sm img-responsive"
+                        >
+                    </div>
+                    <div class="section-content-col-descr">
+                        <p>
+                            <a href="{{ url_for('main.user', username=user.username, _external=True) }}">
+                                {{ user.name }} {{ user.surname }} - @{{ user.username }}
+                            </a>
+                            <span class="small">({% if user.is_online() %}Online{% else %}Offline{% endif %})</span>
+                        </p>
+                        <p class="text-md">
+                            Записей {{ user.posts.count() }},
+                            Комментариев {{ user.comments.count() }}
+                        </p>
+                    </div>
+                </div>
+            {%- endfor %}
+        </div>
+    </div>
+    {% if pagination %}
+        <div class="container">
+            <div class="row">
+                <div class="pagination">
+                    {{ pagmacros.pagination_widget(pagination, 'main.users') }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block scripts %}
+    <script>
+        $(function() {
+            $('button').click(function() {
+                var query = $('#query').val();
+                $.ajax({
+                    url: '{{ url_for('api.get_users', _external=True) }}',
+                    data: $('form').serialize(),
+                    type: 'GET',
+                    success: function(response) {
+                        $("#search-results").html('');
+                        if (response.users.length == 0)
+                            $("#search-results").append('<br><h3>Не найдено результатов по запросу.</h3>');
+                        else
+                        {
+                            $("#search-results").append('<br><h3>Найдены такие результаты:</h3>');
+                            for (var i = 0; i < response.users.length; i++)
+                            {
+                                $("#search-results").append(
+                                        'Пользователь с id' + response.users[i].id + ': ' +
+                                        '<a href="{{ url_for('main.user', username='', _external=True) }}' + response.users[i].personal.username
+                                        + '">' + response.users[i].personal.username + '</a>' +
+                                        '<br>'
+                                );
+                            }
+                        }
+                    },
+                    error: function(error) {
+                        $("#search-results").html('');
+                        $("#search-results").append('An error occured: ' + error);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

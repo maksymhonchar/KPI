@@ -1,0 +1,58 @@
+{% extends "core/base.html" %}
+{% import "core/_macros_navbar.html" as navbar_macro %}
+{% import "core/_macros_footer.html" as footer_macro %}
+
+{% block title %}WIDT-Контакты{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename="css/contacts.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+    {{ navbar_macro.navbar(current_user) }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <img
+                src="https://pp.vk.me/c637529/v637529738/23c12/8qYHvPKukQQ.jpg"
+                class="img-circle img-avatar img-responsive"
+                alt="Maxim Gonchar"
+                align="center"
+        >
+        <p class="paragraph-md img-avatar-description text-center margin-bottom-100px">Eto ya</p>
+        <p class="paragraph-sm text-center">У меня есть профиль вконтакте, фейсбуке и твиттере</p>
+        <div class="soc-btns-wrapper">
+            <a href="https://www.facebook.com/diferenzial13" class="btn soc-btn-contacts"><i class="fa fa-facebook-square"
+                                                                                aria-hidden="true"></i></a>
+            <a href="https://www.vk.com/diferenzial13" class="btn soc-btn-contacts"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="https://www.twitter.com/diferenzial13" class="btn soc-btn-contacts"><i class="fa fa-twitter-square"
+                                                                               aria-hidden="true"></i></a>
+        </div>
+        <p class="paragraph-sm text-center">Еще у меня есть профиль на GitHub</p>
+        <div class="soc-btns-wrapper">
+            <a href="https://github.com/maximgonchar" class="btn soc-btn-contacts soc-big-fz"><i class="fa fa-github-square"
+                                                                                    aria-hidden="true"></i></a>
+        </div>
+        <p class="paragraph-sm text-center">Познакомимся?</p>
+        <div class="contact-info-wrapper">
+            <div class="contact-span">
+                <span class="vertical-align-middle"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                <span>(880) 555-35-35</span>
+            </div>
+            <div class="contact-span">
+                <span class="vertical-align-middle"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                <span>maxgonchar9@gmail.com</span>
+            </div>
+            <div class="contact-span">
+                <span class="vertical-align-middle"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                <span><a href="https://www.google.com/maps?q=%D1%81%D1%8B%D0%BA%D1%82%D1%8B%D0%B2%D0%BA%D0%B0%D1%80">Сыктывкар</a></span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ footer_macro.footer() }}
+{% endblock %}

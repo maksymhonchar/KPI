@@ -1,0 +1,29 @@
+<page><title>Comparison of disc image software</title><pageid>19067399</pageid><category>Data compression software</category><sections><section title="">This article is a comparison of notable software applications that can access or manipulate disk image files. It compares their disk image handling features.
+
+
+</section><section title="Comparison criteria">This article compares two features: Supported file formats and capabilities of the software as to how they treat the image format.
+
+
+=== Capabilities ===
+"Creates?"
+Specifies whether the application can create a new disc image file, either by capturing the image of an actual disc, by composing a disc image file from locally stored files or an empty disc image.
+"Modifies?"
+Specifies whether the application is able to manipulate the contents of an existing disc image file, including adding, changing or deleting files within or modifying disc image metadata.
+"Mounts?"
+Specifies whether the application can emulate an optical disc drive. Such an application treats a disc image file like a virtual disc and virtually inserts it into that emulated virtual drive.
+"Restores?"
+Specifies whether the application can write the contents of a disk image file onto a physical media (such as an optical disc, a floppy disk, a hard disk drive or a USB flash drive) and create a physical replica.
+"Extracts?"
+Specifies whether the application can copy some or all of the files within a disc image file to somewhere else.
+
+
+=== Supported file formats ===
+"Input"
+Specifies the types of disc image formats that the application can open.
+"Output"
+Specifies the types of disc image formats that the application can save to.
+
+
+</section><section title="The comparison">
+
+</section></sections></page>

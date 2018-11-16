@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Допомога - Реєстр громадських об'єднань{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+        <h3>Технічна допомога</h3>
+        <p>Не зволікайте, якщо у Вас з'явились питання щодо:</p>
+        <ul>
+            <li>Технічної сторони Реєстру</li>
+            <li>API Реєстру</li>
+            <li>Використання Реєстру</li>
+        </ul>
+        <p>Телефон чергового інженера: (+38 044) 206-71-10</p>
+        <p>Телефон Адміністратора: (+38 044) 206-71-48, (+38 044) 206-71-49</p>
+        <hr>
+        <h4>Форма для відправки питання:</h4>
+        <p>Ви можете написати своє питання до нашого Відділу Підтримки у текстовому форматі.</p>
+        <p>Вкажіть питання та електронну пошту для зворотнього зв'язку у формі нижче.</p>
+        <hr>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ suppform.non_field_errors }}
+            {% for hidden_field in suppform.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+            {% endfor %}
+            {% for field in suppform.visible_fields %}
+            <p>{{ field.label_tag }}</p>
+            <p>{{ field }}</p>
+            {% endfor %}
+            {{ form }}
+            <button type="submit">Надіслати питання</button>
+        </form>
+        <br>
+        <br>
+        <hr>
+    </div>
+</div>
+{% endblock %}
