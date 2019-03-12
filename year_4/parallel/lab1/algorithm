@@ -1,0 +1,70 @@
+1 2 3
+4 5 6
+7 8 9
+
+1 2 3 4 5 6 7 8 9
+
+
+matrix_size=3
+thread_number=4
+n_elements = 9
+n_operations = 2
+rest_operations = 1
+
+thread1:
+start_op = 0
+end_op = 3
+
+thread2:
+start_op = 3
+end_op = 5
+
+thread3:
+start_op = 5
+end_op = 7
+
+thread4:
+start_op = 7
+end_op = 9
+
+
+---------------------------------------
+thread1 job:
+iter1 
+    op=0
+    row=0 col=0
+    iter1.1
+        m1[0][0]*m2[0][0]
+    iter1.2
+        m1[0][1]*m2[1][0]
+    iter1.3
+        m1[0][2]*m2[2][0]
+    [0][0]
+iter2
+    op=1
+    row=1 col=0
+    iter2.1
+        m1[1][0]*m2[0][0]
+    iter2.2
+        m1[1][1]*m2[1][0]
+    iter2.3
+        m1[1][2]*m2[2][0]
+    [1][0]
+iter3
+    op=2
+    row=2 col=0
+    iter3.1
+        m1[2][0]*m2[0][0]
+    iter3.2
+        m1[2][1]*m2[1][0]
+    iter3.3
+        m1[2][2]*m2[2][0]
+    [2][0]
+iter4
+    op=3
+    row=0 col=1
+    iter4.1
+        ...
+
+
+
