@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>CryptoApp</Name>
+    <Version>1.0.0</Version>
+    <Title>CryptoApp Installer</Title>
+    <Publisher>Honchar Dev</Publisher>
+    <StartMenuDir>CryptoApp</StartMenuDir>
+    <TargetDir>@HomeDir@/CryptoApp</TargetDir>
+</Installer>
